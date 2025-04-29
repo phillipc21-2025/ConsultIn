@@ -3,7 +3,15 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import OpenAI from "openai";
 import { z } from "zod";
-import { insertBusinessProblemSchema, type SolutionResponse } from "@shared/schema";
+import { 
+  insertBusinessProblemSchema, 
+  type SolutionResponse, 
+  type Expert,
+  type Conversation,
+  type Talent,
+  type Training,
+  type Service
+} from "@shared/schema";
 
 // Initialize OpenAI
 const openai = new OpenAI({ 
@@ -96,54 +104,181 @@ export async function registerRoutes(app: Express): Promise<Server> {
         storage.getServices(),
       ]);
       
-      // Analyze the problem using OpenAI
-      const prompt = `
-        You are an AI assistant helping a small business owner solve a problem. 
+      // Function to generate mock solution based on the problem
+      const generateMockSolution = (problem: string, 
+        experts: Expert[], 
+        conversations: Conversation[],
+        talents: Talent[],
+        trainings: Training[],
+        services: Service[]): SolutionResponse => {
         
-        Their problem is: "${validatedBody.problem}"
+        console.log("Generating mock solution for:", problem);
+
+        // Helper to get a random subset of items from any array
+        const getRandomSubset = <T>(array: T[], max: number = 2): T[] => {
+          if (!array.length) return [];
+          const shuffled = [...array].sort(() => 0.5 - Math.random());
+          return shuffled.slice(0, Math.min(max, array.length));
+        };
         
-        Based on this problem, provide a structured analysis, a detailed step-by-step process for solving the problem, and specific recommendations in the following JSON format:
+        // Create some sample process steps based on problem keywords
+        let processSteps = [];
         
-        {
-          "analysis": "A concise 2-3 sentence analysis of the problem",
-          "experts": ${JSON.stringify(experts)},
-          "conversations": ${JSON.stringify(conversations)},
-          "talents": ${JSON.stringify(talents)},
-          "trainings": ${JSON.stringify(trainings)},
-          "services": ${JSON.stringify(services)},
-          "processSteps": [
+        if (problem.toLowerCase().includes("supply chain")) {
+          processSteps = [
             {
-              "id": 1,
-              "title": "Step title - short and action-oriented",
-              "description": "Detailed explanation of what to do in this step",
-              "solution": "Specific solution or implementation guidance for this step",
-              "resources": {
-                "experts": [...subset of relevant experts for this specific step...],
-                "conversations": [...subset of relevant conversations for this specific step...],
-                "talents": [...subset of relevant talents for this specific step...],
-                "trainings": [...subset of relevant trainings for this specific step...],
-                "services": [...subset of relevant services for this specific step...]
+              id: 1,
+              title: "Identify key supply chain vulnerabilities",
+              description: "Conduct a thorough audit of your current supply chain to identify single points of failure, bottlenecks, and areas most vulnerable to disruption.",
+              solution: "Use a supply chain mapping tool to create a visual representation of your entire supply network. Highlight suppliers with the longest lead times and those providing critical components.",
+              resources: {
+                experts: getRandomSubset(experts),
+                conversations: getRandomSubset(conversations),
+                trainings: getRandomSubset(trainings),
+                services: getRandomSubset(services)
               }
             },
-            ...more steps...
-          ]
+            {
+              id: 2,
+              title: "Diversify supplier base",
+              description: "Expand your supplier network to include multiple sources for critical materials and components.",
+              solution: "Create a secondary supplier list with at least two backup options for each critical component. Initiate relationships with these suppliers even if you're not immediately placing orders.",
+              resources: {
+                experts: getRandomSubset(experts),
+                conversations: getRandomSubset(conversations),
+                talents: getRandomSubset(talents)
+              }
+            },
+            {
+              id: 3,
+              title: "Implement inventory optimization strategy",
+              description: "Balance inventory levels to protect against disruptions while minimizing holding costs.",
+              solution: "Adopt a hybrid inventory model with safety stock for critical items and just-in-time principles for others. Use historical data to calculate optimal safety stock levels based on supplier lead time variability.",
+              resources: {
+                trainings: getRandomSubset(trainings),
+                services: getRandomSubset(services)
+              }
+            },
+            {
+              id: 4,
+              title: "Develop contingency planning",
+              description: "Create detailed action plans for potential supply chain disruptions before they occur.",
+              solution: "Document step-by-step response procedures for common disruption scenarios. Include emergency contact information, decision trees, and communication templates.",
+              resources: {
+                experts: getRandomSubset(experts),
+                trainings: getRandomSubset(trainings)
+              }
+            }
+          ];
+        } else if (problem.toLowerCase().includes("staffing") || problem.toLowerCase().includes("hiring")) {
+          processSteps = [
+            {
+              id: 1,
+              title: "Define clear job requirements",
+              description: "Create detailed job descriptions that accurately reflect the skills, experience, and qualities needed for each position.",
+              solution: "Conduct a job analysis by interviewing current successful employees and their managers. Identify the key skills and attributes that drive success in the role.",
+              resources: {
+                experts: getRandomSubset(experts),
+                trainings: getRandomSubset(trainings)
+              }
+            },
+            {
+              id: 2,
+              title: "Expand recruitment channels",
+              description: "Diversify your recruitment sources to reach a wider pool of qualified candidates.",
+              solution: "In addition to job boards, leverage industry-specific forums, professional associations, and employee referral programs. Attend industry events and partner with relevant educational institutions.",
+              resources: {
+                services: getRandomSubset(services),
+                conversations: getRandomSubset(conversations)
+              }
+            },
+            {
+              id: 3,
+              title: "Implement structured interview process",
+              description: "Create a standardized interview framework to evaluate candidates consistently and reduce bias.",
+              solution: "Develop role-specific interview questions that assess both technical skills and cultural fit. Use scoring rubrics for each question and involve multiple team members in the interview process.",
+              resources: {
+                talents: getRandomSubset(talents),
+                trainings: getRandomSubset(trainings)
+              }
+            }
+          ];
+        } else {
+          // Default steps for any other type of problem
+          processSteps = [
+            {
+              id: 1,
+              title: "Analyze current situation",
+              description: "Gather relevant data and assess the current state of your business to understand the root causes of the problem.",
+              solution: "Conduct a SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) focused specifically on the problem area. Identify key metrics to measure the current situation and track improvement.",
+              resources: {
+                experts: getRandomSubset(experts),
+                trainings: getRandomSubset(trainings)
+              }
+            },
+            {
+              id: 2,
+              title: "Develop an action plan",
+              description: "Create a detailed strategy with specific, measurable goals and timeline for implementation.",
+              solution: "Use the SMART framework (Specific, Measurable, Achievable, Relevant, Time-bound) to set clear objectives. Break down the plan into weekly milestones with assigned responsibilities.",
+              resources: {
+                services: getRandomSubset(services),
+                conversations: getRandomSubset(conversations)
+              }
+            },
+            {
+              id: 3,
+              title: "Implement solution",
+              description: "Execute your action plan methodically while monitoring progress and making adjustments as needed.",
+              solution: "Start with a pilot implementation to test effectiveness. Schedule regular check-ins to review progress and address any obstacles quickly. Document lessons learned throughout the process.",
+              resources: {
+                talents: getRandomSubset(talents),
+                trainings: getRandomSubset(trainings)
+              }
+            },
+            {
+              id: 4,
+              title: "Measure results and refine approach",
+              description: "Evaluate the effectiveness of your solution and make necessary adjustments for continuous improvement.",
+              solution: "Compare key metrics before and after implementation. Gather feedback from team members and stakeholders. Create a system for ongoing monitoring and regular reviews.",
+              resources: {
+                experts: getRandomSubset(experts),
+                services: getRandomSubset(services)
+              }
+            }
+          ];
         }
-        
-        Important guidelines:
-        1. Create 3-5 clear, sequential process steps that address the problem comprehensively
-        2. Make each step actionable with specific guidance
-        3. For each step, provide a concrete solution that is immediately applicable
-        4. Only include the most relevant experts, conversations, talents, trainings, and services from the provided lists that directly address each specific step
-        5. Do not invent new entries that aren't in the provided data
-      `;
+
+        // Generate a business-appropriate analysis based on the problem
+        let analysis = "";
+        if (problem.toLowerCase().includes("supply chain")) {
+          analysis = "Your supply chain challenges stem from over-reliance on limited suppliers and lack of contingency planning. Implementing a diversified supplier strategy and optimized inventory management will significantly improve resilience and operational continuity.";
+        } else if (problem.toLowerCase().includes("staffing") || problem.toLowerCase().includes("hiring")) {
+          analysis = "Your staffing difficulties are primarily caused by narrow recruitment channels and an unstructured hiring process. Expanding your talent acquisition approaches and implementing standardized evaluation methods will help attract and identify the right candidates more efficiently.";
+        } else {
+          analysis = "This business challenge requires a methodical approach beginning with thorough analysis of the current situation. A structured plan with clear metrics, regular implementation reviews, and continuous refinement will lead to sustainable improvement.";
+        }
+
+        return {
+          analysis,
+          experts: experts.slice(0, 3),
+          conversations: conversations.slice(0, 3),
+          talents: talents.slice(0, 3),
+          trainings: trainings.slice(0, 3),
+          services: services.slice(0, 3),
+          processSteps
+        };
+      };
       
-      const completion = await openai.chat.completions.create({
-        model: OPENAI_MODEL,
-        messages: [{ role: "user", content: prompt }],
-        response_format: { type: "json_object" },
-      });
-      
-      const solution = JSON.parse(completion.choices[0].message.content || "{}") as SolutionResponse;
+      // Generate mock solution instead of calling OpenAI
+      const solution = generateMockSolution(
+        validatedBody.problem,
+        experts,
+        conversations,
+        talents,
+        trainings,
+        services
+      );
       
       // Update the business problem with the solution
       const updatedProblem = await storage.updateBusinessProblemSolution(newBusinessProblem.id, solution);

@@ -30,7 +30,7 @@ interface SolutionsContainerProps {
 
 const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const [activeTab, setActiveTab] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<string | undefined>(undefined);
   
   // Determine which resource tabs to show
   const tabs = [];
@@ -92,7 +92,7 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
                   {tabs.map((tab) => (
                     <li key={tab.id} className="mr-1">
                       <button 
-                        onClick={() => setActiveTab(activeTab === tab.id ? null : tab.id)}
+                        onClick={() => setActiveTab(activeTab === tab.id ? undefined : tab.id)}
                         className={`tab-item text-xs py-1 ${activeTab === tab.id ? 'active' : ''}`}
                       >
                         <tab.icon className="mr-1 inline" /> {tab.name}
@@ -107,7 +107,7 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
                   {step.resources.experts.map((expert) => (
                     <div key={expert.id} className="flex items-center p-2 mb-2 border-b border-dashed border-[#e0e0e0]">
                       <img 
-                        src={expert.profileImage} 
+                        src={expert.profileImage || ''} 
                         alt={expert.name} 
                         className="h-10 w-10 rounded-full object-cover" 
                       />
@@ -129,7 +129,7 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
                     <div key={conversation.id} className="p-2 mb-2 border-b border-dashed border-[#e0e0e0]">
                       <div className="flex items-center mb-1">
                         <img 
-                          src={conversation.authorImage} 
+                          src={conversation.authorImage || ''} 
                           alt={conversation.authorName} 
                           className="h-6 w-6 rounded-full object-cover" 
                         />
@@ -148,7 +148,7 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
                   {step.resources.talents.map((talent) => (
                     <div key={talent.id} className="flex items-center p-2 mb-2 border-b border-dashed border-[#e0e0e0]">
                       <img 
-                        src={talent.profileImage} 
+                        src={talent.profileImage || ''} 
                         alt={talent.name} 
                         className="h-10 w-10 rounded-full object-cover" 
                       />
@@ -263,7 +263,7 @@ const SolutionsContainer = ({ solution }: SolutionsContainerProps) => {
             {solution.experts.map((expert) => (
               <div key={expert.id} className="flex items-center p-3 border border-[#e0e0e0] rounded-lg mb-3 hover:shadow-sm">
                 <img 
-                  src={expert.profileImage} 
+                  src={expert.profileImage || ''} 
                   alt={expert.name} 
                   className="h-12 w-12 rounded-full object-cover" 
                 />
@@ -293,7 +293,7 @@ const SolutionsContainer = ({ solution }: SolutionsContainerProps) => {
               <div key={conversation.id} className="p-3 border border-[#e0e0e0] rounded-lg mb-3 hover:shadow-sm">
                 <div className="flex items-center mb-2">
                   <img 
-                    src={conversation.authorImage} 
+                    src={conversation.authorImage || ''} 
                     alt={conversation.authorName} 
                     className="h-8 w-8 rounded-full object-cover" 
                   />
@@ -324,7 +324,7 @@ const SolutionsContainer = ({ solution }: SolutionsContainerProps) => {
             {solution.talents.map((talent) => (
               <div key={talent.id} className="flex items-center p-3 border border-[#e0e0e0] rounded-lg mb-3 hover:shadow-sm">
                 <img 
-                  src={talent.profileImage} 
+                  src={talent.profileImage || ''} 
                   alt={talent.name} 
                   className="h-12 w-12 rounded-full object-cover" 
                 />
@@ -355,7 +355,7 @@ const SolutionsContainer = ({ solution }: SolutionsContainerProps) => {
                 <div className="flex">
                   <div className="h-16 w-24 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                     <img 
-                      src={training.thumbnail} 
+                      src={training.thumbnail || ''} 
                       alt="Course thumbnail" 
                       className="w-full h-full object-cover" 
                     />
