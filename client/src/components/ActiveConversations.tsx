@@ -128,10 +128,10 @@ const ActiveConversations: React.FC<ActiveConversationsProps> = ({ conversations
             
             <CardContent className="pb-2">
               <h4 className="font-semibold mb-2">
-                {conversation.title || "Discussion Topic"}
+                {(conversation as any).title || "Discussion Topic"}
               </h4>
               <p className="text-sm text-gray-600 line-clamp-3">
-                {conversation.description || (conversation as any).content || "Join this conversation about business challenges and solutions."}
+                {(conversation as any).description || (conversation as any).content || "Join this conversation about business challenges and solutions."}
               </p>
               
               <div className="flex flex-wrap gap-1.5 mt-3">

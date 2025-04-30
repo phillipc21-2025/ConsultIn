@@ -5,7 +5,7 @@ import LeftSidebar from "./LeftSidebar";
 import RightSidebar from "./RightSidebar";
 import ProblemInput from "./ProblemInput";
 import SolutionsContainer from "./SolutionsContainer";
-import SuccessStories from "./SuccessStories";
+import ActiveConversations from "./ActiveConversations";
 import { analyzeProblem } from "@/lib/openai";
 import type { SolutionResponse } from "@shared/schema";
 
@@ -48,7 +48,7 @@ const SMBPage = () => {
           {solution && (
             <>
               <SolutionsContainer solution={solution} />
-              <SuccessStories />
+              <ActiveConversations conversations={solution.conversations} />
             </>
           )}
         </div>

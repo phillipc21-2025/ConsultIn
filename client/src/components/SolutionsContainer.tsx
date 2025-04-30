@@ -19,7 +19,9 @@ import {
   FaLightbulb,
   FaClipboardList,
   FaAngleDown,
-  FaAngleUp
+  FaAngleUp,
+  FaNetworkWired,
+  FaThumbsDown
 } from "react-icons/fa";
 import { Card } from "@/components/ui/card";
 import type { SolutionResponse, ProcessStep } from "@shared/schema";
@@ -82,6 +84,57 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
             </h4>
             <p className="text-sm ml-6">{step.solution}</p>
           </div>
+          
+          {/* Network Comments Section */}
+          {step.networkComments && step.networkComments.length > 0 && (
+            <div className="mb-4 border rounded p-3">
+              <h4 className="font-semibold text-sm mb-2 flex items-center">
+                <FaNetworkWired className="mr-2 text-[#0a66c2]" /> People in your network commenting on this step:
+              </h4>
+              
+              <div className="space-y-3 ml-2">
+                {step.networkComments.map((comment) => (
+                  <div 
+                    key={comment.id} 
+                    className={`p-2 rounded ${
+                      comment.sentiment === 'positive' ? 'bg-[#f3f9f1] border-l-2 border-green-500' : 
+                      comment.sentiment === 'negative' ? 'bg-[#fff9f9] border-l-2 border-red-500' :
+                      'bg-[#f9f9f9] border-l-2 border-gray-400'
+                    }`}
+                  >
+                    <div className="flex items-start">
+                      <img
+                        src={comment.authorImage}
+                        alt={comment.authorName}
+                        className="h-8 w-8 rounded-full object-cover"
+                      />
+                      <div className="ml-2 flex-1">
+                        <div className="flex items-center">
+                          <h5 className="font-semibold text-xs">{comment.authorName}</h5>
+                          {comment.sentiment === 'positive' && (
+                            <span className="ml-2 text-green-600 text-xs flex items-center">
+                              <FaThumbsUp className="mr-1" size={10} /> Agrees
+                            </span>
+                          )}
+                          {comment.sentiment === 'negative' && (
+                            <span className="ml-2 text-red-600 text-xs flex items-center">
+                              <FaThumbsDown className="mr-1" size={10} /> Disagrees
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-xs text-gray-600">{comment.authorTitle} • {comment.authorCompany}</p>
+                        <p className="text-xs mt-1">{comment.content}</p>
+                        <div className="flex items-center text-xs text-gray-500 mt-1">
+                          <span>{comment.postedTime}</span>
+                          <span className="ml-2"><FaThumbsUp className="inline mr-1" size={10} /> {comment.likes}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
           
           {tabs.length > 0 && (
             <div className="border-t border-[#e0e0e0] pt-3 mt-3">
