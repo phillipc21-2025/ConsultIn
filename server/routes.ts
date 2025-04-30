@@ -390,7 +390,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return {
           analysis,
           experts: experts.slice(0, 4),
-          conversations: conversations.slice(0, 4),
+          conversations: conversations.slice(0, 5), // Increased to 5 for ActiveConversations
           talents: talents.slice(0, 4),
           trainings: trainings.slice(0, 4),
           services: services.slice(0, 4),
