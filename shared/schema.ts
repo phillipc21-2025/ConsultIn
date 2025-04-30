@@ -160,12 +160,26 @@ export type Training = typeof trainings.$inferSelect;
 export type InsertService = z.infer<typeof insertServiceSchema>;
 export type Service = typeof services.$inferSelect;
 
+// Network comment type for process steps
+export interface NetworkComment {
+  id: number;
+  authorName: string;
+  authorTitle: string;
+  authorCompany: string;
+  authorImage: string;
+  content: string;
+  sentiment: 'positive' | 'negative' | 'neutral'; // whether they agree or disagree
+  postedTime: string;
+  likes: number;
+}
+
 // Step response type for the process breakdown
 export interface ProcessStep {
   id: number;
   title: string;
   description: string;
   solution: string;
+  networkComments: NetworkComment[];
   resources?: {
     experts?: Expert[];
     conversations?: Conversation[];

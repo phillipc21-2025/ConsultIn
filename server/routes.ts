@@ -10,7 +10,9 @@ import {
   type Conversation,
   type Talent,
   type Training,
-  type Service
+  type Service,
+  type NetworkComment,
+  type ProcessStep
 } from "@shared/schema";
 
 // Initialize OpenAI
@@ -115,10 +117,125 @@ export async function registerRoutes(app: Express): Promise<Server> {
         console.log("Generating mock solution for:", problem);
 
         // Helper to get a random subset of items from any array
-        const getRandomSubset = <T>(array: T[], max: number = 2): T[] => {
+        const getRandomSubset = <T>(array: T[], max: number = 4): T[] => {
           if (!array.length) return [];
           const shuffled = [...array].sort(() => 0.5 - Math.random());
           return shuffled.slice(0, Math.min(max, array.length));
+        };
+        
+        // Create network comments for process steps
+        const generateNetworkComments = (): NetworkComment[] => {
+          // Sample images
+          const profileImages = [
+            "https://randomuser.me/api/portraits/men/32.jpg",
+            "https://randomuser.me/api/portraits/women/44.jpg",
+            "https://randomuser.me/api/portraits/men/86.jpg",
+            "https://randomuser.me/api/portraits/women/63.jpg",
+            "https://randomuser.me/api/portraits/men/22.jpg",
+            "https://randomuser.me/api/portraits/women/54.jpg"
+          ];
+          
+          // Sample positive comments
+          const positiveComments = [
+            "I fully agree with this approach. We implemented something similar at my company and saw a 35% improvement in fulfillment rates.",
+            "This strategy worked wonders for us. The key was getting leadership buy-in early in the process.",
+            "100% support this. We actually went further and automated parts of this process, which saved us hundreds of hours annually.",
+            "Great suggestion. I'd add that documentation is critical during this step - we learned that the hard way!",
+            "My team followed a similar approach last quarter. The ROI was impressive, and stakeholder satisfaction improved measurably."
+          ];
+          
+          // Sample negative/cautionary comments
+          const negativeComments = [
+            "I'd be careful with this approach. We tried it and found that we needed to customize heavily for our industry specifics.",
+            "This might work for larger companies, but we struggled to implement with our limited resources. Consider scaling based on team size.",
+            "We had mixed results with this strategy. The upfront costs were higher than anticipated, so prepare your budget accordingly.",
+            "This approach has merit, but I'd suggest a pilot program first. Full implementation created bottlenecks in our workflow.",
+            "I disagree with parts of this. We found that focusing on quality first rather than quantity produced better long-term results."
+          ];
+          
+          // Sample neutral/additional perspective comments
+          const neutralComments = [
+            "Consider this alternative: we focused on building relationships first, then formalized the process later with better results.",
+            "An important addition: make sure to involve your legal team early in this process to avoid compliance issues down the line.",
+            "In our experience, the timeline for seeing results was about 6-8 months, so set appropriate expectations with stakeholders.",
+            "This works, but don't forget to establish clear metrics at the start. We had to backtrack because we weren't measuring the right things.",
+            "This is a solid approach, though industry regulations may require adjustments for companies in regulated sectors."
+          ];
+          
+          // Generate 3-5 comments with varied sentiments
+          const numComments = Math.floor(Math.random() * 3) + 3; // 3-5 comments
+          let comments: NetworkComment[] = [];
+          
+          // Ensure at least one positive and one critical comment
+          comments.push({
+            id: 1,
+            authorName: "Michael Chen",
+            authorTitle: "Operations Director",
+            authorCompany: "NexGen Manufacturing",
+            authorImage: profileImages[0],
+            content: positiveComments[Math.floor(Math.random() * positiveComments.length)],
+            sentiment: "positive",
+            postedTime: "2 days ago",
+            likes: Math.floor(Math.random() * 50) + 5
+          });
+          
+          comments.push({
+            id: 2,
+            authorName: "Sarah Johnson",
+            authorTitle: "Supply Chain Consultant",
+            authorCompany: "Global Logistics Partners",
+            authorImage: profileImages[1],
+            content: negativeComments[Math.floor(Math.random() * negativeComments.length)],
+            sentiment: "negative",
+            postedTime: "1 day ago",
+            likes: Math.floor(Math.random() * 20) + 3
+          });
+          
+          // Add remaining comments randomly
+          for (let i = 3; i <= numComments; i++) {
+            const sentimentType = Math.random() < 0.5 ? 
+              (Math.random() < 0.5 ? "positive" : "negative") : "neutral";
+            
+            let commentPool = positiveComments;
+            if (sentimentType === "negative") commentPool = negativeComments;
+            if (sentimentType === "neutral") commentPool = neutralComments;
+            
+            const randomIdx = Math.floor(Math.random() * commentPool.length);
+            
+            // List of plausible names
+            const names = [
+              "Emma Rodriguez", "David Kim", "Priya Patel", "James Wilson",
+              "Olivia Thompson", "Wei Zhang", "Jamal Bennett", "Sofia Garcia"
+            ];
+            
+            // List of plausible titles
+            const titles = [
+              "VP of Operations", "Supply Chain Manager", "Business Owner",
+              "Production Lead", "Chief Strategy Officer", "Director of Procurement",
+              "Inventory Specialist", "Business Analyst"
+            ];
+            
+            // List of plausible companies
+            const companies = [
+              "Horizon Solutions", "BlueStream Logistics", "TechCraft Industries",
+              "Pinnacle Manufacturing", "EverGreen Supply Co.", "Summit Operations",
+              "InnovateNow Corp", "Elite Business Group"
+            ];
+            
+            comments.push({
+              id: i,
+              authorName: names[Math.floor(Math.random() * names.length)],
+              authorTitle: titles[Math.floor(Math.random() * titles.length)],
+              authorCompany: companies[Math.floor(Math.random() * companies.length)],
+              authorImage: profileImages[i % profileImages.length],
+              content: commentPool[randomIdx],
+              sentiment: sentimentType as 'positive' | 'negative' | 'neutral',
+              postedTime: `${Math.floor(Math.random() * 7) + 1} days ago`,
+              likes: Math.floor(Math.random() * 30) + 1
+            });
+          }
+          
+          return comments;
         };
         
         // Create some sample process steps based on problem keywords
@@ -131,6 +248,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               title: "Identify key supply chain vulnerabilities",
               description: "Conduct a thorough audit of your current supply chain to identify single points of failure, bottlenecks, and areas most vulnerable to disruption.",
               solution: "Use a supply chain mapping tool to create a visual representation of your entire supply network. Highlight suppliers with the longest lead times and those providing critical components.",
+              networkComments: generateNetworkComments(),
               resources: {
                 experts: getRandomSubset(experts),
                 conversations: getRandomSubset(conversations),
@@ -143,6 +261,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               title: "Diversify supplier base",
               description: "Expand your supplier network to include multiple sources for critical materials and components.",
               solution: "Create a secondary supplier list with at least two backup options for each critical component. Initiate relationships with these suppliers even if you're not immediately placing orders.",
+              networkComments: generateNetworkComments(),
               resources: {
                 experts: getRandomSubset(experts),
                 conversations: getRandomSubset(conversations),
@@ -154,6 +273,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               title: "Implement inventory optimization strategy",
               description: "Balance inventory levels to protect against disruptions while minimizing holding costs.",
               solution: "Adopt a hybrid inventory model with safety stock for critical items and just-in-time principles for others. Use historical data to calculate optimal safety stock levels based on supplier lead time variability.",
+              networkComments: generateNetworkComments(),
               resources: {
                 trainings: getRandomSubset(trainings),
                 services: getRandomSubset(services)
@@ -164,6 +284,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               title: "Develop contingency planning",
               description: "Create detailed action plans for potential supply chain disruptions before they occur.",
               solution: "Document step-by-step response procedures for common disruption scenarios. Include emergency contact information, decision trees, and communication templates.",
+              networkComments: generateNetworkComments(),
               resources: {
                 experts: getRandomSubset(experts),
                 trainings: getRandomSubset(trainings)
@@ -177,6 +298,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               title: "Define clear job requirements",
               description: "Create detailed job descriptions that accurately reflect the skills, experience, and qualities needed for each position.",
               solution: "Conduct a job analysis by interviewing current successful employees and their managers. Identify the key skills and attributes that drive success in the role.",
+              networkComments: generateNetworkComments(),
               resources: {
                 experts: getRandomSubset(experts),
                 trainings: getRandomSubset(trainings)
@@ -187,6 +309,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               title: "Expand recruitment channels",
               description: "Diversify your recruitment sources to reach a wider pool of qualified candidates.",
               solution: "In addition to job boards, leverage industry-specific forums, professional associations, and employee referral programs. Attend industry events and partner with relevant educational institutions.",
+              networkComments: generateNetworkComments(),
               resources: {
                 services: getRandomSubset(services),
                 conversations: getRandomSubset(conversations)
@@ -197,6 +320,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               title: "Implement structured interview process",
               description: "Create a standardized interview framework to evaluate candidates consistently and reduce bias.",
               solution: "Develop role-specific interview questions that assess both technical skills and cultural fit. Use scoring rubrics for each question and involve multiple team members in the interview process.",
+              networkComments: generateNetworkComments(),
               resources: {
                 talents: getRandomSubset(talents),
                 trainings: getRandomSubset(trainings)
