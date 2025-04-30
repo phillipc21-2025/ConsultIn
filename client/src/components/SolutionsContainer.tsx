@@ -21,10 +21,51 @@ import {
   FaAngleDown,
   FaAngleUp,
   FaNetworkWired,
-  FaThumbsDown
+  FaThumbsDown,
+  FaRobot,
+  FaEnvelope,
+  FaClipboard,
+  FaCreditCard,
+  FaSpinner
 } from "react-icons/fa";
 import { Card } from "@/components/ui/card";
-import type { SolutionResponse, ProcessStep } from "@shared/schema";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogDescription, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogTrigger 
+} from "@/components/ui/dialog";
+import { 
+  Form, 
+  FormControl, 
+  FormDescription, 
+  FormField, 
+  FormItem, 
+  FormLabel, 
+  FormMessage 
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { 
+  Select, 
+  SelectContent, 
+  SelectItem, 
+  SelectTrigger, 
+  SelectValue 
+} from "@/components/ui/select";
+import type { 
+  SolutionResponse, 
+  ProcessStep, 
+  ConsultInAction, 
+  ConsultInEmailAction, 
+  ConsultInFormAction, 
+  ConsultInProductAction 
+} from "@shared/schema";
 
 interface SolutionsContainerProps {
   solution: SolutionResponse;
@@ -33,6 +74,9 @@ interface SolutionsContainerProps {
 const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [activeTab, setActiveTab] = useState<string | undefined>(undefined);
+  const [showConsultInDialog, setShowConsultInDialog] = useState(false);
+  const [isConsultInThinking, setIsConsultInThinking] = useState(false);
+  const [showConsultInAction, setShowConsultInAction] = useState(false);
   
   // Determine which resource tabs to show
   const tabs = [];
@@ -51,6 +95,20 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
   if (step.resources?.services && step.resources.services.length > 0) {
     tabs.push({ id: "services", name: "Services", icon: FaTools });
   }
+  
+  // Add ConsultIn tab if there's a consultInAction
+  if (step.consultInAction) {
+    tabs.push({ id: "consultin", name: "ConsultIn", icon: FaRobot });
+  }
+  
+  // Handle ConsultIn button click
+  const handleConsultInClick = () => {
+    setIsConsultInThinking(true);
+    setTimeout(() => {
+      setIsConsultInThinking(false);
+      setShowConsultInAction(true);
+    }, 2000); // Simulate "thinking" for 2 seconds
+  };
 
   return (
     <div className="mb-4 border border-[#e0e0e0] rounded-lg overflow-hidden bg-white">
@@ -242,6 +300,235 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
                       </button>
                     </div>
                   ))}
+                </div>
+              )}
+              
+              {/* ConsultIn tab content */}
+              {activeTab === "consultin" && step.consultInAction && (
+                <div className="pl-2">
+                  {!showConsultInAction ? (
+                    <div className="flex flex-col items-center justify-center p-4">
+                      <div className="text-center mb-3">
+                        <FaRobot className="inline-block text-4xl text-[#0a66c2] mb-2" />
+                        <h4 className="font-semibold">ConsultIn - Your Digital Consultant</h4>
+                        <p className="text-sm text-gray-600 mt-1">
+                          Let ConsultIn help you implement this step by drafting emails, creating forms, or recommending products
+                        </p>
+                      </div>
+                      
+                      <Button 
+                        onClick={handleConsultInClick}
+                        disabled={isConsultInThinking}
+                        className="mt-2 bg-[#0a66c2] hover:bg-blue-700 text-white rounded-full text-sm font-semibold"
+                      >
+                        {isConsultInThinking ? (
+                          <>
+                            <FaSpinner className="mr-2 inline-block animate-spin" /> 
+                            ConsultIn is thinking...
+                          </>
+                        ) : (
+                          <>
+                            <FaRobot className="mr-2 inline-block" /> 
+                            Generate ConsultIn Action
+                          </>
+                        )}
+                      </Button>
+                    </div>
+                  ) : (
+                    <div className="border rounded p-3 bg-blue-50 mb-3">
+                      {/* Email action type */}
+                      {step.consultInAction.type === 'email' && (
+                        <div>
+                          <div className="flex items-center mb-2">
+                            <FaEnvelope className="text-[#0a66c2] mr-2" size={16} />
+                            <h4 className="font-semibold">Email Draft</h4>
+                          </div>
+                          
+                          <div className="bg-white p-3 border rounded mb-2">
+                            <div className="mb-2">
+                              <label className="block text-xs font-semibold mb-1">To:</label>
+                              <Input 
+                                value={step.consultInAction.recipient}
+                                className="text-sm"
+                                readOnly
+                              />
+                            </div>
+                            
+                            {step.consultInAction.ccList && step.consultInAction.ccList.length > 0 && (
+                              <div className="mb-2">
+                                <label className="block text-xs font-semibold mb-1">CC:</label>
+                                <Input 
+                                  value={step.consultInAction.ccList.join("; ")}
+                                  className="text-sm"
+                                  readOnly
+                                />
+                              </div>
+                            )}
+                            
+                            <div className="mb-2">
+                              <label className="block text-xs font-semibold mb-1">Subject:</label>
+                              <Input 
+                                value={step.consultInAction.subject}
+                                className="text-sm"
+                                readOnly
+                              />
+                            </div>
+                            
+                            <div>
+                              <label className="block text-xs font-semibold mb-1">Message:</label>
+                              <Textarea 
+                                value={step.consultInAction.body}
+                                className="text-sm h-40 whitespace-pre-line"
+                                readOnly
+                              />
+                            </div>
+                          </div>
+                          
+                          <div className="flex justify-end">
+                            <Button variant="outline" size="sm" className="mr-2">
+                              <FaClipboard className="mr-1" /> Copy
+                            </Button>
+                            <Button size="sm">
+                              <FaPaperPlane className="mr-1" /> Send via Email Client
+                            </Button>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {/* Form action type */}
+                      {step.consultInAction.type === 'form' && (
+                        <div>
+                          <div className="flex items-center mb-2">
+                            <FaClipboard className="text-[#0a66c2] mr-2" size={16} />
+                            <h4 className="font-semibold">{step.consultInAction.formTitle}</h4>
+                          </div>
+                          
+                          <div className="bg-white p-3 border rounded mb-2">
+                            {step.consultInAction.formFields.map((field, idx) => (
+                              <div key={idx} className="mb-3">
+                                {field.type === 'text' && (
+                                  <div>
+                                    <label className="block text-xs font-semibold mb-1">
+                                      {field.label} {field.required && <span className="text-red-500">*</span>}
+                                    </label>
+                                    <Input 
+                                      defaultValue={field.value || ''}
+                                      className="text-sm"
+                                      placeholder={`Enter ${field.label.toLowerCase()}`}
+                                    />
+                                  </div>
+                                )}
+                                
+                                {field.type === 'date' && (
+                                  <div>
+                                    <label className="block text-xs font-semibold mb-1">
+                                      {field.label} {field.required && <span className="text-red-500">*</span>}
+                                    </label>
+                                    <Input 
+                                      type="date"
+                                      className="text-sm"
+                                    />
+                                  </div>
+                                )}
+                                
+                                {field.type === 'number' && (
+                                  <div>
+                                    <label className="block text-xs font-semibold mb-1">
+                                      {field.label} {field.required && <span className="text-red-500">*</span>}
+                                    </label>
+                                    <Input 
+                                      type="number"
+                                      className="text-sm"
+                                      placeholder="0"
+                                    />
+                                  </div>
+                                )}
+                                
+                                {field.type === 'select' && field.options && (
+                                  <div>
+                                    <label className="block text-xs font-semibold mb-1">
+                                      {field.label} {field.required && <span className="text-red-500">*</span>}
+                                    </label>
+                                    <Select>
+                                      <SelectTrigger className="text-sm">
+                                        <SelectValue placeholder={`Select ${field.label.toLowerCase()}`} />
+                                      </SelectTrigger>
+                                      <SelectContent>
+                                        {field.options.map((option, optIdx) => (
+                                          <SelectItem key={optIdx} value={option}>
+                                            {option}
+                                          </SelectItem>
+                                        ))}
+                                      </SelectContent>
+                                    </Select>
+                                  </div>
+                                )}
+                                
+                                {field.type === 'checkbox' && (
+                                  <div className="flex items-center mt-2">
+                                    <Checkbox id={`checkbox-${idx}`} />
+                                    <label 
+                                      htmlFor={`checkbox-${idx}`} 
+                                      className="ml-2 text-xs"
+                                    >
+                                      {field.label} {field.required && <span className="text-red-500">*</span>}
+                                    </label>
+                                  </div>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                          
+                          <div className="flex justify-end mt-3">
+                            <Button variant="outline" size="sm" className="mr-2">
+                              Reset
+                            </Button>
+                            <Button size="sm">
+                              Submit Form
+                            </Button>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {/* Product action type */}
+                      {step.consultInAction.type === 'product' && (
+                        <div>
+                          <div className="flex items-center mb-3">
+                            <FaCreditCard className="text-[#0a66c2] mr-2" size={16} />
+                            <h4 className="font-semibold">Recommended Products & Services</h4>
+                          </div>
+                          
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            {step.consultInAction.products.map((product) => (
+                              <div key={product.id} className="bg-white border rounded p-3 flex">
+                                {product.imageUrl && (
+                                  <div className="h-16 w-16 flex-shrink-0">
+                                    <img 
+                                      src={product.imageUrl} 
+                                      alt={product.name}
+                                      className="h-full w-full object-cover rounded"
+                                    />
+                                  </div>
+                                )}
+                                <div className={product.imageUrl ? "ml-3 flex-1" : "flex-1"}>
+                                  <h5 className="font-semibold text-sm">{product.name}</h5>
+                                  <p className="text-xs text-gray-600 mb-2">{product.description}</p>
+                                  <div className="flex items-center justify-between">
+                                    {product.price && (
+                                      <span className="font-bold text-sm text-[#0a66c2]">{product.price}</span>
+                                    )}
+                                    <Button size="sm" variant="outline" className="text-xs">
+                                      Learn More
+                                    </Button>
+                                  </div>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               )}
             </div>
