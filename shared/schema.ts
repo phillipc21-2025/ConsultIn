@@ -173,6 +173,44 @@ export interface NetworkComment {
   likes: number;
 }
 
+// ConsultIn action types
+export type ConsultInActionType = 'email' | 'form' | 'product';
+
+export interface ConsultInEmailAction {
+  type: 'email';
+  recipient: string;
+  subject: string;
+  body: string;
+  ccList?: string[];
+}
+
+export interface ConsultInFormAction {
+  type: 'form';
+  formTitle: string;
+  formFields: Array<{
+    label: string;
+    type: 'text' | 'date' | 'number' | 'checkbox' | 'select';
+    options?: string[]; // For select type
+    required: boolean;
+    value?: string; // Pre-filled value
+  }>;
+  submissionEndpoint: string;
+}
+
+export interface ConsultInProductAction {
+  type: 'product';
+  products: Array<{
+    id: number;
+    name: string;
+    description: string;
+    price?: string;
+    url?: string;
+    imageUrl?: string;
+  }>;
+}
+
+export type ConsultInAction = ConsultInEmailAction | ConsultInFormAction | ConsultInProductAction;
+
 // Step response type for the process breakdown
 export interface ProcessStep {
   id: number;
@@ -180,6 +218,7 @@ export interface ProcessStep {
   description: string;
   solution: string;
   networkComments: NetworkComment[];
+  consultInAction?: ConsultInAction;
   resources?: {
     experts?: Expert[];
     conversations?: Conversation[];

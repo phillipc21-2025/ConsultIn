@@ -12,7 +12,11 @@ import {
   type Training,
   type Service,
   type NetworkComment,
-  type ProcessStep
+  type ProcessStep,
+  type ConsultInAction,
+  type ConsultInEmailAction,
+  type ConsultInFormAction,
+  type ConsultInProductAction
 } from "@shared/schema";
 
 // Initialize OpenAI
@@ -121,6 +125,117 @@ export async function registerRoutes(app: Express): Promise<Server> {
           if (!array.length) return [];
           const shuffled = [...array].sort(() => 0.5 - Math.random());
           return shuffled.slice(0, Math.min(max, array.length));
+        };
+        
+        // Generate ConsultIn actions for process steps
+        const generateConsultInAction = (stepTitle: string, stepDescription: string): ConsultInAction => {
+          // Randomly choose an action type, with bias toward email
+          const randomNum = Math.random();
+          if (randomNum < 0.5) {
+            // Email action (50% chance)
+            const emailSubjects = [
+              `Request for information regarding: ${stepTitle}`,
+              `Follow-up on ${stepTitle}`,
+              `Action required: ${stepTitle} implementation`,
+              `Partnership opportunity for ${stepTitle} initiative`
+            ];
+            
+            const emailBodies = [
+              `Dear [Recipient],\n\nI am writing to request more information about ${stepTitle}. Based on our recent analysis, we need to ${stepDescription.toLowerCase()}\n\nCould you please provide the following details:\n\n1. Current status of our supply chain mapping\n2. List of critical suppliers and their lead times\n3. Any existing contingency plans\n\nThis information will help us implement the solution more effectively.\n\nThank you for your assistance.\n\nBest regards,\n[Your Name]\n[Your Company]`,
+              
+              `Dear [Recipient],\n\nFollowing our recent business analysis, we need to implement a solution to ${stepDescription.toLowerCase()}\n\nOur recommended approach is to:\n\n1. Begin with a comprehensive assessment\n2. Develop an implementation plan with specific milestones\n3. Allocate resources appropriately\n4. Set up regular progress reviews\n\nPlease let me know if you have any questions or would like to discuss this further.\n\nRegards,\n[Your Name]\n[Your Company]`,
+              
+              `Dear [Recipient],\n\nI hope this email finds you well. I'm reaching out regarding our upcoming initiative to address ${stepTitle.toLowerCase()}.\n\nWe've identified this as a critical area for improvement, and I'd like to schedule a meeting to discuss how we can collaborate on implementing the following solution:\n\n"${stepDescription.toLowerCase()}"\n\nPlease let me know your availability for next week.\n\nThank you,\n[Your Name]\n[Your Company]`
+            ];
+            
+            return {
+              type: 'email',
+              recipient: "[Recipient Email]",
+              subject: emailSubjects[Math.floor(Math.random() * emailSubjects.length)],
+              body: emailBodies[Math.floor(Math.random() * emailBodies.length)],
+              ccList: ["[Team Member]", "[Stakeholder]"]
+            };
+          } else if (randomNum < 0.8) {
+            // Form action (30% chance)
+            const formTitles = [
+              `${stepTitle} Implementation Form`,
+              `Request for ${stepTitle} Resources`,
+              `${stepTitle} Approval Request`,
+              `${stepTitle} Information Submission`
+            ];
+            
+            return {
+              type: 'form',
+              formTitle: formTitles[Math.floor(Math.random() * formTitles.length)],
+              formFields: [
+                {
+                  label: "Project Name",
+                  type: "text",
+                  required: true,
+                  value: `${stepTitle} Initiative`
+                },
+                {
+                  label: "Implementation Date",
+                  type: "date",
+                  required: true
+                },
+                {
+                  label: "Budget Allocation",
+                  type: "number",
+                  required: true
+                },
+                {
+                  label: "Project Description",
+                  type: "text",
+                  required: true,
+                  value: stepDescription
+                },
+                {
+                  label: "Department",
+                  type: "select",
+                  options: ["Operations", "Supply Chain", "Manufacturing", "Sales", "Marketing", "Finance", "HR"],
+                  required: true
+                },
+                {
+                  label: "I confirm all information is accurate",
+                  type: "checkbox",
+                  required: true
+                }
+              ],
+              submissionEndpoint: "/api/form-submission"
+            };
+          } else {
+            // Product action (20% chance)
+            return {
+              type: 'product',
+              products: [
+                {
+                  id: 1,
+                  name: `${stepTitle} Analytics Platform`,
+                  description: `AI-powered software to help you implement ${stepTitle} with data-driven insights and recommendations.`,
+                  price: "$499/month",
+                  url: "#",
+                  imageUrl: "https://randomuser.me/api/portraits/lego/1.jpg"
+                },
+                {
+                  id: 2,
+                  name: `${stepTitle} Implementation Service`,
+                  description: `Professional consultants will guide you through the entire process of ${stepDescription.toLowerCase()}`,
+                  price: "$3,500",
+                  url: "#",
+                  imageUrl: "https://randomuser.me/api/portraits/lego/2.jpg"
+                },
+                {
+                  id: 3,
+                  name: `${stepTitle} Training Program`,
+                  description: `Comprehensive training for your team on how to effectively ${stepDescription.toLowerCase()}`,
+                  price: "$1,200",
+                  url: "#",
+                  imageUrl: "https://randomuser.me/api/portraits/lego/3.jpg"
+                }
+              ]
+            };
+          }
         };
         
         // Create network comments for process steps
@@ -249,6 +364,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               description: "Conduct a thorough audit of your current supply chain to identify single points of failure, bottlenecks, and areas most vulnerable to disruption.",
               solution: "Use a supply chain mapping tool to create a visual representation of your entire supply network. Highlight suppliers with the longest lead times and those providing critical components.",
               networkComments: generateNetworkComments(),
+              consultInAction: generateConsultInAction("Identify key supply chain vulnerabilities", "Conduct a thorough audit of your current supply chain to identify single points of failure, bottlenecks, and areas most vulnerable to disruption."),
               resources: {
                 experts: getRandomSubset(experts),
                 conversations: getRandomSubset(conversations),
@@ -262,6 +378,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               description: "Expand your supplier network to include multiple sources for critical materials and components.",
               solution: "Create a secondary supplier list with at least two backup options for each critical component. Initiate relationships with these suppliers even if you're not immediately placing orders.",
               networkComments: generateNetworkComments(),
+              consultInAction: generateConsultInAction("Diversify supplier base", "Expand your supplier network to include multiple sources for critical materials and components."),
               resources: {
                 experts: getRandomSubset(experts),
                 conversations: getRandomSubset(conversations),
@@ -274,6 +391,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               description: "Balance inventory levels to protect against disruptions while minimizing holding costs.",
               solution: "Adopt a hybrid inventory model with safety stock for critical items and just-in-time principles for others. Use historical data to calculate optimal safety stock levels based on supplier lead time variability.",
               networkComments: generateNetworkComments(),
+              consultInAction: generateConsultInAction("Implement inventory optimization strategy", "Balance inventory levels to protect against disruptions while minimizing holding costs."),
               resources: {
                 trainings: getRandomSubset(trainings),
                 services: getRandomSubset(services)
@@ -285,6 +403,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               description: "Create detailed action plans for potential supply chain disruptions before they occur.",
               solution: "Document step-by-step response procedures for common disruption scenarios. Include emergency contact information, decision trees, and communication templates.",
               networkComments: generateNetworkComments(),
+              consultInAction: generateConsultInAction("Develop contingency planning", "Create detailed action plans for potential supply chain disruptions before they occur."),
               resources: {
                 experts: getRandomSubset(experts),
                 trainings: getRandomSubset(trainings)
