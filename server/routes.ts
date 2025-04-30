@@ -335,6 +335,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               title: "Analyze current situation",
               description: "Gather relevant data and assess the current state of your business to understand the root causes of the problem.",
               solution: "Conduct a SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) focused specifically on the problem area. Identify key metrics to measure the current situation and track improvement.",
+              networkComments: generateNetworkComments(),
               resources: {
                 experts: getRandomSubset(experts),
                 trainings: getRandomSubset(trainings)
@@ -345,6 +346,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               title: "Develop an action plan",
               description: "Create a detailed strategy with specific, measurable goals and timeline for implementation.",
               solution: "Use the SMART framework (Specific, Measurable, Achievable, Relevant, Time-bound) to set clear objectives. Break down the plan into weekly milestones with assigned responsibilities.",
+              networkComments: generateNetworkComments(),
               resources: {
                 services: getRandomSubset(services),
                 conversations: getRandomSubset(conversations)
@@ -355,6 +357,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               title: "Implement solution",
               description: "Execute your action plan methodically while monitoring progress and making adjustments as needed.",
               solution: "Start with a pilot implementation to test effectiveness. Schedule regular check-ins to review progress and address any obstacles quickly. Document lessons learned throughout the process.",
+              networkComments: generateNetworkComments(),
               resources: {
                 talents: getRandomSubset(talents),
                 trainings: getRandomSubset(trainings)
@@ -365,6 +368,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               title: "Measure results and refine approach",
               description: "Evaluate the effectiveness of your solution and make necessary adjustments for continuous improvement.",
               solution: "Compare key metrics before and after implementation. Gather feedback from team members and stakeholders. Create a system for ongoing monitoring and regular reviews.",
+              networkComments: generateNetworkComments(),
               resources: {
                 experts: getRandomSubset(experts),
                 services: getRandomSubset(services)
@@ -385,11 +389,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
         return {
           analysis,
-          experts: experts.slice(0, 3),
-          conversations: conversations.slice(0, 3),
-          talents: talents.slice(0, 3),
-          trainings: trainings.slice(0, 3),
-          services: services.slice(0, 3),
+          experts: experts.slice(0, 4),
+          conversations: conversations.slice(0, 4),
+          talents: talents.slice(0, 4),
+          trainings: trainings.slice(0, 4),
+          services: services.slice(0, 4),
           processSteps
         };
       };
