@@ -81,6 +81,8 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
   const [activeTab, setActiveTab] = useState<string | undefined>(
     (step.consultInAction && index === 0) ? "consultin" : undefined
   );
+  // State to control showing all comments
+  const [showAllComments, setShowAllComments] = useState(false);
   const [showConsultInDialog, setShowConsultInDialog] = useState(false);
   const [isConsultInThinking, setIsConsultInThinking] = useState(false);
   const [showConsultInAction, setShowConsultInAction] = useState(false);
@@ -166,12 +168,65 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
           {/* Network Comments Section */}
           {step.networkComments && step.networkComments.length > 0 && (
             <div className="mb-4 border rounded p-3">
-              <h4 className="font-semibold text-sm mb-2 flex items-center">
-                <FaNetworkWired className="mr-2 text-[#0a66c2]" /> People in your network commenting on this step:
+              <h4 className="font-semibold text-sm mb-2 flex items-center justify-between">
+                <div>
+                  <FaNetworkWired className="mr-2 text-[#0a66c2] inline" /> 
+                  People in your network commenting on this step:
+                </div>
+                {step.networkComments.length > 1 && (
+                  <button 
+                    onClick={() => setShowAllComments(!showAllComments)}
+                    className="text-xs text-[#0a66c2] hover:underline"
+                  >
+                    {showAllComments ? 'Show less' : `See ${step.networkComments.length - 1} more comments`}
+                  </button>
+                )}
               </h4>
               
               <div className="space-y-3 ml-2">
-                {step.networkComments.map((comment) => (
+                {/* Always show the first comment */}
+                {step.networkComments.length > 0 && (
+                  <div 
+                    key={step.networkComments[0].id} 
+                    className={`p-2 rounded ${
+                      step.networkComments[0].sentiment === 'positive' ? 'bg-[#f3f9f1] border-l-2 border-green-500' : 
+                      step.networkComments[0].sentiment === 'negative' ? 'bg-[#fff9f9] border-l-2 border-red-500' :
+                      'bg-[#f9f9f9] border-l-2 border-gray-400'
+                    }`}
+                  >
+                    <div className="flex items-start">
+                      <img
+                        src={step.networkComments[0].authorImage}
+                        alt={step.networkComments[0].authorName}
+                        className="h-8 w-8 rounded-full object-cover"
+                      />
+                      <div className="ml-2 flex-1">
+                        <div className="flex items-center">
+                          <h5 className="font-semibold text-xs">{step.networkComments[0].authorName}</h5>
+                          {step.networkComments[0].sentiment === 'positive' && (
+                            <span className="ml-2 text-green-600 text-xs flex items-center">
+                              <FaThumbsUp className="mr-1" size={10} /> Agrees
+                            </span>
+                          )}
+                          {step.networkComments[0].sentiment === 'negative' && (
+                            <span className="ml-2 text-red-600 text-xs flex items-center">
+                              <FaThumbsDown className="mr-1" size={10} /> Disagrees
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-xs text-gray-600">{step.networkComments[0].authorTitle} • {step.networkComments[0].authorCompany}</p>
+                        <p className="text-xs mt-1">{step.networkComments[0].content}</p>
+                        <div className="flex items-center text-xs text-gray-500 mt-1">
+                          <span>{step.networkComments[0].postedTime}</span>
+                          <span className="ml-2"><FaThumbsUp className="inline mr-1" size={10} /> {step.networkComments[0].likes}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
+                {/* Show additional comments only if expanded */}
+                {showAllComments && step.networkComments.slice(1).map((comment) => (
                   <div 
                     key={comment.id} 
                     className={`p-2 rounded ${
