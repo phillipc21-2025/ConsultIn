@@ -93,36 +93,63 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Validate request body
       const validatedBody = businessProblemSchema.parse(req.body);
       
-      // Get all existing business problems to check if we have a solution for this problem
-      const userId = validatedBody.userId;
-      const existingProblems = await storage.getBusinessProblemsByUserId(userId);
+      // Get ALL existing business problems from everyone
+      // This ensures we search the seed data too, not just the user's problems
+      const allProblems = await Promise.all([
+        // Get user's own problems
+        storage.getBusinessProblemsByUserId(validatedBody.userId),
+        // Get problems for user 1 (seed data user)
+        storage.getBusinessProblemsByUserId(1)
+      ]).then(results => results.flat());
+      
+      // For easier console logging
+      console.log("Available seed questions:");
+      allProblems.forEach(p => {
+        if (p.solution) {
+          console.log(`- ${p.problem.substring(0, 50)}...`);
+        }
+      });
       
       // Find a business problem with a similar text
       const userInput = validatedBody.problem.toLowerCase().trim();
-      const exactMatches = [
-        'tap-room foot-traffic',
-        'subscription',
-        'energy usage',
-        'tiktok',
-        'grocery stores',
-        'loyalty program',
-        'analytics stack',
-        'keg loss',
-        'beer garden',
-        'beer-quality consistency',
-        'BJCP'
-      ];
       
-      // Check if input contains any of the exact match phrases
-      const matchingProblem = existingProblems.find(problem => {
-        // Try to find an exact match from our keyword list
-        return exactMatches.some(match => 
-          userInput.includes(match) && problem.problem.toLowerCase().includes(match)
-        );
-      });
+      // Keywords that identify specific questions
+      const exactMatches = {
+        'tap-room foot-traffic': ['tap-room', 'foot-traffic', 'taproom', 'foot traffic'],
+        'subscription': ['subscription', 'brewer\'s box', 'brewers box'],
+        'energy usage': ['energy', 'cost-effective'],
+        'tiktok': ['tiktok', 'merchandise', 'holiday'],
+        'grocery stores': ['grocery', 'stores', 'flagship', 'ipa'],
+        'loyalty program': ['loyalty', 'repeat purchases'],
+        'analytics stack': ['analytics', 'dashboard', 'pos'],
+        'keg loss': ['keg', 'tracking'],
+        'beer garden': ['beer garden', 'pop-up', 'summer'],
+        'beer-quality consistency': ['beer-quality', 'beer quality', 'consistency', 'bjcp', 'scoresheets']
+      };
       
+      // Find matching problem with solution
+      let matchingProblem = null;
+      
+      // Check for exact matches first
+      for (const [key, synonyms] of Object.entries(exactMatches)) {
+        if (synonyms.some(term => userInput.includes(term))) {
+          // Find a problem that contains the key phrase and has a solution
+          const match = allProblems.find(p => 
+            p.solution && 
+            p.problem.toLowerCase().includes(key)
+          );
+          
+          if (match) {
+            matchingProblem = match;
+            console.log(`Found exact match for '${key}' in problem: ${match.problem.substring(0, 50)}...`);
+            break;
+          }
+        }
+      }
+      
+      // If we found a match with a solution, return it
       if (matchingProblem && matchingProblem.solution) {
-        console.log("Found matching problem, returning existing solution");
+        console.log("Returning existing solution from seed data");
         return res.json(matchingProblem.solution);
       }
       
