@@ -26,7 +26,10 @@ import {
   FaEnvelope,
   FaClipboard,
   FaCreditCard,
-  FaSpinner
+  FaSpinner,
+  FaCheckCircle,
+  FaTimesCircle,
+  FaQuestion
 } from "react-icons/fa";
 import AgentMarketplace from "./AgentMarketplace";
 import { Card } from "@/components/ui/card";
@@ -93,6 +96,13 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
   const [agentExecutionMessage, setAgentExecutionMessage] = useState("");
   const [isAgentExecuting, setIsAgentExecuting] = useState(false);
   const [agentTaskComplete, setAgentTaskComplete] = useState(false);
+  
+  // State for step completion
+  const [isStepCompleted, setIsStepCompleted] = useState(false);
+  
+  // State for confirmation dialog
+  const [showConfirmationDialog, setShowConfirmationDialog] = useState(false);
+  const [confirmationAction, setConfirmationAction] = useState<string>("");
   
   // Determine which resource tabs to show
   const tabs = [];
@@ -170,28 +180,90 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
         setAgentExecutionProgress(100);
         setAgentExecutionMessage(generateRobotSpeak(6));
         
-        // After showing completion message, show the ConsultIn action
+        // After showing completion message, show the ConsultIn action and confirmation dialog
         setTimeout(() => {
           setIsAgentExecuting(false);
           setAgentTaskComplete(true);
           setIsConsultInThinking(false);
           setShowConsultInAction(true);
+          
+          // Show confirmation dialog after a short delay
+          setTimeout(() => {
+            showActionConfirmation("agent_completed");
+          }, 500);
         }, 2000);
       }
     }, 800); // Update every 800ms for about 5 seconds total
   };
 
+  // Handle showing confirmation dialog after an action 
+  const showActionConfirmation = (actionType: string) => {
+    setConfirmationAction(actionType);
+    setShowConfirmationDialog(true);
+  };
+  
+  // Handle dialog confirmation
+  const handleConfirmAction = (confirmed: boolean) => {
+    setShowConfirmationDialog(false);
+    
+    if (confirmed) {
+      // Mark step as completed
+      setIsStepCompleted(true);
+    }
+  };
+
   return (
     <div className="mb-4 border border-[#e0e0e0] rounded-lg overflow-hidden bg-white">
+      {/* Confirmation Dialog */}
+      <Dialog open={showConfirmationDialog} onOpenChange={() => setShowConfirmationDialog(false)}>
+        <DialogContent className="max-w-sm mx-auto">
+          <DialogHeader>
+            <DialogTitle className="text-center flex flex-col items-center">
+              <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center mb-2">
+                <FaQuestion className="text-blue-600 text-lg" />
+              </div>
+              Did this solve the step?
+            </DialogTitle>
+            <DialogDescription className="text-center pt-2">
+              Has the "{step.title}" step been completed successfully?
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-center gap-3 pt-4">
+            <Button 
+              variant="outline" 
+              className="border-red-200 text-red-600 hover:bg-red-50 hover:text-red-700"
+              onClick={() => handleConfirmAction(false)}
+            >
+              <FaTimesCircle className="mr-2" /> No
+            </Button>
+            <Button 
+              className="bg-green-600 hover:bg-green-700 text-white"
+              onClick={() => handleConfirmAction(true)}
+            >
+              <FaCheckCircle className="mr-2" /> Yes
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+      
+      {/* Step Header */}
       <div 
-        className={`p-4 flex items-center ${isOpen ? 'border-b border-[#e0e0e0]' : ''} cursor-pointer hover:bg-[#f3f2ef]`}
+        className={`p-4 flex items-center ${isOpen ? 'border-b border-[#e0e0e0]' : ''} 
+          ${isStepCompleted ? 'bg-green-50' : 'hover:bg-[#f3f2ef]'} cursor-pointer`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="h-8 w-8 rounded-full bg-[#0a66c2] text-white flex items-center justify-center font-semibold flex-shrink-0">
-          {index + 1}
+        <div className={`h-8 w-8 rounded-full ${isStepCompleted ? 'bg-green-600' : 'bg-[#0a66c2]'} 
+          text-white flex items-center justify-center font-semibold flex-shrink-0`}
+        >
+          {isStepCompleted ? <FaCheck className="text-sm" /> : index + 1}
         </div>
         <div className="ml-3 flex-1">
           <h3 className="font-semibold">{step.title}</h3>
+          {isStepCompleted && (
+            <span className="text-xs text-green-700 flex items-center">
+              <FaCheckCircle className="mr-1" size={10} /> Completed
+            </span>
+          )}
         </div>
         <div className="text-[#0a66c2]">
           {isOpen ? <FaAngleUp /> : <FaAngleDown />}
@@ -570,10 +642,26 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
                           </div>
                           
                           <div className="flex justify-end">
-                            <Button variant="outline" size="sm" className="mr-2">
+                            <Button 
+                              variant="outline" 
+                              size="sm" 
+                              className="mr-2"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                // Copy email content to clipboard here
+                                showActionConfirmation("email_copy");
+                              }}
+                            >
                               <FaClipboard className="mr-1" /> Copy
                             </Button>
-                            <Button size="sm">
+                            <Button 
+                              size="sm"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                // Open email client here
+                                showActionConfirmation("email_send");
+                              }}
+                            >
                               <FaPaperPlane className="mr-1" /> Send via Email Client
                             </Button>
                           </div>
@@ -665,10 +753,25 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
                           </div>
                           
                           <div className="flex justify-end mt-3">
-                            <Button variant="outline" size="sm" className="mr-2">
+                            <Button 
+                              variant="outline" 
+                              size="sm" 
+                              className="mr-2"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                // Reset form here
+                              }}
+                            >
                               Reset
                             </Button>
-                            <Button size="sm">
+                            <Button 
+                              size="sm"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                // Submit form here
+                                showActionConfirmation("form_submit");
+                              }}
+                            >
                               Submit Form
                             </Button>
                           </div>
@@ -702,7 +805,16 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
                                     {product.price && (
                                       <span className="font-bold text-sm text-[#0a66c2]">{product.price}</span>
                                     )}
-                                    <Button size="sm" variant="outline" className="text-xs">
+                                    <Button 
+                                      size="sm" 
+                                      variant="outline" 
+                                      className="text-xs"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        // View product details here
+                                        showActionConfirmation("product_view");
+                                      }}
+                                    >
                                       Learn More
                                     </Button>
                                   </div>
