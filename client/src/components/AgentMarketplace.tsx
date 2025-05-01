@@ -113,7 +113,7 @@ const AgentMarketplace = ({ isOpen, onClose, onInstallAgent }: AgentMarketplaceP
   
   // Filter agents by category and search query
   const filteredAgents = mockAgents.filter(agent => {
-    const matchesCategory = !selectedCategory || agent.category === selectedCategory;
+    const matchesCategory = !selectedCategory || selectedCategory === 'all' || agent.category === selectedCategory;
     const matchesSearch = !searchQuery || 
       agent.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
       agent.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -162,12 +162,12 @@ const AgentMarketplace = ({ isOpen, onClose, onInstallAgent }: AgentMarketplaceP
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
-            <Select value={selectedCategory || ''} onValueChange={(val) => setSelectedCategory(val || null)}>
+            <Select value={selectedCategory || 'all'} onValueChange={(val) => setSelectedCategory(val)}>
               <SelectTrigger className="w-full sm:w-[180px]">
                 <SelectValue placeholder="All Categories" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Categories</SelectItem>
+                <SelectItem value="all">All Categories</SelectItem>
                 {categories.map((category) => (
                   <SelectItem key={category} value={category}>{category}</SelectItem>
                 ))}
