@@ -134,111 +134,273 @@ export const generateNetworkComments = (): NetworkComment[] => {
 
 // Generate ConsultIn actions for process steps
 export const generateConsultInAction = (stepTitle: string, stepDescription: string): ConsultInAction => {
-  // Randomly choose an action type, with bias toward email
-  const randomNum = Math.random();
-  if (randomNum < 0.5) {
-    // Email action (50% chance)
-    const emailSubjects = [
-      `Help with: ${stepTitle} for my brewery`,
-      `Seeking guidance on ${stepTitle}`,
-      `Need assistance with ${stepTitle} for our small brewery`,
-      `Brewery consultant needed for ${stepTitle}`
-    ];
-    
-    const emailBodies = [
-      `Dear [Brewery Consultant],\n\nI own a small craft brewery and I need help with ${stepTitle}. We're trying to ${stepDescription.toLowerCase()}\n\nOur brewery produces about 1,000 barrels annually with 5 year-round beers and 4 seasonals. We have a small taproom and distribute to local restaurants and stores.\n\nCould you provide some guidance on how we should approach this issue given our size?\n\nThanks for your help,\n[Your Name]\n[Your Brewery]`,
-      
-      `Dear [Brewing Association],\n\nI'm reaching out about ${stepTitle} for our small brewery. We need to ${stepDescription.toLowerCase()}\n\nDo you have any resources specifically for small breweries like ours? Or could you connect me with other brewery owners who have successfully addressed this challenge?\n\nWe've been operating for 3 years and are looking to grow sustainably.\n\nThanks in advance,\n[Your Name]\n[Your Brewery]`,
-      
-      `Hello [Fellow Brewer],\n\nI hope your brewing operations are going well. I'm trying to figure out how to ${stepDescription.toLowerCase()} at our brewery.\n\nWe're facing challenges with ${stepTitle.toLowerCase()} and I'd appreciate any insights from your experience. Would you be open to a quick call or brewery visit to discuss how you've handled this?\n\nI'm happy to share some of our seasonal releases as thanks!\n\nCheers,\n[Your Name]\n[Your Brewery]`
-    ];
-    
-    return {
-      type: 'email',
-      recipient: "[Brewery Consultant]",
-      subject: emailSubjects[Math.floor(Math.random() * emailSubjects.length)],
-      body: emailBodies[Math.floor(Math.random() * emailBodies.length)],
-      ccList: ["[Head Brewer]", "[Taproom Manager]"]
-    };
-  } else if (randomNum < 0.8) {
-    // Form action (30% chance)
-    const formTitles = [
-      `${stepTitle} Planning Form`,
-      `Brewery ${stepTitle} Assessment`,
-      `${stepTitle} Implementation Request`,
-      `Brewery ${stepTitle} Consultation Request`
-    ];
+  // Special case for permit-related steps
+  if (stepTitle.toLowerCase().includes("permit") || 
+      stepDescription.toLowerCase().includes("permit") ||
+      stepTitle.toLowerCase().includes("licens") || 
+      stepDescription.toLowerCase().includes("licens") ||
+      stepTitle.toLowerCase().includes("legal") || 
+      stepDescription.toLowerCase().includes("legal") ||
+      stepTitle.toLowerCase().includes("regulat") || 
+      stepDescription.toLowerCase().includes("regulat")) {
     
     return {
       type: 'form',
-      formTitle: formTitles[Math.floor(Math.random() * formTitles.length)],
+      formTitle: "Local Brewery Permit Application Assistant",
       formFields: [
         {
-          label: "Brewery Name",
-          type: "text",
-          required: true
-        },
-        {
-          label: "Annual Production (in barrels)",
-          type: "number",
-          required: true
-        },
-        {
-          label: "Number of Year-Round Beers",
-          type: "number",
-          required: true
-        },
-        {
-          label: "Describe your current approach to this challenge",
+          label: "Brewery Legal Business Name",
           type: "text",
           required: true,
-          value: `We're trying to ${stepDescription.toLowerCase()} but facing difficulties with...`
         },
         {
-          label: "Distribution Methods",
+          label: "Business Address",
+          type: "text",
+          required: true,
+        },
+        {
+          label: "Business Owner Name",
+          type: "text",
+          required: true,
+        },
+        {
+          label: "Contact Email",
+          type: "text",
+          required: true,
+        },
+        {
+          label: "Contact Phone",
+          type: "text",
+          required: true,
+        },
+        {
+          label: "Federal Employer Identification Number (EIN)",
+          type: "text",
+          required: true,
+        },
+        {
+          label: "Tax ID Number",
+          type: "text",
+          required: true,
+        },
+        {
+          label: "Type of Permit",
           type: "select",
-          options: ["Self-distribution only", "Local distributor", "Regional distributor", "Taproom sales only"],
-          required: true
+          options: [
+            "Alcohol Beverage License", 
+            "Live Music/Entertainment Permit", 
+            "Food Service Permit", 
+            "Outdoor Seating Permit",
+            "Special Event Permit",
+            "Brewery Manufacturing License"
+          ],
+          required: true,
         },
         {
-          label: "I agree to share non-confidential information about my brewery",
+          label: "Permit Purpose",
+          type: "text",
+          required: true,
+          value: stepDescription
+        },
+        {
+          label: "Expected Start Date",
+          type: "date",
+          required: true,
+        },
+        {
+          label: "I certify that all information is true and accurate",
           type: "checkbox",
-          required: true
+          required: true,
         }
       ],
-      submissionEndpoint: "/api/form-submission"
+      submissionEndpoint: "/api/permit-submission"
     };
-  } else {
-    // Product action (20% chance)
+  }
+  
+  // Special case for payment systems
+  else if (stepTitle.toLowerCase().includes("payment") || 
+      stepDescription.toLowerCase().includes("payment") ||
+      stepTitle.toLowerCase().includes("square") || 
+      stepDescription.toLowerCase().includes("square") ||
+      stepTitle.toLowerCase().includes("transaction") || 
+      stepDescription.toLowerCase().includes("transaction")) {
+    
     return {
       type: 'product',
       products: [
         {
           id: 1,
-          name: `Brewery ${stepTitle} Guide`,
-          description: `A comprehensive guide specifically for small breweries on how to ${stepDescription.toLowerCase()}. Includes case studies from breweries of similar size.`,
-          price: "$149",
+          name: "BrewPay POS System",
+          description: "Complete point-of-sale system designed specifically for craft breweries. Handles tabs, flight boards, and integrates with inventory management. Compatible with existing hardware.",
+          price: "$49/month",
           url: "#",
           imageUrl: "https://randomuser.me/api/portraits/lego/1.jpg"
         },
         {
           id: 2,
-          name: `${stepTitle} Consultation Package`,
-          description: `Four hours of expert consultation for your brewery team, focusing specifically on how to ${stepDescription.toLowerCase()}. Includes follow-up support.`,
-          price: "$599",
+          name: "TapRoom Transactions Pro",
+          description: "Mobile payment system that works offline during internet outages. Includes QR code ordering for tables and contactless payment options. Seamlessly syncs when connection is restored.",
+          price: "$65/month",
           url: "#",
-          imageUrl: "https://randomuser.me/api/portraits/lego/2.jpg"
+          imageUrl: "https://randomuser.me/api/portraits/lego/2.jpg" 
         },
         {
           id: 3,
-          name: `Small Brewery ${stepTitle} Software`,
-          description: `Software designed specifically for craft breweries to help manage and optimize ${stepTitle.toLowerCase()}. Includes mobile app for your brewing team.`,
-          price: "$29/month",
+          name: "Payment System Migration Service",
+          description: "Our team will handle the entire transition from your current payment system to a new one. Includes data transfer, staff training, and weekend support during the transition.",
+          price: "$599 one-time",
           url: "#",
           imageUrl: "https://randomuser.me/api/portraits/lego/3.jpg"
         }
       ]
     };
+  }
+  
+  // Special case for customer insights and marketing analytics
+  else if ((stepTitle.toLowerCase().includes("customer") && stepTitle.toLowerCase().includes("insight")) || 
+      (stepDescription.toLowerCase().includes("customer") && stepDescription.toLowerCase().includes("insight")) ||
+      (stepTitle.toLowerCase().includes("who") && stepTitle.toLowerCase().includes("likes")) || 
+      (stepDescription.toLowerCase().includes("who") && stepDescription.toLowerCase().includes("likes"))) {
+    
+    return {
+      type: 'product',
+      products: [
+        {
+          id: 1,
+          name: "BrewFan Insight Tool",
+          description: "Customer analytics platform designed for small breweries. Analyzes taproom data, online reviews, and social media mentions to create customer profiles and preference patterns.",
+          price: "$39/month",
+          url: "#",
+          imageUrl: "https://randomuser.me/api/portraits/lego/4.jpg"
+        },
+        {
+          id: 2,
+          name: "Beer Preference Survey Kit",
+          description: "Ready-to-use digital and printable survey templates to gather customer feedback. Includes QR codes for your taproom tables and analysis dashboard.",
+          price: "$149 one-time",
+          url: "#",
+          imageUrl: "https://randomuser.me/api/portraits/lego/5.jpg"
+        },
+        {
+          id: 3,
+          name: "Craft Beer Customer Research Report",
+          description: "Comprehensive market research report on craft beer consumer demographics, preferences, and trends in your region, based on surveys of over 5,000 craft beer drinkers.",
+          price: "$299 one-time",
+          url: "#",
+          imageUrl: "https://randomuser.me/api/portraits/lego/6.jpg"
+        }
+      ]
+    };
+  }
+  
+  // Regular random choice for other types
+  else {
+    // Randomly choose an action type, with bias toward email
+    const randomNum = Math.random();
+    if (randomNum < 0.5) {
+      // Email action (50% chance)
+      const emailSubjects = [
+        `Help with: ${stepTitle} for my brewery`,
+        `Seeking guidance on ${stepTitle}`,
+        `Need assistance with ${stepTitle} for our small brewery`,
+        `Brewery consultant needed for ${stepTitle}`
+      ];
+      
+      const emailBodies = [
+        `Dear [Brewery Consultant],\n\nI own a small craft brewery and I need help with ${stepTitle}. We're trying to ${stepDescription.toLowerCase()}\n\nOur brewery produces about 1,000 barrels annually with 5 year-round beers and 4 seasonals. We have a small taproom and distribute to local restaurants and stores.\n\nCould you provide some guidance on how we should approach this issue given our size?\n\nThanks for your help,\n[Your Name]\n[Your Brewery]`,
+        
+        `Dear [Brewing Association],\n\nI'm reaching out about ${stepTitle} for our small brewery. We need to ${stepDescription.toLowerCase()}\n\nDo you have any resources specifically for small breweries like ours? Or could you connect me with other brewery owners who have successfully addressed this challenge?\n\nWe've been operating for 3 years and are looking to grow sustainably.\n\nThanks in advance,\n[Your Name]\n[Your Brewery]`,
+        
+        `Hello [Fellow Brewer],\n\nI hope your brewing operations are going well. I'm trying to figure out how to ${stepDescription.toLowerCase()} at our brewery.\n\nWe're facing challenges with ${stepTitle.toLowerCase()} and I'd appreciate any insights from your experience. Would you be open to a quick call or brewery visit to discuss how you've handled this?\n\nI'm happy to share some of our seasonal releases as thanks!\n\nCheers,\n[Your Name]\n[Your Brewery]`
+      ];
+      
+      return {
+        type: 'email',
+        recipient: "[Brewery Consultant]",
+        subject: emailSubjects[Math.floor(Math.random() * emailSubjects.length)],
+        body: emailBodies[Math.floor(Math.random() * emailBodies.length)],
+        ccList: ["[Head Brewer]", "[Taproom Manager]"]
+      };
+    } else if (randomNum < 0.8) {
+      // Form action (30% chance)
+      const formTitles = [
+        `${stepTitle} Planning Form`,
+        `Brewery ${stepTitle} Assessment`,
+        `${stepTitle} Implementation Request`,
+        `Brewery ${stepTitle} Consultation Request`
+      ];
+      
+      return {
+        type: 'form',
+        formTitle: formTitles[Math.floor(Math.random() * formTitles.length)],
+        formFields: [
+          {
+            label: "Brewery Name",
+            type: "text",
+            required: true
+          },
+          {
+            label: "Annual Production (in barrels)",
+            type: "number",
+            required: true
+          },
+          {
+            label: "Number of Year-Round Beers",
+            type: "number",
+            required: true
+          },
+          {
+            label: "Describe your current approach to this challenge",
+            type: "text",
+            required: true,
+            value: `We're trying to ${stepDescription.toLowerCase()} but facing difficulties with...`
+          },
+          {
+            label: "Distribution Methods",
+            type: "select",
+            options: ["Self-distribution only", "Local distributor", "Regional distributor", "Taproom sales only"],
+            required: true
+          },
+          {
+            label: "I agree to share non-confidential information about my brewery",
+            type: "checkbox",
+            required: true
+          }
+        ],
+        submissionEndpoint: "/api/form-submission"
+      };
+    } else {
+      // Product action (20% chance)
+      return {
+        type: 'product',
+        products: [
+          {
+            id: 1,
+            name: `Brewery ${stepTitle} Guide`,
+            description: `A comprehensive guide specifically for small breweries on how to ${stepDescription.toLowerCase()}. Includes case studies from breweries of similar size.`,
+            price: "$149",
+            url: "#",
+            imageUrl: "https://randomuser.me/api/portraits/lego/1.jpg"
+          },
+          {
+            id: 2,
+            name: `${stepTitle} Consultation Package`,
+            description: `Four hours of expert consultation for your brewery team, focusing specifically on how to ${stepDescription.toLowerCase()}. Includes follow-up support.`,
+            price: "$599",
+            url: "#",
+            imageUrl: "https://randomuser.me/api/portraits/lego/2.jpg"
+          },
+          {
+            id: 3,
+            name: `Small Brewery ${stepTitle} Software`,
+            description: `Software designed specifically for craft breweries to help manage and optimize ${stepTitle.toLowerCase()}. Includes mobile app for your brewing team.`,
+            price: "$29/month",
+            url: "#",
+            imageUrl: "https://randomuser.me/api/portraits/lego/3.jpg"
+          }
+        ]
+      };
+    }
   }
 };
 

@@ -62,6 +62,48 @@ const ProblemInput = ({ onSubmit, isLoading }: ProblemInputProps) => {
           >
             Brewery marketing
           </div>
+          <div 
+            className="text-xs py-1 px-3 bg-[#f3f2ef] text-[#666666] rounded-full cursor-pointer hover:bg-[#e3e2df]"
+            onClick={() => setProblem("How can I figure out who likes my beer and target my marketing to them?")}
+          >
+            Customer insights
+          </div>
+          <div 
+            className="text-xs py-1 px-3 bg-[#f3f2ef] text-[#666666] rounded-full cursor-pointer hover:bg-[#e3e2df]"
+            onClick={() => setProblem("Square payments is not working for my taproom, what are the best alternatives for small breweries?")}
+          >
+            Payment systems
+          </div>
+          <div 
+            className="text-xs py-1 px-3 bg-[#f3f2ef] text-[#666666] rounded-full cursor-pointer hover:bg-[#e3e2df]"
+            onClick={() => setProblem("What permits do I need to start hosting live music events at my brewery?")}
+          >
+            Event permits
+          </div>
+          <div 
+            className="text-xs py-1 px-3 bg-[#f3f2ef] text-[#666666] rounded-full cursor-pointer hover:bg-[#e3e2df]"
+            onClick={() => setProblem("How can I reduce water usage in my brewing process to be more sustainable?")}
+          >
+            Sustainability
+          </div>
+          <div 
+            className="text-xs py-1 px-3 bg-[#f3f2ef] text-[#666666] rounded-full cursor-pointer hover:bg-[#e3e2df]"
+            onClick={() => setProblem("What's the best way to price our small-batch specialty beers?")}
+          >
+            Pricing strategy
+          </div>
+          <div 
+            className="text-xs py-1 px-3 bg-[#f3f2ef] text-[#666666] rounded-full cursor-pointer hover:bg-[#e3e2df]"
+            onClick={() => setProblem("I'm considering adding a small food menu to our taproom. What are simple options that won't require a full kitchen?")}
+          >
+            Food options
+          </div>
+          <div 
+            className="text-xs py-1 px-3 bg-[#f3f2ef] text-[#666666] rounded-full cursor-pointer hover:bg-[#e3e2df]"
+            onClick={() => setProblem("How can I collaborate with local restaurants to get my beer on more menus?")}
+          >
+            Restaurant partnerships
+          </div>
         </div>
         
         <div className="mb-4">

@@ -30,73 +30,117 @@ import {
   SelectValue 
 } from "@/components/ui/select";
 
-// Mock AI agents for marketplace
+// Brewery-specific AI agents for marketplace
 const mockAgents = [
   {
     id: 1,
-    name: "Supply Chain Optimizer",
-    icon: <FaShippingFast className="text-blue-500" size={24} />,
-    description: "AI-powered assistant that analyzes your supply chain and recommends optimization strategies.",
-    category: "Supply Chain",
+    name: "Brewery Hop Supplier Finder",
+    icon: <FaShippingFast className="text-green-600" size={24} />,
+    description: "Locates reliable specialty hop suppliers for seasonal and flagship craft beers. Includes lead time analysis and backup supplier recommendations.",
+    category: "Brewery Supply Chain",
     rating: 4.8,
     reviews: 124,
-    creator: "LinkedIn Business Solutions",
-    actions: ["analyze", "optimize", "report"]
+    creator: "BreweryLink Solutions",
+    actions: ["find suppliers", "compare prices", "analyze reliability"]
   },
   {
     id: 2,
-    name: "Email Composer Pro",
-    icon: <FaEnvelope className="text-green-500" size={24} />,
-    description: "Creates professional business emails with perfect tone and formatting for any business need.",
-    category: "Communication",
+    name: "Brewery Staff Scheduler",
+    icon: <FaClipboard className="text-blue-500" size={24} />,
+    description: "AI-powered brewery staffing tool that creates optimized schedules for taproom, brewing, and packaging staff based on production needs and peak hours.",
+    category: "Brewery Staffing",
     rating: 4.7,
-    reviews: 356,
-    creator: "ProWrite AI",
-    actions: ["draft", "edit", "schedule"]
+    reviews: 232,
+    creator: "BrewStaff Pro",
+    actions: ["create schedules", "analyze staff needs", "optimize shifts"]
   },
   {
     id: 3,
-    name: "Form Builder AI",
-    icon: <FaClipboard className="text-purple-500" size={24} />,
-    description: "Generate custom forms for data collection, surveys, and business processes with smart validation.",
-    category: "Process Automation",
-    rating: 4.6,
-    reviews: 89,
-    creator: "FormForge Technologies",
-    actions: ["create", "validate", "analyze"]
+    name: "Local Permit Application Helper",
+    icon: <FaClipboard className="text-purple-600" size={24} />,
+    description: "Automatically fills brewery permit applications for your city/county and submits directly to local permitting offices. Handles live music, food service, and special events.",
+    category: "Brewery Permits",
+    rating: 4.9,
+    reviews: 178,
+    creator: "BrewPermit Technologies",
+    actions: ["fill forms", "submit applications", "track status"]
   },
   {
     id: 4,
-    name: "Market Analyst",
-    icon: <FaChartBar className="text-orange-500" size={24} />,
-    description: "Real-time market analysis and competitor insights for strategic business decisions.",
-    category: "Business Intelligence",
-    rating: 4.9,
-    reviews: 212,
-    creator: "DataSense AI",
-    actions: ["research", "compare", "visualize"]
+    name: "Craft Beer Customer Analyzer",
+    icon: <FaChartBar className="text-amber-600" size={24} />,
+    description: "Identifies who likes your beer by analyzing taproom data, social media mentions, and local check-ins. Creates detailed customer profiles for targeted marketing.",
+    category: "Brewery Marketing",
+    rating: 4.8,
+    reviews: 159,
+    creator: "CraftAnalytics",
+    actions: ["analyze preferences", "identify demographics", "create profiles"]
   },
   {
     id: 5,
-    name: "Inventory Manager",
+    name: "Brewery Inventory Manager",
     icon: <FaDatabase className="text-red-500" size={24} />,
-    description: "Optimize inventory levels, predict stock needs, and prevent overstock or stockouts.",
-    category: "Supply Chain",
-    rating: 4.5,
-    reviews: 78,
-    creator: "SupplyAI Solutions",
-    actions: ["track", "forecast", "optimize"]
+    description: "Specialized inventory system for small breweries. Tracks ingredients, packaging materials, and finished product with minimal tech requirements.",
+    category: "Brewery Operations",
+    rating: 4.6,
+    reviews: 144,
+    creator: "BrewStock Solutions",
+    actions: ["track inventory", "send alerts", "optimize ordering"]
   },
   {
     id: 6,
-    name: "Product Recommender",
-    icon: <FaShoppingCart className="text-indigo-500" size={24} />,
-    description: "Recommend the perfect products and services for specific business needs and constraints.",
-    category: "Sales",
+    name: "Brewery Payment Provider",
+    icon: <FaShoppingCart className="text-blue-700" size={24} />,
+    description: "Alternative payment processing system for brewery taprooms. Specializes in handling tabs, tipping, and flight boards with lower fees than Square.",
+    category: "Brewery Payments",
     rating: 4.7,
     reviews: 156,
-    creator: "RecoSystems Inc.",
-    actions: ["analyze", "recommend", "compare"]
+    creator: "TapTab Financial",
+    actions: ["process payments", "handle tabs", "manage tipping"]
+  },
+  {
+    id: 7,
+    name: "Water Usage Optimizer",
+    icon: <FaDatabase className="text-cyan-500" size={24} />,
+    description: "Analyzes your brewery's water consumption and recommends equipment upgrades and process changes to reduce usage and improve sustainability.",
+    category: "Brewery Sustainability",
+    rating: 4.8,
+    reviews: 98,
+    creator: "BrewGreen Technologies",
+    actions: ["analyze usage", "optimize processes", "calculate savings"]
+  },
+  {
+    id: 8,
+    name: "Craft Beer Pricing Advisor",
+    icon: <FaChartBar className="text-emerald-600" size={24} />,
+    description: "Specialized pricing tool for small-batch and specialty craft beers. Factors in ingredient costs, local market rates, and perceived value.",
+    category: "Brewery Finance",
+    rating: 4.7,
+    reviews: 112,
+    creator: "CraftValue Analytics",
+    actions: ["analyze costs", "recommend prices", "model profit margins"]
+  },
+  {
+    id: 9,
+    name: "Brewery Food Menu Builder",
+    icon: <FaClipboard className="text-yellow-700" size={24} />,
+    description: "Creates simple food menus for taprooms without full kitchens. Includes food truck scheduling, local partnerships, and small-plate options.",
+    category: "Brewery Food Service",
+    rating: 4.5,
+    reviews: 87,
+    creator: "BrewBites Solutions",
+    actions: ["create menus", "find partnerships", "manage scheduling"]
+  },
+  {
+    id: 10,
+    name: "Local Restaurant Partnership Agent",
+    icon: <FaEnvelope className="text-orange-600" size={24} />,
+    description: "Helps craft breweries get their beer on more local restaurant menus by creating personalized pitches, handling follow-ups, and managing relationships.",
+    category: "Brewery Distribution",
+    rating: 4.9,
+    reviews: 142,
+    creator: "CraftConnect Network",
+    actions: ["create pitches", "schedule follow-ups", "track placements"]
   }
 ];
 
@@ -140,10 +184,10 @@ const AgentMarketplace = ({ isOpen, onClose, onInstallAgent }: AgentMarketplaceP
         <DialogHeader>
           <DialogTitle className="flex items-center">
             <FaRobot className="text-[#0a66c2] mr-2" />
-            <span>ConsultIn Agent Marketplace</span>
+            <span>Brewery Solutions Marketplace</span>
           </DialogTitle>
           <DialogDescription>
-            Browse and install AI agents to help you complete this step. Agents work alongside ConsultIn to provide specialized capabilities.
+            Browse and install specialized brewery AI tools to help you solve this challenge. These agents work alongside ConsultIn to provide brewery-specific capabilities.
           </DialogDescription>
         </DialogHeader>
         
