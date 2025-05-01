@@ -93,6 +93,40 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Validate request body
       const validatedBody = businessProblemSchema.parse(req.body);
       
+      // Get all existing business problems to check if we have a solution for this problem
+      const userId = validatedBody.userId;
+      const existingProblems = await storage.getBusinessProblemsByUserId(userId);
+      
+      // Find a business problem with a similar text
+      const userInput = validatedBody.problem.toLowerCase().trim();
+      const exactMatches = [
+        'tap-room foot-traffic',
+        'subscription',
+        'energy usage',
+        'tiktok',
+        'grocery stores',
+        'loyalty program',
+        'analytics stack',
+        'keg loss',
+        'beer garden',
+        'beer-quality consistency',
+        'BJCP'
+      ];
+      
+      // Check if input contains any of the exact match phrases
+      const matchingProblem = existingProblems.find(problem => {
+        // Try to find an exact match from our keyword list
+        return exactMatches.some(match => 
+          userInput.includes(match) && problem.problem.toLowerCase().includes(match)
+        );
+      });
+      
+      if (matchingProblem && matchingProblem.solution) {
+        console.log("Found matching problem, returning existing solution");
+        return res.json(matchingProblem.solution);
+      }
+      
+      // If no matching problem found, create a new one
       // Create a new business problem
       const newBusinessProblem = await storage.createBusinessProblem({
         userId: validatedBody.userId,
