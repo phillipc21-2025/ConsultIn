@@ -28,22 +28,18 @@ export interface IStorage {
   // Conversation operations
   getConversations(): Promise<Conversation[]>;
   createConversation(conversation: InsertConversation): Promise<Conversation>;
-  getConversationById(id: number): Promise<Conversation | undefined>;
   
   // Talent operations
   getTalents(): Promise<Talent[]>;
   createTalent(talent: InsertTalent): Promise<Talent>;
-  getTalentById(id: number): Promise<Talent | undefined>;
   
   // Training operations
   getTrainings(): Promise<Training[]>;
   createTraining(training: InsertTraining): Promise<Training>;
-  getTrainingById(id: number): Promise<Training | undefined>;
   
   // Service operations
   getServices(): Promise<Service[]>;
   createService(service: InsertService): Promise<Service>;
-  getServiceById(id: number): Promise<Service | undefined>;
 }
 
 export class MemStorage implements IStorage {
@@ -155,10 +151,6 @@ export class MemStorage implements IStorage {
     return conversation;
   }
   
-  async getConversationById(id: number): Promise<Conversation | undefined> {
-    return this.conversations.get(id);
-  }
-  
   // Talent operations
   async getTalents(): Promise<Talent[]> {
     return Array.from(this.talents.values());
@@ -169,10 +161,6 @@ export class MemStorage implements IStorage {
     const talent: Talent = { ...insertTalent, id };
     this.talents.set(id, talent);
     return talent;
-  }
-  
-  async getTalentById(id: number): Promise<Talent | undefined> {
-    return this.talents.get(id);
   }
   
   // Training operations
@@ -187,10 +175,6 @@ export class MemStorage implements IStorage {
     return training;
   }
   
-  async getTrainingById(id: number): Promise<Training | undefined> {
-    return this.trainings.get(id);
-  }
-  
   // Service operations
   async getServices(): Promise<Service[]> {
     return Array.from(this.services.values());
@@ -201,10 +185,6 @@ export class MemStorage implements IStorage {
     const service: Service = { ...insertService, id };
     this.services.set(id, service);
     return service;
-  }
-  
-  async getServiceById(id: number): Promise<Service | undefined> {
-    return this.services.get(id);
   }
   
   // Initialize with sample data
