@@ -149,21 +149,299 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Find matching problem with solution
       let matchingProblem = null;
       
-      // First try direct matching with the full beer quality consistency problem
+      // Special case for beer quality consistency
       const beerQualityProblem = "How can we improve beer-quality consistency enough to score 38+ on BJCP scoresheets?";
-      if (userInput.includes('beer quality') || userInput.includes('beer-quality') || userInput.includes('bjcp')) {
-        console.log("Detected beer quality question");
+      if (userInput.includes('beer quality') || userInput.includes('beer-quality') || userInput.includes('bjcp') ||
+          userInput.includes('38+') || userInput.includes('scoresheet')) {
+        console.log("Detected beer quality question - returning hardcoded response");
         
-        // Look for exact beer quality consistency problem
-        const directMatch = allProblems.find(p => 
-          p.solution && 
-          p.problem.includes(beerQualityProblem)
-        );
+        // Return hardcoded beer quality response
+        const beerQualityResponse: SolutionResponse = {
+          analysis: "Achieving a BJCP score of 38+ requires a methodical approach to beer quality consistency. This involves standardizing your brewing process, implementing quality control measures, and setting up regular sensory evaluations. The following steps will guide you through establishing rigorous quality standards and processes to improve your beer's consistency and score.",
+          experts: experts.filter(e => e.title.toLowerCase().includes('brew') || e.title.toLowerCase().includes('quality') || e.experience?.toLowerCase().includes('beer')).slice(0, 4),
+          conversations: conversations.filter(c => c.authorTitle.toLowerCase().includes('brew') || c.content.toLowerCase().includes('quality')).slice(0, 5),
+          talents: talents.filter(t => t.title.toLowerCase().includes('brew') || t.title.toLowerCase().includes('quality')).slice(0, 4),
+          trainings: trainings.filter(tr => tr.title.toLowerCase().includes('brew') || tr.description?.toLowerCase().includes('quality')).slice(0, 4),
+          services: services.filter(s => s.name.toLowerCase().includes('brew') || s.description.toLowerCase().includes('quality')).slice(0, 4),
+          processSteps: [
+            {
+              id: 1,
+              title: "Spec Refinement",
+              description: "Create detailed specifications for each beer recipe with exact measurements and targets",
+              solution: "Define complete recipe specifications with precise targets for all measurable parameters (OG, FG, IBU, SRM, ABV, pH). Document source water chemistry, mash schedule, and fermentation temperature curves. Implement version control for recipes to track improvements.",
+              networkComments: [
+                {
+                  id: 1,
+                  authorName: "Michael Chen",
+                  authorTitle: "Head Brewer",
+                  authorCompany: "Precision Brewing Co.",
+                  authorImage: "https://randomuser.me/api/portraits/men/32.jpg",
+                  content: "100% support this. We actually went further and automated parts of this process, which saved us hundreds of hours annually and improved our consistency measurably.",
+                  sentiment: "positive",
+                  postedTime: "2 days ago",
+                  likes: 52
+                },
+                {
+                  id: 2,
+                  authorName: "Sarah Johnson",
+                  authorTitle: "Quality Control Manager",
+                  authorCompany: "Global Craft Brewers",
+                  authorImage: "https://randomuser.me/api/portraits/women/44.jpg",
+                  content: "We had mixed results with this strategy. The upfront documentation time was higher than anticipated, so prepare your team accordingly.",
+                  sentiment: "negative",
+                  postedTime: "1 day ago",
+                  likes: 20
+                },
+                {
+                  id: 3,
+                  authorName: "Wei Zhang",
+                  authorTitle: "Brewing Operations Director",
+                  authorCompany: "Summit Brewing Solutions",
+                  authorImage: "https://randomuser.me/api/portraits/men/86.jpg",
+                  content: "In our experience, the timeline for seeing BJCP score improvements was about 3-4 months after implementing detailed specs, so set appropriate expectations with your team.",
+                  sentiment: "neutral",
+                  postedTime: "3 days ago",
+                  likes: 35
+                }
+              ],
+              consultInAction: {
+                type: "form",
+                formTitle: "Beer Recipe Specification Form",
+                formFields: [
+                  {
+                    label: "Beer Style",
+                    type: "text",
+                    required: true,
+                    value: "BJCP Style Category"
+                  },
+                  {
+                    label: "Target OG",
+                    type: "text",
+                    required: true
+                  },
+                  {
+                    label: "Target FG",
+                    type: "text",
+                    required: true
+                  },
+                  {
+                    label: "Target IBU",
+                    type: "number",
+                    required: true
+                  },
+                  {
+                    label: "Target SRM",
+                    type: "number",
+                    required: true
+                  },
+                  {
+                    label: "Water Chemistry Profile",
+                    type: "text",
+                    required: true
+                  },
+                  {
+                    label: "Mash Schedule",
+                    type: "text",
+                    required: true
+                  }
+                ],
+                submissionEndpoint: "/api/form-submission"
+              },
+              resources: {
+                experts: experts.filter(e => e.title.toLowerCase().includes('quality')).slice(0, 2),
+                conversations: conversations.filter(c => c.content.toLowerCase().includes('recipe')).slice(0, 1),
+                talents: talents.filter(t => t.title.toLowerCase().includes('quality')).slice(0, 1),
+                trainings: trainings.filter(tr => tr.title.toLowerCase().includes('quality')).slice(0, 1)
+              }
+            },
+            {
+              id: 2,
+              title: "Sensory Panel",
+              description: "Build an in-house tasting panel trained in BJCP evaluation methods",
+              solution: "Train staff in formal BJCP evaluation. Hold weekly blind tastings with standardized evaluation forms. Include benchmark commercial examples in panels. Develop a flavor lexicon specific to your brewery. Consider inviting a BJCP judge quarterly for external feedback.",
+              networkComments: [
+                {
+                  id: 1,
+                  authorName: "Emma Rodriguez",
+                  authorTitle: "Sensory Analysis Director",
+                  authorCompany: "Craft Sensory Labs",
+                  authorImage: "https://randomuser.me/api/portraits/women/63.jpg",
+                  content: "This strategy worked wonders for us. The key was getting BJCP training for at least 3-4 key staff members who could then train others.",
+                  sentiment: "positive",
+                  postedTime: "5 days ago",
+                  likes: 43
+                },
+                {
+                  id: 2,
+                  authorName: "David Kim",
+                  authorTitle: "Master Brewer",
+                  authorCompany: "Precision Brewing",
+                  authorImage: "https://randomuser.me/api/portraits/men/22.jpg",
+                  content: "I'd be careful with this approach. We tried it and found that we needed to customize the BJCP forms to focus on our specific quality issues rather than using the standard forms.",
+                  sentiment: "negative",
+                  postedTime: "3 days ago",
+                  likes: 15
+                },
+                {
+                  id: 3,
+                  authorName: "James Wilson",
+                  authorTitle: "Quality Manager",
+                  authorCompany: "Elite Brewing Group",
+                  authorImage: "https://randomuser.me/api/portraits/men/86.jpg",
+                  content: "Make sure to involve your front-of-house staff occasionally too - they hear direct customer feedback and can bring valuable insights to the panel.",
+                  sentiment: "neutral",
+                  postedTime: "4 days ago",
+                  likes: 27
+                }
+              ],
+              consultInAction: {
+                type: "email",
+                recipient: "staff@yourbrewery.com",
+                subject: "Sensory Panel Training Initiative",
+                body: "Hello Brewing Team,\n\nAs part of our quality improvement initiative, we're establishing a formal sensory evaluation panel using BJCP standards.\n\nThe training will take place next Tuesday at 2pm and will cover:\n\n1. BJCP style guidelines and scoring methodology\n2. Common off-flavor identification\n3. Proper tasting technique and evaluation form usage\n4. Calibration using commercial benchmark examples\n\nEach panel member will receive a sensory evaluation kit and training materials. This is a crucial step toward improving our beer quality consistency and achieving higher BJCP scores.\n\nPlease confirm your attendance by Monday.\n\nBest regards,\n[Your Name]\nHead Brewer",
+                ccList: ["management@yourbrewery.com"]
+              },
+              resources: {
+                experts: experts.filter(e => e.title.toLowerCase().includes('sensory')).slice(0, 2),
+                conversations: conversations.filter(c => c.content.toLowerCase().includes('tasting')).slice(0, 1),
+                talents: talents.filter(t => t.title.toLowerCase().includes('sensory')).slice(0, 1),
+                trainings: trainings.filter(tr => tr.title.toLowerCase().includes('sensory')).slice(0, 1)
+              }
+            },
+            {
+              id: 3,
+              title: "Critical Parameter Logging",
+              description: "Implement rigorous data collection for all brew processes",
+              solution: "Create digital logging systems for real-time tracking of critical control points. Monitor mash temperatures at 5-minute intervals, dissolved oxygen at packaging, and daily microbiological testing of each fermentation vessel. Analyze data trends to identify correlations between process variations and flavor outcomes.",
+              networkComments: [
+                {
+                  id: 1,
+                  authorName: "Olivia Thompson",
+                  authorTitle: "Production Manager",
+                  authorCompany: "Data-Driven Brewing",
+                  authorImage: "https://randomuser.me/api/portraits/women/54.jpg",
+                  content: "I fully agree with this approach. We implemented similar logging and saw our BJCP scores improve from 32-33 to 37-39 within six months.",
+                  sentiment: "positive",
+                  postedTime: "2 days ago",
+                  likes: 38
+                },
+                {
+                  id: 2,
+                  authorName: "Jamal Bennett",
+                  authorTitle: "Brewery Operations Consultant",
+                  authorCompany: "Efficiency Brewing Solutions",
+                  authorImage: "https://randomuser.me/api/portraits/men/32.jpg",
+                  content: "This might work for larger breweries, but small operations can get overwhelmed with data. Consider starting with just 3-5 most critical parameters and expanding gradually.",
+                  sentiment: "negative",
+                  postedTime: "1 day ago",
+                  likes: 12
+                },
+                {
+                  id: 3,
+                  authorName: "Priya Patel",
+                  authorTitle: "Quality Control Lead",
+                  authorCompany: "Perfect Pint Brewing",
+                  authorImage: "https://randomuser.me/api/portraits/women/44.jpg",
+                  content: "Make sure to involve your IT team or invest in user-friendly systems. We learned that if logging is too cumbersome, staff will find ways to skip it.",
+                  sentiment: "neutral",
+                  postedTime: "4 days ago",
+                  likes: 29
+                }
+              ],
+              consultInAction: {
+                type: "product",
+                products: [
+                  {
+                    id: 1,
+                    name: "BrewTrack Pro Logger",
+                    description: "Complete digital logging system with real-time monitoring, alerts, and trends analysis specifically designed for quality-focused craft breweries.",
+                    price: "$349/month",
+                    url: "#",
+                    imageUrl: "https://randomuser.me/api/portraits/lego/1.jpg"
+                  },
+                  {
+                    id: 2,
+                    name: "Quality Parameter Testing Kit",
+                    description: "Professional-grade testing equipment for measuring dissolved oxygen, pH, gravity, and other critical beer quality parameters.",
+                    price: "$1,850",
+                    url: "#",
+                    imageUrl: "https://randomuser.me/api/portraits/lego/2.jpg"
+                  },
+                  {
+                    id: 3,
+                    name: "Micro-Testing Lab Setup",
+                    description: "Basic brewery microbiology lab setup with all equipment and supplies needed for in-house beer quality testing.",
+                    price: "$3,200",
+                    url: "#",
+                    imageUrl: "https://randomuser.me/api/portraits/lego/3.jpg"
+                  }
+                ]
+              },
+              resources: {
+                experts: experts.filter(e => e.title.toLowerCase().includes('quality')).slice(0, 2),
+                conversations: conversations.filter(c => c.content.toLowerCase().includes('data')).slice(0, 1),
+                talents: talents.filter(t => t.title.toLowerCase().includes('quality')).slice(0, 1),
+                trainings: trainings.filter(tr => tr.title.toLowerCase().includes('quality')).slice(0, 1)
+              }
+            },
+            {
+              id: 4,
+              title: "SOP Documentation",
+              description: "Create comprehensive brewery-wide standard operating procedures",
+              solution: "Develop detailed SOPs for every brewery process from grain handling to packaging. Include clear troubleshooting guides for common issues. Make SOPs easily accessible on tablets throughout the brewery. Implement annual SOP reviews and updates based on quality findings. Create training matrix to ensure all staff are certified on relevant procedures.",
+              networkComments: [
+                {
+                  id: 1,
+                  authorName: "David Kim",
+                  authorTitle: "Master Brewer",
+                  authorCompany: "Standard Brewing Co.",
+                  authorImage: "https://randomuser.me/api/portraits/men/22.jpg",
+                  content: "Great suggestion. I'd add that documentation is critical - we learned that the hard way! Make pictures and videos part of your SOPs for better compliance.",
+                  sentiment: "positive",
+                  postedTime: "3 days ago",
+                  likes: 42
+                },
+                {
+                  id: 2,
+                  authorName: "Sofia Garcia",
+                  authorTitle: "Brewing Consultant",
+                  authorCompany: "Top Shelf Brewing",
+                  authorImage: "https://randomuser.me/api/portraits/women/63.jpg",
+                  content: "This approach has merit, but I'd suggest a pilot program first. Creating SOPs for everything at once created bottlenecks in our workflow.",
+                  sentiment: "negative",
+                  postedTime: "2 days ago",
+                  likes: 18
+                },
+                {
+                  id: 3,
+                  authorName: "Wei Zhang",
+                  authorTitle: "Operations Manager",
+                  authorCompany: "Precision Craft Brewing",
+                  authorImage: "https://randomuser.me/api/portraits/men/86.jpg",
+                  content: "Consider creating a standardized format that's concise - our first SOPs were too verbose and nobody read them. One-page visual guides work best for brewery floor procedures.",
+                  sentiment: "neutral",
+                  postedTime: "5 days ago",
+                  likes: 31
+                }
+              ],
+              consultInAction: {
+                type: "email",
+                recipient: "team@yourbrewery.com",
+                subject: "SOP Development Project - Action Required",
+                body: "Dear Brewery Team,\n\nWe're launching a comprehensive SOP development project to improve our beer quality consistency and BJCP scores.\n\nEach department will need to document their processes following these steps:\n\n1. List all procedures in your area\n2. Prioritize them based on quality impact\n3. Document each using our new SOP template (attached)\n4. Include photos/videos where helpful\n5. Submit for review by [DATE]\n\nWe'll be holding a workshop this Friday at 2pm to walk through the process and answer any questions.\n\nConsistent procedures = consistent beer quality!\n\nThank you for your participation,\n[Your Name]\nHead Brewer",
+                ccList: ["management@yourbrewery.com"]
+              },
+              resources: {
+                experts: experts.filter(e => e.title.toLowerCase().includes('operations')).slice(0, 2),
+                conversations: conversations.filter(c => c.content.toLowerCase().includes('procedure')).slice(0, 1),
+                talents: talents.filter(t => t.title.toLowerCase().includes('operations')).slice(0, 1),
+                trainings: trainings.filter(tr => tr.title.toLowerCase().includes('operations')).slice(0, 1)
+              }
+            }
+          ]
+        };
         
-        if (directMatch) {
-          console.log("Found direct beer quality consistency match!");
-          matchingProblem = directMatch;
-        }
+        return res.json(beerQualityResponse);
       }
       
       // If no direct match found, try keyword matching
