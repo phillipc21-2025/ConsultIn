@@ -87,6 +87,13 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
   const [isConsultInThinking, setIsConsultInThinking] = useState(false);
   const [showConsultInAction, setShowConsultInAction] = useState(false);
   
+  // State for agent installation and execution process
+  const [installedAgentId, setInstalledAgentId] = useState<number | null>(null);
+  const [agentExecutionProgress, setAgentExecutionProgress] = useState(0);
+  const [agentExecutionMessage, setAgentExecutionMessage] = useState("");
+  const [isAgentExecuting, setIsAgentExecuting] = useState(false);
+  const [agentTaskComplete, setAgentTaskComplete] = useState(false);
+  
   // Determine which resource tabs to show
   const tabs = [];
   
@@ -121,15 +128,57 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
     }, 2000); // Simulate "thinking" for 2 seconds
   };
   
+  // Generate robot speak messages
+  const generateRobotSpeak = (stage: number): string => {
+    const messages = [
+      "INITIALIZING BREWERY AGENT PROTOCOLS... BEEP BOOP!",
+      "SCANNING BREWERY SYSTEMS... HOP ANALYSIS IN PROGRESS...",
+      "ANALYZING LOCAL BREWERY MARKET DATA... *WHIRR* *CLICK*",
+      "OPTIMIZING FERMENTATION ALGORITHMS... MALT SUBROUTINES ENGAGED!",
+      "CALIBRATING FLAVOR PROFILES... BEEP! CALCULATING IDEAL IBU...",
+      "FINALIZING BREWERY SOLUTION... TANK CAPACITY OPTIMIZED!",
+      "TASK COMPLETE! YOUR BREWERY PROBLEM HAS BEEN SOLVED. ENJOY OPTIMAL RESULTS!"
+    ];
+    return messages[Math.min(stage, messages.length - 1)];
+  };
+
   // Handle agent installation from marketplace
   const handleInstallAgent = (agentId: number) => {
+    // Close the dialog, store the agent ID, and begin execution process
     setShowConsultInDialog(false);
+    setInstalledAgentId(agentId);
+    setIsAgentExecuting(true);
+    setAgentExecutionProgress(0);
+    setAgentExecutionMessage(generateRobotSpeak(0));
     
-    // After a brief pause, show the ConsultIn action (as if the agent completed the task)
-    setTimeout(() => {
-      setIsConsultInThinking(false);
-      setShowConsultInAction(true);
-    }, 1000);
+    // Simulate agent execution with progress updates
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+      progress += 16;
+      setAgentExecutionProgress(progress);
+      
+      // Update robot messages at certain thresholds
+      if (progress === 16) setAgentExecutionMessage(generateRobotSpeak(1));
+      if (progress === 32) setAgentExecutionMessage(generateRobotSpeak(2));
+      if (progress === 48) setAgentExecutionMessage(generateRobotSpeak(3));
+      if (progress === 64) setAgentExecutionMessage(generateRobotSpeak(4));
+      if (progress === 80) setAgentExecutionMessage(generateRobotSpeak(5));
+      
+      if (progress >= 100) {
+        // Task complete
+        clearInterval(progressInterval);
+        setAgentExecutionProgress(100);
+        setAgentExecutionMessage(generateRobotSpeak(6));
+        
+        // After showing completion message, show the ConsultIn action
+        setTimeout(() => {
+          setIsAgentExecuting(false);
+          setAgentTaskComplete(true);
+          setIsConsultInThinking(false);
+          setShowConsultInAction(true);
+        }, 2000);
+      }
+    }, 800); // Update every 800ms for about 5 seconds total
   };
 
   return (
