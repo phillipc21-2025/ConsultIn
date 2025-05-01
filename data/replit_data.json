@@ -1,0 +1,594 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "text": "How can we lift weekday tap-room foot-traffic by 30 % in the next 90 days without discounting flagship beers?",
+      "steps": [
+        "step1_1",
+        "step1_2",
+        "step1_3",
+        "step1_4"
+      ],
+      "related_experts": [
+        "talent6",
+        "talent5"
+      ],
+      "related_conversations": [
+        "conv1",
+        "conv2",
+        "conv3",
+        "conv4",
+        "conv5"
+      ],
+      "related_talents": [
+        "talent6",
+        "talent5",
+        "talent2",
+        "talent4",
+        "talent10",
+        "talent7",
+        "talent8",
+        "talent11",
+        "talent12",
+        "talent9",
+        "talent1",
+        "talent3"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service3",
+        "service4",
+        "service6",
+        "service7",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "How do we launch a profitable subscription \u2018Brewer\u2019s Box\u2019 that ships four seasonal 16-oz cans monthly to California customers?",
+      "steps": [
+        "step2_1",
+        "step2_2",
+        "step2_3",
+        "step2_4"
+      ],
+      "related_experts": [
+        "talent22",
+        "talent19"
+      ],
+      "related_conversations": [
+        "conv6",
+        "conv7",
+        "conv8",
+        "conv9",
+        "conv10"
+      ],
+      "related_talents": [
+        "talent22",
+        "talent19",
+        "talent20",
+        "talent17",
+        "talent15",
+        "talent16",
+        "talent21",
+        "talent13",
+        "talent24",
+        "talent14",
+        "talent18",
+        "talent23"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service6",
+        "service3",
+        "service4",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "What\u2019s the most cost-effective way to cut annual energy usage in the brewhouse by 15 %?",
+      "steps": [
+        "step3_1",
+        "step3_2",
+        "step3_3",
+        "step3_4"
+      ],
+      "related_experts": [
+        "talent32",
+        "talent26"
+      ],
+      "related_conversations": [
+        "conv11",
+        "conv12",
+        "conv13",
+        "conv14",
+        "conv15"
+      ],
+      "related_talents": [
+        "talent32",
+        "talent26",
+        "talent31",
+        "talent34",
+        "talent33",
+        "talent36",
+        "talent29",
+        "talent25",
+        "talent27",
+        "talent35",
+        "talent28",
+        "talent30"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service6",
+        "service3",
+        "service4",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "How can we leverage TikTok to sell 20 % more merchandise online over the holiday season?",
+      "steps": [
+        "step4_1",
+        "step4_2",
+        "step4_3",
+        "step4_4"
+      ],
+      "related_experts": [
+        "talent40",
+        "talent2"
+      ],
+      "related_conversations": [
+        "conv16",
+        "conv17",
+        "conv18",
+        "conv19",
+        "conv20"
+      ],
+      "related_talents": [
+        "talent40",
+        "talent2",
+        "talent43",
+        "talent45",
+        "talent44",
+        "talent38",
+        "talent39",
+        "talent41",
+        "talent37",
+        "talent42",
+        "talent1",
+        "talent3"
+      ],
+      "related_trainings": [
+        "training8",
+        "training6",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service3",
+        "service4",
+        "service6",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "What steps do we need to take to get our flagship IPA into 50 more independent grocery stores within a year?",
+      "steps": [
+        "step5_1",
+        "step5_2",
+        "step5_3",
+        "step5_4"
+      ],
+      "related_experts": [
+        "talent6",
+        "talent5"
+      ],
+      "related_conversations": [
+        "conv21",
+        "conv22",
+        "conv23",
+        "conv24",
+        "conv25"
+      ],
+      "related_talents": [
+        "talent6",
+        "talent5",
+        "talent4",
+        "talent10",
+        "talent7",
+        "talent15",
+        "talent13",
+        "talent8",
+        "talent14",
+        "talent11",
+        "talent12",
+        "talent9"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service3",
+        "service4",
+        "service6",
+        "service7",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "How do we set up a customer-loyalty program that boosts repeat purchases by 25 % but keeps software spend under $100 / month?",
+      "steps": [
+        "step6_1",
+        "step6_2",
+        "step6_3",
+        "step6_4"
+      ],
+      "related_experts": [
+        "talent22",
+        "talent19"
+      ],
+      "related_conversations": [
+        "conv26",
+        "conv27",
+        "conv28",
+        "conv29",
+        "conv30"
+      ],
+      "related_talents": [
+        "talent22",
+        "talent19",
+        "talent26",
+        "talent20",
+        "talent17",
+        "talent21",
+        "talent16",
+        "talent24",
+        "talent25",
+        "talent18",
+        "talent27",
+        "talent23"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service3",
+        "service4",
+        "service6",
+        "service7",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Which analytics stack should we adopt to unify taproom POS, e-commerce, and distributor sales into one dashboard?",
+      "steps": [
+        "step7_1",
+        "step7_2",
+        "step7_3",
+        "step7_4"
+      ],
+      "related_experts": [
+        "talent32",
+        "talent31"
+      ],
+      "related_conversations": [
+        "conv31",
+        "conv32",
+        "conv33",
+        "conv34",
+        "conv35"
+      ],
+      "related_talents": [
+        "talent32",
+        "talent31",
+        "talent34",
+        "talent33",
+        "talent36",
+        "talent38",
+        "talent29",
+        "talent39",
+        "talent37",
+        "talent35",
+        "talent28",
+        "talent30"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service6",
+        "service3",
+        "service4",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "How can we reduce keg loss and tracking errors by 50 % within six months?",
+      "steps": [
+        "step8_1",
+        "step8_2",
+        "step8_3",
+        "step8_4"
+      ],
+      "related_experts": [
+        "talent40",
+        "talent5"
+      ],
+      "related_conversations": [
+        "conv36",
+        "conv37",
+        "conv38",
+        "conv39",
+        "conv40"
+      ],
+      "related_talents": [
+        "talent40",
+        "talent5",
+        "talent6",
+        "talent2",
+        "talent43",
+        "talent4",
+        "talent45",
+        "talent44",
+        "talent41",
+        "talent42",
+        "talent1",
+        "talent3"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service6",
+        "service3",
+        "service4",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "What\u2019s the fastest way to launch a pop-up beer garden this summer with city permits in place?",
+      "steps": [
+        "step9_1",
+        "step9_2",
+        "step9_3",
+        "step9_4"
+      ],
+      "related_experts": [
+        "talent10",
+        "talent17"
+      ],
+      "related_conversations": [
+        "conv41",
+        "conv42",
+        "conv43",
+        "conv44",
+        "conv45"
+      ],
+      "related_talents": [
+        "talent10",
+        "talent17",
+        "talent7",
+        "talent15",
+        "talent16",
+        "talent13",
+        "talent21",
+        "talent14",
+        "talent24",
+        "talent11",
+        "talent12",
+        "talent9"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service3",
+        "service4",
+        "service6",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "How can we improve beer-quality consistency enough to score 38+ on BJCP scoresheets?",
+      "steps": [
+        "step10_1",
+        "step10_2",
+        "step10_3",
+        "step10_4"
+      ],
+      "related_experts": [
+        "talent26",
+        "talent32"
+      ],
+      "related_conversations": [
+        "conv46",
+        "conv47",
+        "conv48",
+        "conv49",
+        "conv50"
+      ],
+      "related_talents": [
+        "talent26",
+        "talent32",
+        "talent31",
+        "talent29",
+        "talent33",
+        "talent36",
+        "talent25",
+        "talent34",
+        "talent27",
+        "talent35",
+        "talent28",
+        "talent30"
+      ],
+      "related_trainings": [
+        "training8",
+        "training6",
+        "training10",
+        "training4",
+        "training3",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service6",
+        "service3",
+        "service4",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    }
+  ]
+}

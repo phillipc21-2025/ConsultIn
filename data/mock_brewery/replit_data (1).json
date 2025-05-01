@@ -1,0 +1,4251 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "text": "How can we lift weekday tap-room foot-traffic by 30 % in the next 90 days without discounting flagship beers?",
+      "steps": [
+        "step1_1",
+        "step1_2",
+        "step1_3",
+        "step1_4"
+      ],
+      "related_experts": [
+        "talent6",
+        "talent5"
+      ],
+      "related_conversations": [
+        "conv1",
+        "conv2",
+        "conv3",
+        "conv4",
+        "conv5"
+      ],
+      "related_talents": [
+        "talent6",
+        "talent5",
+        "talent2",
+        "talent4",
+        "talent10",
+        "talent7",
+        "talent8",
+        "talent11",
+        "talent12",
+        "talent9",
+        "talent1",
+        "talent3"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service3",
+        "service4",
+        "service6",
+        "service7",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "How do we launch a profitable subscription \u2018Brewer\u2019s Box\u2019 that ships four seasonal 16-oz cans monthly to California customers?",
+      "steps": [
+        "step2_1",
+        "step2_2",
+        "step2_3",
+        "step2_4"
+      ],
+      "related_experts": [
+        "talent22",
+        "talent19"
+      ],
+      "related_conversations": [
+        "conv6",
+        "conv7",
+        "conv8",
+        "conv9",
+        "conv10"
+      ],
+      "related_talents": [
+        "talent22",
+        "talent19",
+        "talent20",
+        "talent17",
+        "talent15",
+        "talent16",
+        "talent21",
+        "talent13",
+        "talent24",
+        "talent14",
+        "talent18",
+        "talent23"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service6",
+        "service3",
+        "service4",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "What\u2019s the most cost-effective way to cut annual energy usage in the brewhouse by 15 %?",
+      "steps": [
+        "step3_1",
+        "step3_2",
+        "step3_3",
+        "step3_4"
+      ],
+      "related_experts": [
+        "talent32",
+        "talent26"
+      ],
+      "related_conversations": [
+        "conv11",
+        "conv12",
+        "conv13",
+        "conv14",
+        "conv15"
+      ],
+      "related_talents": [
+        "talent32",
+        "talent26",
+        "talent31",
+        "talent34",
+        "talent33",
+        "talent36",
+        "talent29",
+        "talent25",
+        "talent27",
+        "talent35",
+        "talent28",
+        "talent30"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service6",
+        "service3",
+        "service4",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "How can we leverage TikTok to sell 20 % more merchandise online over the holiday season?",
+      "steps": [
+        "step4_1",
+        "step4_2",
+        "step4_3",
+        "step4_4"
+      ],
+      "related_experts": [
+        "talent40",
+        "talent2"
+      ],
+      "related_conversations": [
+        "conv16",
+        "conv17",
+        "conv18",
+        "conv19",
+        "conv20"
+      ],
+      "related_talents": [
+        "talent40",
+        "talent2",
+        "talent43",
+        "talent45",
+        "talent44",
+        "talent38",
+        "talent39",
+        "talent41",
+        "talent37",
+        "talent42",
+        "talent1",
+        "talent3"
+      ],
+      "related_trainings": [
+        "training8",
+        "training6",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service3",
+        "service4",
+        "service6",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "What steps do we need to take to get our flagship IPA into 50 more independent grocery stores within a year?",
+      "steps": [
+        "step5_1",
+        "step5_2",
+        "step5_3",
+        "step5_4"
+      ],
+      "related_experts": [
+        "talent6",
+        "talent5"
+      ],
+      "related_conversations": [
+        "conv21",
+        "conv22",
+        "conv23",
+        "conv24",
+        "conv25"
+      ],
+      "related_talents": [
+        "talent6",
+        "talent5",
+        "talent4",
+        "talent10",
+        "talent7",
+        "talent15",
+        "talent13",
+        "talent8",
+        "talent14",
+        "talent11",
+        "talent12",
+        "talent9"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service3",
+        "service4",
+        "service6",
+        "service7",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "How do we set up a customer-loyalty program that boosts repeat purchases by 25 % but keeps software spend under $100 / month?",
+      "steps": [
+        "step6_1",
+        "step6_2",
+        "step6_3",
+        "step6_4"
+      ],
+      "related_experts": [
+        "talent22",
+        "talent19"
+      ],
+      "related_conversations": [
+        "conv26",
+        "conv27",
+        "conv28",
+        "conv29",
+        "conv30"
+      ],
+      "related_talents": [
+        "talent22",
+        "talent19",
+        "talent26",
+        "talent20",
+        "talent17",
+        "talent21",
+        "talent16",
+        "talent24",
+        "talent25",
+        "talent18",
+        "talent27",
+        "talent23"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service3",
+        "service4",
+        "service6",
+        "service7",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Which analytics stack should we adopt to unify taproom POS, e-commerce, and distributor sales into one dashboard?",
+      "steps": [
+        "step7_1",
+        "step7_2",
+        "step7_3",
+        "step7_4"
+      ],
+      "related_experts": [
+        "talent32",
+        "talent31"
+      ],
+      "related_conversations": [
+        "conv31",
+        "conv32",
+        "conv33",
+        "conv34",
+        "conv35"
+      ],
+      "related_talents": [
+        "talent32",
+        "talent31",
+        "talent34",
+        "talent33",
+        "talent36",
+        "talent38",
+        "talent29",
+        "talent39",
+        "talent37",
+        "talent35",
+        "talent28",
+        "talent30"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service6",
+        "service3",
+        "service4",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "How can we reduce keg loss and tracking errors by 50 % within six months?",
+      "steps": [
+        "step8_1",
+        "step8_2",
+        "step8_3",
+        "step8_4"
+      ],
+      "related_experts": [
+        "talent40",
+        "talent5"
+      ],
+      "related_conversations": [
+        "conv36",
+        "conv37",
+        "conv38",
+        "conv39",
+        "conv40"
+      ],
+      "related_talents": [
+        "talent40",
+        "talent5",
+        "talent6",
+        "talent2",
+        "talent43",
+        "talent4",
+        "talent45",
+        "talent44",
+        "talent41",
+        "talent42",
+        "talent1",
+        "talent3"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service6",
+        "service3",
+        "service4",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "What\u2019s the fastest way to launch a pop-up beer garden this summer with city permits in place?",
+      "steps": [
+        "step9_1",
+        "step9_2",
+        "step9_3",
+        "step9_4"
+      ],
+      "related_experts": [
+        "talent10",
+        "talent17"
+      ],
+      "related_conversations": [
+        "conv41",
+        "conv42",
+        "conv43",
+        "conv44",
+        "conv45"
+      ],
+      "related_talents": [
+        "talent10",
+        "talent17",
+        "talent7",
+        "talent15",
+        "talent16",
+        "talent13",
+        "talent8",
+        "talent14",
+        "talent18",
+        "talent11",
+        "talent12",
+        "talent9"
+      ],
+      "related_trainings": [
+        "training8",
+        "training6",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service3",
+        "service4",
+        "service6",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "How can we improve beer-quality consistency enough to score 38+ on BJCP scoresheets?",
+      "steps": [
+        "step10_1",
+        "step10_2",
+        "step10_3",
+        "step10_4"
+      ],
+      "related_experts": [
+        "talent22",
+        "talent19"
+      ],
+      "related_conversations": [
+        "conv46",
+        "conv47",
+        "conv48",
+        "conv49",
+        "conv50"
+      ],
+      "related_talents": [
+        "talent22",
+        "talent19",
+        "talent26",
+        "talent20",
+        "talent21",
+        "talent30",
+        "talent29",
+        "talent24",
+        "talent25",
+        "talent27",
+        "talent28",
+        "talent23"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service3",
+        "service4",
+        "service6",
+        "service7",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q11",
+      "text": "Which funding options would let us add a 15-bbl fermenter without risking more than 10 % equity?",
+      "steps": [
+        "step11_1",
+        "step11_2",
+        "step11_3",
+        "step11_4"
+      ],
+      "related_experts": [
+        "talent32",
+        "talent40"
+      ],
+      "related_conversations": [
+        "conv51",
+        "conv52",
+        "conv53",
+        "conv54",
+        "conv55"
+      ],
+      "related_talents": [
+        "talent32",
+        "talent40",
+        "talent31",
+        "talent34",
+        "talent42",
+        "talent36",
+        "talent38",
+        "talent39",
+        "talent41",
+        "talent37",
+        "talent35",
+        "talent33"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service3",
+        "service4",
+        "service6",
+        "service7",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q12",
+      "text": "How do we create an annual barrel-aged stout release that generates $50 k revenue on launch day?",
+      "steps": [
+        "step12_1",
+        "step12_2",
+        "step12_3",
+        "step12_4"
+      ],
+      "related_experts": [
+        "talent6",
+        "talent5"
+      ],
+      "related_conversations": [
+        "conv56",
+        "conv57",
+        "conv58",
+        "conv59",
+        "conv60"
+      ],
+      "related_talents": [
+        "talent6",
+        "talent5",
+        "talent2",
+        "talent43",
+        "talent4",
+        "talent45",
+        "talent44",
+        "talent7",
+        "talent8",
+        "talent9",
+        "talent1",
+        "talent3"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service6",
+        "service3",
+        "service4",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q13",
+      "text": "What\u2019s the quickest path to achieving 4.3+ average rating on Untappd for all core beers?",
+      "steps": [
+        "step13_1",
+        "step13_2",
+        "step13_3",
+        "step13_4"
+      ],
+      "related_experts": [
+        "talent19",
+        "talent10"
+      ],
+      "related_conversations": [
+        "conv61",
+        "conv62",
+        "conv63",
+        "conv64",
+        "conv65"
+      ],
+      "related_talents": [
+        "talent19",
+        "talent10",
+        "talent20",
+        "talent17",
+        "talent15",
+        "talent16",
+        "talent21",
+        "talent13",
+        "talent14",
+        "talent18",
+        "talent12",
+        "talent11"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service6",
+        "service3",
+        "service4",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q14",
+      "text": "How can we add hard seltzer to our lineup with minimal capital and still meet TTB compliance?",
+      "steps": [
+        "step14_1",
+        "step14_2",
+        "step14_3",
+        "step14_4"
+      ],
+      "related_experts": [
+        "talent22",
+        "talent32"
+      ],
+      "related_conversations": [
+        "conv66",
+        "conv67",
+        "conv68",
+        "conv69",
+        "conv70"
+      ],
+      "related_talents": [
+        "talent22",
+        "talent32",
+        "talent26",
+        "talent31",
+        "talent33",
+        "talent30",
+        "talent29",
+        "talent24",
+        "talent25",
+        "talent27",
+        "talent28",
+        "talent23"
+      ],
+      "related_trainings": [
+        "training8",
+        "training6",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service7",
+        "service3",
+        "service4",
+        "service6",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    },
+    {
+      "id": "q15",
+      "text": "What digital gift-card strategy will boost Q4 cash flow by $20 k without increasing refund risk?",
+      "steps": [
+        "step15_1",
+        "step15_2",
+        "step15_3",
+        "step15_4"
+      ],
+      "related_experts": [
+        "talent40",
+        "talent34"
+      ],
+      "related_conversations": [
+        "conv71",
+        "conv72",
+        "conv73",
+        "conv74",
+        "conv75"
+      ],
+      "related_talents": [
+        "talent40",
+        "talent34",
+        "talent43",
+        "talent45",
+        "talent42",
+        "talent36",
+        "talent38",
+        "talent39",
+        "talent44",
+        "talent41",
+        "talent37",
+        "talent35"
+      ],
+      "related_trainings": [
+        "training6",
+        "training8",
+        "training10",
+        "training3",
+        "training4",
+        "training9",
+        "training7",
+        "training2",
+        "training5",
+        "training1"
+      ],
+      "related_services": [
+        "service9",
+        "service3",
+        "service4",
+        "service6",
+        "service7",
+        "service1",
+        "service5",
+        "service10",
+        "service8",
+        "service2"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": "step1_1",
+      "question_id": "q1",
+      "step_number": 1,
+      "name": "Local Audience Mapping",
+      "description": "Analyze POS ZIP codes and geofence data to find high-potential but underrepresented neighborhoods within 5 miles.",
+      "feasibility": "High",
+      "rationale": "Sales and Wi-Fi check-in data already exist.",
+      "next_action": "Export last-year POS transactions with customer ZIPs.",
+      "service_ids": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "training_ids": [
+        "training1",
+        "training2",
+        "training3"
+      ],
+      "talent_ids": [
+        "talent1",
+        "talent2",
+        "talent3"
+      ]
+    },
+    {
+      "id": "step1_2",
+      "question_id": "q1",
+      "step_number": 2,
+      "name": "Limited-Release Calendar",
+      "description": "Plan a 12-week series of weekday-only small-batch beers tied to local events (e.g., trivia, live music).",
+      "feasibility": "Medium",
+      "rationale": "Brew schedule must accommodate small batches.",
+      "next_action": "Meet head brewer to lock 6 pilot recipes.",
+      "service_ids": [
+        "service4",
+        "service5",
+        "service6"
+      ],
+      "training_ids": [
+        "training4",
+        "training5",
+        "training6"
+      ],
+      "talent_ids": [
+        "talent4",
+        "talent5",
+        "talent6"
+      ]
+    },
+    {
+      "id": "step1_3",
+      "question_id": "q1",
+      "step_number": 3,
+      "name": "Hyper-Local Ads",
+      "description": "Run Facebook/Instagram radius ads + Untappd push within 3-mile geofence featuring each limited release.",
+      "feasibility": "High",
+      "rationale": "Ad platforms and creative assets are turnkey.",
+      "next_action": "Design template creative and set $400 weekly budget.",
+      "service_ids": [
+        "service7",
+        "service8",
+        "service9"
+      ],
+      "training_ids": [
+        "training7",
+        "training8",
+        "training9"
+      ],
+      "talent_ids": [
+        "talent7",
+        "talent8",
+        "talent9"
+      ]
+    },
+    {
+      "id": "step1_4",
+      "question_id": "q1",
+      "step_number": 4,
+      "name": "Partner Cross-Promos",
+      "description": "Offer local gyms and coworking spaces \u2018bring your badge for a first flight\u2019 Wednesday deal.",
+      "feasibility": "Medium",
+      "rationale": "Requires partner outreach but no cash cost.",
+      "next_action": "List top 10 nearby businesses and draft email pitch.",
+      "service_ids": [
+        "service10",
+        "service1",
+        "service2"
+      ],
+      "training_ids": [
+        "training10",
+        "training1",
+        "training2"
+      ],
+      "talent_ids": [
+        "talent10",
+        "talent11",
+        "talent12"
+      ]
+    },
+    {
+      "id": "step2_1",
+      "question_id": "q2",
+      "step_number": 1,
+      "name": "Regulatory Check",
+      "description": "Confirm CA direct-to-consumer beer shipment compliance and secure required ABC licenses.",
+      "feasibility": "Medium",
+      "rationale": "Paperwork intensive but straightforward.",
+      "next_action": "Call ABC district office about Type 85 permit.",
+      "service_ids": [
+        "service3",
+        "service4",
+        "service5"
+      ],
+      "training_ids": [
+        "training3",
+        "training4",
+        "training5"
+      ],
+      "talent_ids": [
+        "talent13",
+        "talent14",
+        "talent15"
+      ]
+    },
+    {
+      "id": "step2_2",
+      "question_id": "q2",
+      "step_number": 2,
+      "name": "Price & Margin Model",
+      "description": "Model COGS, shipping, and fulfillment to hit \u226525 % contribution margin at 500 subs.",
+      "feasibility": "High",
+      "rationale": "All cost inputs known.",
+      "next_action": "Build spreadsheet with three volume tiers.",
+      "service_ids": [
+        "service6",
+        "service7",
+        "service8"
+      ],
+      "training_ids": [
+        "training6",
+        "training7",
+        "training8"
+      ],
+      "talent_ids": [
+        "talent16",
+        "talent17",
+        "talent18"
+      ]
+    },
+    {
+      "id": "step2_3",
+      "question_id": "q2",
+      "step_number": 3,
+      "name": "Landing-Page MVP",
+      "description": "Launch wait-list page with mock box images; spend $300 on Instagram ads to gauge demand.",
+      "feasibility": "High",
+      "rationale": "No product until demand proven.",
+      "next_action": "Create Webflow page and link Stripe pre-order.",
+      "service_ids": [
+        "service9",
+        "service10",
+        "service1"
+      ],
+      "training_ids": [
+        "training9",
+        "training10",
+        "training1"
+      ],
+      "talent_ids": [
+        "talent19",
+        "talent20",
+        "talent21"
+      ]
+    },
+    {
+      "id": "step2_4",
+      "question_id": "q2",
+      "step_number": 4,
+      "name": "Pilot Fulfillment",
+      "description": "Ship 50 beta boxes, collect NPS & unboxing feedback, iterate packaging.",
+      "feasibility": "High",
+      "rationale": "Low-volume pilot manageable in-house.",
+      "next_action": "Order custom 4-pack inserts and print labels.",
+      "service_ids": [
+        "service2",
+        "service3",
+        "service4"
+      ],
+      "training_ids": [
+        "training2",
+        "training3",
+        "training4"
+      ],
+      "talent_ids": [
+        "talent22",
+        "talent23",
+        "talent24"
+      ]
+    },
+    {
+      "id": "step3_1",
+      "question_id": "q3",
+      "step_number": 1,
+      "name": "Utility Baseline",
+      "description": "Download 24-month gas/electric bills and map kWh & therms per brew-day.",
+      "feasibility": "High",
+      "rationale": "Data is on utility portal.",
+      "next_action": "Export bills to Excel.",
+      "service_ids": [
+        "service5",
+        "service6",
+        "service7"
+      ],
+      "training_ids": [
+        "training5",
+        "training6",
+        "training7"
+      ],
+      "talent_ids": [
+        "talent25",
+        "talent26",
+        "talent27"
+      ]
+    },
+    {
+      "id": "step3_2",
+      "question_id": "q3",
+      "step_number": 2,
+      "name": "Thermal Loss Scan",
+      "description": "Conduct IR camera walkthrough to identify poorly insulated lines and tank walls.",
+      "feasibility": "Medium",
+      "rationale": "Need rental IR camera or consultant.",
+      "next_action": "Book $200/day FLIR rental.",
+      "service_ids": [
+        "service8",
+        "service9",
+        "service10"
+      ],
+      "training_ids": [
+        "training8",
+        "training9",
+        "training10"
+      ],
+      "talent_ids": [
+        "talent28",
+        "talent29",
+        "talent30"
+      ]
+    },
+    {
+      "id": "step3_3",
+      "question_id": "q3",
+      "step_number": 3,
+      "name": "Heat-Recovery Loop",
+      "description": "Install plate heat-exchanger to use knockout water to pre-heat next mash.",
+      "feasibility": "Medium",
+      "rationale": "Requires plumbing changes but common practice.",
+      "next_action": "Get quotes from three suppliers.",
+      "service_ids": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "training_ids": [
+        "training1",
+        "training2",
+        "training3"
+      ],
+      "talent_ids": [
+        "talent31",
+        "talent32",
+        "talent33"
+      ]
+    },
+    {
+      "id": "step3_4",
+      "question_id": "q3",
+      "step_number": 4,
+      "name": "Smart Scheduling",
+      "description": "Cluster double-batch days to maximize boiler efficiency and reduce warm-up cycles.",
+      "feasibility": "High",
+      "rationale": "Only scheduling discipline needed.",
+      "next_action": "Revise brew calendar for next quarter.",
+      "service_ids": [
+        "service4",
+        "service5",
+        "service6"
+      ],
+      "training_ids": [
+        "training4",
+        "training5",
+        "training6"
+      ],
+      "talent_ids": [
+        "talent34",
+        "talent35",
+        "talent36"
+      ]
+    },
+    {
+      "id": "step4_1",
+      "question_id": "q4",
+      "step_number": 1,
+      "name": "Audience Persona",
+      "description": "Analyze Shopify data to define top three merch-buyer segments (age, region, SKU).",
+      "feasibility": "High",
+      "rationale": "Shopify reports available.",
+      "next_action": "Pull last year Q4 merch orders.",
+      "service_ids": [
+        "service7",
+        "service8",
+        "service9"
+      ],
+      "training_ids": [
+        "training7",
+        "training8",
+        "training9"
+      ],
+      "talent_ids": [
+        "talent37",
+        "talent38",
+        "talent39"
+      ]
+    },
+    {
+      "id": "step4_2",
+      "question_id": "q4",
+      "step_number": 2,
+      "name": "Content Calendar",
+      "description": "Draft 12 short-form video ideas featuring behind-the-scenes brewing, gift bundles, and staff cameos.",
+      "feasibility": "High",
+      "rationale": "Filming can use smartphones.",
+      "next_action": "Storyboard first four videos.",
+      "service_ids": [
+        "service10",
+        "service1",
+        "service2"
+      ],
+      "training_ids": [
+        "training10",
+        "training1",
+        "training2"
+      ],
+      "talent_ids": [
+        "talent40",
+        "talent41",
+        "talent42"
+      ]
+    },
+    {
+      "id": "step4_3",
+      "question_id": "q4",
+      "step_number": 3,
+      "name": "Influencer Collab",
+      "description": "Offer free tour + merch bundle to 5 local food micro-creators (<100 k followers) for duet content.",
+      "feasibility": "Medium",
+      "rationale": "Relies on outreach and creator fit.",
+      "next_action": "DM candidate creators with proposal.",
+      "service_ids": [
+        "service3",
+        "service4",
+        "service5"
+      ],
+      "training_ids": [
+        "training3",
+        "training4",
+        "training5"
+      ],
+      "talent_ids": [
+        "talent43",
+        "talent44",
+        "talent45"
+      ]
+    },
+    {
+      "id": "step4_4",
+      "question_id": "q4",
+      "step_number": 4,
+      "name": "Shop Links",
+      "description": "Enable TikTok Shop or link-in-bio with trackable UTMs for each SKU.",
+      "feasibility": "High",
+      "rationale": "Platform supports native commerce.",
+      "next_action": "Apply for TikTok Shop account.",
+      "service_ids": [
+        "service6",
+        "service7",
+        "service8"
+      ],
+      "training_ids": [
+        "training6",
+        "training7",
+        "training8"
+      ],
+      "talent_ids": [
+        "talent1",
+        "talent2",
+        "talent3"
+      ]
+    },
+    {
+      "id": "step5_1",
+      "question_id": "q5",
+      "step_number": 1,
+      "name": "Retail Target List",
+      "description": "Scrape Yelp/Google to build list of 150 independent groceries within 150 mi, rank by craft-beer shelf size.",
+      "feasibility": "High",
+      "rationale": "Data scraping straightforward.",
+      "next_action": "Use Import.io to harvest store details.",
+      "service_ids": [
+        "service9",
+        "service10",
+        "service1"
+      ],
+      "training_ids": [
+        "training9",
+        "training10",
+        "training1"
+      ],
+      "talent_ids": [
+        "talent4",
+        "talent5",
+        "talent6"
+      ]
+    },
+    {
+      "id": "step5_2",
+      "question_id": "q5",
+      "step_number": 2,
+      "name": "Distributor Gap Analysis",
+      "description": "Compare list to current distributor coverage; decide where self-distribution is needed.",
+      "feasibility": "High",
+      "rationale": "Invoices show existing accounts.",
+      "next_action": "Mark current stores in spreadsheet.",
+      "service_ids": [
+        "service2",
+        "service3",
+        "service4"
+      ],
+      "training_ids": [
+        "training2",
+        "training3",
+        "training4"
+      ],
+      "talent_ids": [
+        "talent7",
+        "talent8",
+        "talent9"
+      ]
+    },
+    {
+      "id": "step5_3",
+      "question_id": "q5",
+      "step_number": 3,
+      "name": "Sales Collateral Refresh",
+      "description": "Design one-pager with sales velocity data and GABF medal story.",
+      "feasibility": "High",
+      "rationale": "In-house Canva work.",
+      "next_action": "Pull latest scan data.",
+      "service_ids": [
+        "service5",
+        "service6",
+        "service7"
+      ],
+      "training_ids": [
+        "training5",
+        "training6",
+        "training7"
+      ],
+      "talent_ids": [
+        "talent10",
+        "talent11",
+        "talent12"
+      ]
+    },
+    {
+      "id": "step5_4",
+      "question_id": "q5",
+      "step_number": 4,
+      "name": "Demo Incentives",
+      "description": "Offer first-month 12-case buy-in + weekend tasting support for new stores.",
+      "feasibility": "Medium",
+      "rationale": "Requires staff availability.",
+      "next_action": "Budget 24 demo days.",
+      "service_ids": [
+        "service8",
+        "service9",
+        "service10"
+      ],
+      "training_ids": [
+        "training8",
+        "training9",
+        "training10"
+      ],
+      "talent_ids": [
+        "talent13",
+        "talent14",
+        "talent15"
+      ]
+    },
+    {
+      "id": "step6_1",
+      "question_id": "q6",
+      "step_number": 1,
+      "name": "Platform Selection",
+      "description": "Evaluate five sub-$100 loyalty SaaS tools (Belly, TapMango, Fivestars, etc.).",
+      "feasibility": "High",
+      "rationale": "Transparent pricing online.",
+      "next_action": "Compile feature/cost matrix.",
+      "service_ids": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "training_ids": [
+        "training1",
+        "training2",
+        "training3"
+      ],
+      "talent_ids": [
+        "talent16",
+        "talent17",
+        "talent18"
+      ]
+    },
+    {
+      "id": "step6_2",
+      "question_id": "q6",
+      "step_number": 2,
+      "name": "Reward Structure",
+      "description": "Design points-per-pint system with free pint at 50 points and exclusive glassware at 150.",
+      "feasibility": "High",
+      "rationale": "Fully controllable.",
+      "next_action": "Draft reward tiers and cost model.",
+      "service_ids": [
+        "service4",
+        "service5",
+        "service6"
+      ],
+      "training_ids": [
+        "training4",
+        "training5",
+        "training6"
+      ],
+      "talent_ids": [
+        "talent19",
+        "talent20",
+        "talent21"
+      ]
+    },
+    {
+      "id": "step6_3",
+      "question_id": "q6",
+      "step_number": 3,
+      "name": "QR Touchpoints",
+      "description": "Place unique QR codes at bar, merch area, and receipt bottom for easy scan-in.",
+      "feasibility": "High",
+      "rationale": "Print-ready signage only.",
+      "next_action": "Order 50 waterproof stickers.",
+      "service_ids": [
+        "service7",
+        "service8",
+        "service9"
+      ],
+      "training_ids": [
+        "training7",
+        "training8",
+        "training9"
+      ],
+      "talent_ids": [
+        "talent22",
+        "talent23",
+        "talent24"
+      ]
+    },
+    {
+      "id": "step6_4",
+      "question_id": "q6",
+      "step_number": 4,
+      "name": "Retention Tracking",
+      "description": "Pull pre/post launch repeat-visit % and spending from POS to verify 25 % lift.",
+      "feasibility": "High",
+      "rationale": "POS exports CSV.",
+      "next_action": "Schedule monthly POS pull.",
+      "service_ids": [
+        "service10",
+        "service1",
+        "service2"
+      ],
+      "training_ids": [
+        "training10",
+        "training1",
+        "training2"
+      ],
+      "talent_ids": [
+        "talent25",
+        "talent26",
+        "talent27"
+      ]
+    },
+    {
+      "id": "step7_1",
+      "question_id": "q7",
+      "step_number": 1,
+      "name": "Data Source Audit",
+      "description": "Document APIs and export formats for Square, Shopify, and VIP.",
+      "feasibility": "High",
+      "rationale": "Docs publicly available.",
+      "next_action": "List fields per source.",
+      "service_ids": [
+        "service3",
+        "service4",
+        "service5"
+      ],
+      "training_ids": [
+        "training3",
+        "training4",
+        "training5"
+      ],
+      "talent_ids": [
+        "talent28",
+        "talent29",
+        "talent30"
+      ]
+    },
+    {
+      "id": "step7_2",
+      "question_id": "q7",
+      "step_number": 2,
+      "name": "ETL Tool Choice",
+      "description": "Compare Stitch vs. Fivetran vs. Airbyte for cost (<$300/mo) and connectors.",
+      "feasibility": "High",
+      "rationale": "Pricing pages clear.",
+      "next_action": "Fill decision matrix.",
+      "service_ids": [
+        "service6",
+        "service7",
+        "service8"
+      ],
+      "training_ids": [
+        "training6",
+        "training7",
+        "training8"
+      ],
+      "talent_ids": [
+        "talent31",
+        "talent32",
+        "talent33"
+      ]
+    },
+    {
+      "id": "step7_3",
+      "question_id": "q7",
+      "step_number": 3,
+      "name": "Warehouse Setup",
+      "description": "Spin up managed Postgres on AWS RDS with daily incremental loads.",
+      "feasibility": "High",
+      "rationale": "Standard procedure.",
+      "next_action": "Create RDS instance with 20 GB storage.",
+      "service_ids": [
+        "service9",
+        "service10",
+        "service1"
+      ],
+      "training_ids": [
+        "training9",
+        "training10",
+        "training1"
+      ],
+      "talent_ids": [
+        "talent34",
+        "talent35",
+        "talent36"
+      ]
+    },
+    {
+      "id": "step7_4",
+      "question_id": "q7",
+      "step_number": 4,
+      "name": "Dashboard Build",
+      "description": "Use Metabase to join sales by channel and visualize GMV trends, top SKUs, and margin splits.",
+      "feasibility": "High",
+      "rationale": "Open-source and easy to host.",
+      "next_action": "Install Metabase on EC2 and connect Postgres.",
+      "service_ids": [
+        "service2",
+        "service3",
+        "service4"
+      ],
+      "training_ids": [
+        "training2",
+        "training3",
+        "training4"
+      ],
+      "talent_ids": [
+        "talent37",
+        "talent38",
+        "talent39"
+      ]
+    },
+    {
+      "id": "step8_1",
+      "question_id": "q8",
+      "step_number": 1,
+      "name": "Current Loss Audit",
+      "description": "Export distributor returns vs. keg fills to quantify baseline variance.",
+      "feasibility": "High",
+      "rationale": "Data comes from fill logs.",
+      "next_action": "Merge fill and return CSVs.",
+      "service_ids": [
+        "service5",
+        "service6",
+        "service7"
+      ],
+      "training_ids": [
+        "training5",
+        "training6",
+        "training7"
+      ],
+      "talent_ids": [
+        "talent40",
+        "talent41",
+        "talent42"
+      ]
+    },
+    {
+      "id": "step8_2",
+      "question_id": "q8",
+      "step_number": 2,
+      "name": "QR Tagging",
+      "description": "Attach durable QR labels linked to unique keg IDs and Google AppSheet tracker.",
+      "feasibility": "High",
+      "rationale": "Labels cost <$0.10 each.",
+      "next_action": "Order 500 stainless QR labels.",
+      "service_ids": [
+        "service8",
+        "service9",
+        "service10"
+      ],
+      "training_ids": [
+        "training8",
+        "training9",
+        "training10"
+      ],
+      "talent_ids": [
+        "talent43",
+        "talent44",
+        "talent45"
+      ]
+    },
+    {
+      "id": "step8_3",
+      "question_id": "q8",
+      "step_number": 3,
+      "name": "Scan Protocol",
+      "description": "Require drivers and cellar crew to scan at hand-off points; log in shared app.",
+      "feasibility": "Medium",
+      "rationale": "Behavior change needed.",
+      "next_action": "Train staff at next shift meeting.",
+      "service_ids": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "training_ids": [
+        "training1",
+        "training2",
+        "training3"
+      ],
+      "talent_ids": [
+        "talent1",
+        "talent2",
+        "talent3"
+      ]
+    },
+    {
+      "id": "step8_4",
+      "question_id": "q8",
+      "step_number": 4,
+      "name": "Weekly Reconciliation",
+      "description": "Auto-flag kegs >30 days unreturned; fine distributor or schedule pickup.",
+      "feasibility": "High",
+      "rationale": "Simple query and email report.",
+      "next_action": "Set AppSheet scheduled workflow.",
+      "service_ids": [
+        "service4",
+        "service5",
+        "service6"
+      ],
+      "training_ids": [
+        "training4",
+        "training5",
+        "training6"
+      ],
+      "talent_ids": [
+        "talent4",
+        "talent5",
+        "talent6"
+      ]
+    },
+    {
+      "id": "step9_1",
+      "question_id": "q9",
+      "step_number": 1,
+      "name": "Permit Checklist",
+      "description": "Review city zoning for Temporary Outdoor Entertainment Permit + ABC event license.",
+      "feasibility": "Medium",
+      "rationale": "Requires multi-dept approval.",
+      "next_action": "Meet city planner Friday.",
+      "service_ids": [
+        "service7",
+        "service8",
+        "service9"
+      ],
+      "training_ids": [
+        "training7",
+        "training8",
+        "training9"
+      ],
+      "talent_ids": [
+        "talent7",
+        "talent8",
+        "talent9"
+      ]
+    },
+    {
+      "id": "step9_2",
+      "question_id": "q9",
+      "step_number": 2,
+      "name": "Site Partner",
+      "description": "Negotiate 3-month lease with existing food-truck lot operator for weekends.",
+      "feasibility": "Medium",
+      "rationale": "Landlord buy-in needed.",
+      "next_action": "Email lot owner proposal.",
+      "service_ids": [
+        "service10",
+        "service1",
+        "service2"
+      ],
+      "training_ids": [
+        "training10",
+        "training1",
+        "training2"
+      ],
+      "talent_ids": [
+        "talent10",
+        "talent11",
+        "talent12"
+      ]
+    },
+    {
+      "id": "step9_3",
+      "question_id": "q9",
+      "step_number": 3,
+      "name": "Modular Layout",
+      "description": "Rent portable fencing, picnic tables, and cold box suited for 300 guests.",
+      "feasibility": "High",
+      "rationale": "Vendors abundant.",
+      "next_action": "Book rental quotes.",
+      "service_ids": [
+        "service3",
+        "service4",
+        "service5"
+      ],
+      "training_ids": [
+        "training3",
+        "training4",
+        "training5"
+      ],
+      "talent_ids": [
+        "talent13",
+        "talent14",
+        "talent15"
+      ]
+    },
+    {
+      "id": "step9_4",
+      "question_id": "q9",
+      "step_number": 4,
+      "name": "Marketing Blitz",
+      "description": "Run countdown social posts + co-promote with food trucks; collect RSVPs via Eventbrite.",
+      "feasibility": "High",
+      "rationale": "Zero marginal cost.",
+      "next_action": "Design Eventbrite page.",
+      "service_ids": [
+        "service6",
+        "service7",
+        "service8"
+      ],
+      "training_ids": [
+        "training6",
+        "training7",
+        "training8"
+      ],
+      "talent_ids": [
+        "talent16",
+        "talent17",
+        "talent18"
+      ]
+    },
+    {
+      "id": "step10_1",
+      "question_id": "q10",
+      "step_number": 1,
+      "name": "Spec Refinement",
+      "description": "Document target OG, FG, IBU, SRM, and water profile for each core recipe.",
+      "feasibility": "High",
+      "rationale": "Current specs informal.",
+      "next_action": "Write SOP sheet per beer.",
+      "service_ids": [
+        "service9",
+        "service10",
+        "service1"
+      ],
+      "training_ids": [
+        "training9",
+        "training10",
+        "training1"
+      ],
+      "talent_ids": [
+        "talent19",
+        "talent20",
+        "talent21"
+      ]
+    },
+    {
+      "id": "step10_2",
+      "question_id": "q10",
+      "step_number": 2,
+      "name": "Critical Control Logging",
+      "description": "Record mash pH, fermentation temp curve, and DO daily in Google Sheets.",
+      "feasibility": "High",
+      "rationale": "Meters on-hand.",
+      "next_action": "Create shared QC sheet.",
+      "service_ids": [
+        "service2",
+        "service3",
+        "service4"
+      ],
+      "training_ids": [
+        "training2",
+        "training3",
+        "training4"
+      ],
+      "talent_ids": [
+        "talent22",
+        "talent23",
+        "talent24"
+      ]
+    },
+    {
+      "id": "step10_3",
+      "question_id": "q10",
+      "step_number": 3,
+      "name": "Sensory Panel",
+      "description": "Train 6-person panel to score beers weekly vs. BJCP style guides.",
+      "feasibility": "Medium",
+      "rationale": "Time commitment but no cost.",
+      "next_action": "Schedule first calibration session.",
+      "service_ids": [
+        "service5",
+        "service6",
+        "service7"
+      ],
+      "training_ids": [
+        "training5",
+        "training6",
+        "training7"
+      ],
+      "talent_ids": [
+        "talent25",
+        "talent26",
+        "talent27"
+      ]
+    },
+    {
+      "id": "step10_4",
+      "question_id": "q10",
+      "step_number": 4,
+      "name": "Iterative Adjust",
+      "description": "Analyze variance, tweak grist or dry-hop timing, and re-test until median score \u226538.",
+      "feasibility": "High",
+      "rationale": "Process oriented.",
+      "next_action": "Set monthly review meeting.",
+      "service_ids": [
+        "service8",
+        "service9",
+        "service10"
+      ],
+      "training_ids": [
+        "training8",
+        "training9",
+        "training10"
+      ],
+      "talent_ids": [
+        "talent28",
+        "talent29",
+        "talent30"
+      ]
+    },
+    {
+      "id": "step11_1",
+      "question_id": "q11",
+      "step_number": 1,
+      "name": "CapEx Estimate",
+      "description": "Gather quotes for 15-bbl tank + glycol lines (~$28 k installed).",
+      "feasibility": "High",
+      "rationale": "Vendors known.",
+      "next_action": "Request three quotes.",
+      "service_ids": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "training_ids": [
+        "training1",
+        "training2",
+        "training3"
+      ],
+      "talent_ids": [
+        "talent31",
+        "talent32",
+        "talent33"
+      ]
+    },
+    {
+      "id": "step11_2",
+      "question_id": "q11",
+      "step_number": 2,
+      "name": "Loan Comparison",
+      "description": "Model SBA 7(a), local bank term loan, and equipment lease cash flows.",
+      "feasibility": "High",
+      "rationale": "Public rate tables exist.",
+      "next_action": "Build 5-year amortization sheet.",
+      "service_ids": [
+        "service4",
+        "service5",
+        "service6"
+      ],
+      "training_ids": [
+        "training4",
+        "training5",
+        "training6"
+      ],
+      "talent_ids": [
+        "talent34",
+        "talent35",
+        "talent36"
+      ]
+    },
+    {
+      "id": "step11_3",
+      "question_id": "q11",
+      "step_number": 3,
+      "name": "Equity Impact",
+      "description": "Forecast DSCR and ensure covenant compliance without selling >10 % shares.",
+      "feasibility": "High",
+      "rationale": "Financial modeling only.",
+      "next_action": "Update cap table scenarios.",
+      "service_ids": [
+        "service7",
+        "service8",
+        "service9"
+      ],
+      "training_ids": [
+        "training7",
+        "training8",
+        "training9"
+      ],
+      "talent_ids": [
+        "talent37",
+        "talent38",
+        "talent39"
+      ]
+    },
+    {
+      "id": "step11_4",
+      "question_id": "q11",
+      "step_number": 4,
+      "name": "Apply & Close",
+      "description": "Submit chosen loan package with last 3 years financials; close in 45 days.",
+      "feasibility": "Medium",
+      "rationale": "Underwriting timeline variable.",
+      "next_action": "Gather tax returns and P&L.",
+      "service_ids": [
+        "service10",
+        "service1",
+        "service2"
+      ],
+      "training_ids": [
+        "training10",
+        "training1",
+        "training2"
+      ],
+      "talent_ids": [
+        "talent40",
+        "talent41",
+        "talent42"
+      ]
+    },
+    {
+      "id": "step12_1",
+      "question_id": "q12",
+      "step_number": 1,
+      "name": "Volume & Pricing",
+      "description": "Plan 20 bbl yield into 500 \u00d7 500 ml bottles at $30 + 200 draft pours at $12.",
+      "feasibility": "High",
+      "rationale": "Historical sell-through supports price.",
+      "next_action": "Run margin calc.",
+      "service_ids": [
+        "service3",
+        "service4",
+        "service5"
+      ],
+      "training_ids": [
+        "training3",
+        "training4",
+        "training5"
+      ],
+      "talent_ids": [
+        "talent43",
+        "talent44",
+        "talent45"
+      ]
+    },
+    {
+      "id": "step12_2",
+      "question_id": "q12",
+      "step_number": 2,
+      "name": "Barrel Procurement",
+      "description": "Source eight Heaven Hill barrels and age stout 9 months.",
+      "feasibility": "Medium",
+      "rationale": "Lead time needed.",
+      "next_action": "Place barrel order now.",
+      "service_ids": [
+        "service6",
+        "service7",
+        "service8"
+      ],
+      "training_ids": [
+        "training6",
+        "training7",
+        "training8"
+      ],
+      "talent_ids": [
+        "talent1",
+        "talent2",
+        "talent3"
+      ]
+    },
+    {
+      "id": "step12_3",
+      "question_id": "q12",
+      "step_number": 3,
+      "name": "Ticketed Presale",
+      "description": "Sell 400 online tickets guaranteeing two bottles + glass ($70) plus VIP party upsell.",
+      "feasibility": "High",
+      "rationale": "Event platforms handle capacity.",
+      "next_action": "Build Eventbrite page.",
+      "service_ids": [
+        "service9",
+        "service10",
+        "service1"
+      ],
+      "training_ids": [
+        "training9",
+        "training10",
+        "training1"
+      ],
+      "talent_ids": [
+        "talent4",
+        "talent5",
+        "talent6"
+      ]
+    },
+    {
+      "id": "step12_4",
+      "question_id": "q12",
+      "step_number": 4,
+      "name": "Launch Event",
+      "description": "Host on-site party with live band; release remaining bottles to general public.",
+      "feasibility": "High",
+      "rationale": "Taproom suited for 250 guests.",
+      "next_action": "Book band and food truck.",
+      "service_ids": [
+        "service2",
+        "service3",
+        "service4"
+      ],
+      "training_ids": [
+        "training2",
+        "training3",
+        "training4"
+      ],
+      "talent_ids": [
+        "talent7",
+        "talent8",
+        "talent9"
+      ]
+    },
+    {
+      "id": "step13_1",
+      "question_id": "q13",
+      "step_number": 1,
+      "name": "Rating Baseline",
+      "description": "Export Untappd API data for core SKUs to pinpoint rating laggards.",
+      "feasibility": "High",
+      "rationale": "API is open.",
+      "next_action": "Query ratings via API key.",
+      "service_ids": [
+        "service5",
+        "service6",
+        "service7"
+      ],
+      "training_ids": [
+        "training5",
+        "training6",
+        "training7"
+      ],
+      "talent_ids": [
+        "talent10",
+        "talent11",
+        "talent12"
+      ]
+    },
+    {
+      "id": "step13_2",
+      "question_id": "q13",
+      "step_number": 2,
+      "name": "Recipe Improvement",
+      "description": "Address off-flavor notes with pilot tweaks (e.g., adjust dry-hop timing).",
+      "feasibility": "High",
+      "rationale": "Within brew control.",
+      "next_action": "Schedule pilot brew.",
+      "service_ids": [
+        "service8",
+        "service9",
+        "service10"
+      ],
+      "training_ids": [
+        "training8",
+        "training9",
+        "training10"
+      ],
+      "talent_ids": [
+        "talent13",
+        "talent14",
+        "talent15"
+      ]
+    },
+    {
+      "id": "step13_3",
+      "question_id": "q13",
+      "step_number": 3,
+      "name": "Check-In Incentives",
+      "description": "Offer $1 discount for live Untappd check-in with rating prompt.",
+      "feasibility": "High",
+      "rationale": "Low cost, immediate impact.",
+      "next_action": "Print table tents with QR instructions.",
+      "service_ids": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "training_ids": [
+        "training1",
+        "training2",
+        "training3"
+      ],
+      "talent_ids": [
+        "talent16",
+        "talent17",
+        "talent18"
+      ]
+    },
+    {
+      "id": "step13_4",
+      "question_id": "q13",
+      "step_number": 4,
+      "name": "Amplify Positives",
+      "description": "Share top reviews on IG stories; engage reviewers to encourage word-of-mouth.",
+      "feasibility": "High",
+      "rationale": "Social reposting is free.",
+      "next_action": "Create weekly review highlight.",
+      "service_ids": [
+        "service4",
+        "service5",
+        "service6"
+      ],
+      "training_ids": [
+        "training4",
+        "training5",
+        "training6"
+      ],
+      "talent_ids": [
+        "talent19",
+        "talent20",
+        "talent21"
+      ]
+    },
+    {
+      "id": "step14_1",
+      "question_id": "q14",
+      "step_number": 1,
+      "name": "Regulation Review",
+      "description": "Confirm TTB requirements for flavored malt beverage vs. wine-base classification.",
+      "feasibility": "High",
+      "rationale": "TTB circulars online.",
+      "next_action": "Read TTB FAQ 2018-4.",
+      "service_ids": [
+        "service7",
+        "service8",
+        "service9"
+      ],
+      "training_ids": [
+        "training7",
+        "training8",
+        "training9"
+      ],
+      "talent_ids": [
+        "talent22",
+        "talent23",
+        "talent24"
+      ]
+    },
+    {
+      "id": "step14_2",
+      "question_id": "q14",
+      "step_number": 2,
+      "name": "Process Adaptation",
+      "description": "Ferment cane sugar wash in spare 7-bbl tank; use nutrient protocol.",
+      "feasibility": "High",
+      "rationale": "No new tanks needed.",
+      "next_action": "Order yeast nutrient and finings.",
+      "service_ids": [
+        "service10",
+        "service1",
+        "service2"
+      ],
+      "training_ids": [
+        "training10",
+        "training1",
+        "training2"
+      ],
+      "talent_ids": [
+        "talent25",
+        "talent26",
+        "talent27"
+      ]
+    },
+    {
+      "id": "step14_3",
+      "question_id": "q14",
+      "step_number": 3,
+      "name": "Flavor Trials",
+      "description": "Pilot three natural flavor extracts, run taproom flight test for preference data.",
+      "feasibility": "High",
+      "rationale": "Extract cost low.",
+      "next_action": "Purchase 1 L sample extracts.",
+      "service_ids": [
+        "service3",
+        "service4",
+        "service5"
+      ],
+      "training_ids": [
+        "training3",
+        "training4",
+        "training5"
+      ],
+      "talent_ids": [
+        "talent28",
+        "talent29",
+        "talent30"
+      ]
+    },
+    {
+      "id": "step14_4",
+      "question_id": "q14",
+      "step_number": 4,
+      "name": "Label Submission",
+      "description": "Submit COLA with nutrition panel via TTB COLAs Online.",
+      "feasibility": "Medium",
+      "rationale": "Approval time variable.",
+      "next_action": "Upload label artwork for review.",
+      "service_ids": [
+        "service6",
+        "service7",
+        "service8"
+      ],
+      "training_ids": [
+        "training6",
+        "training7",
+        "training8"
+      ],
+      "talent_ids": [
+        "talent31",
+        "talent32",
+        "talent33"
+      ]
+    },
+    {
+      "id": "step15_1",
+      "question_id": "q15",
+      "step_number": 1,
+      "name": "Liability Cap",
+      "description": "Set 18-month expiration and max $100 denomination to manage breakage risk.",
+      "feasibility": "High",
+      "rationale": "Legal in our state.",
+      "next_action": "Verify state escheat rules.",
+      "service_ids": [
+        "service9",
+        "service10",
+        "service1"
+      ],
+      "training_ids": [
+        "training9",
+        "training10",
+        "training1"
+      ],
+      "talent_ids": [
+        "talent34",
+        "talent35",
+        "talent36"
+      ]
+    },
+    {
+      "id": "step15_2",
+      "question_id": "q15",
+      "step_number": 2,
+      "name": "Bonus Tiers",
+      "description": "Offer $50 card for $45 and $110 card for $100 for limited 4-week window.",
+      "feasibility": "High",
+      "rationale": "Simple pricing tweak.",
+      "next_action": "Create promo codes in Square.",
+      "service_ids": [
+        "service2",
+        "service3",
+        "service4"
+      ],
+      "training_ids": [
+        "training2",
+        "training3",
+        "training4"
+      ],
+      "talent_ids": [
+        "talent37",
+        "talent38",
+        "talent39"
+      ]
+    },
+    {
+      "id": "step15_3",
+      "question_id": "q15",
+      "step_number": 3,
+      "name": "Digital Delivery",
+      "description": "Enable email/SMS delivery via Stripe Issuing API with festive templates.",
+      "feasibility": "High",
+      "rationale": "Stripe supports today.",
+      "next_action": "Integrate Stripe e-gift module.",
+      "service_ids": [
+        "service5",
+        "service6",
+        "service7"
+      ],
+      "training_ids": [
+        "training5",
+        "training6",
+        "training7"
+      ],
+      "talent_ids": [
+        "talent40",
+        "talent41",
+        "talent42"
+      ]
+    },
+    {
+      "id": "step15_4",
+      "question_id": "q15",
+      "step_number": 4,
+      "name": "Marketing Push",
+      "description": "Run targeted email to past buyers and Facebook lookalike audiences; remarket abandoned carts.",
+      "feasibility": "High",
+      "rationale": "Lists and pixels live.",
+      "next_action": "Draft Klaviyo campaign.",
+      "service_ids": [
+        "service8",
+        "service9",
+        "service10"
+      ],
+      "training_ids": [
+        "training8",
+        "training9",
+        "training10"
+      ],
+      "talent_ids": [
+        "talent43",
+        "talent44",
+        "talent45"
+      ]
+    }
+  ],
+  "experts": [
+    {
+      "id": "expert1",
+      "first_name": "Uma",
+      "last_name": "Wright",
+      "job_title": "Operations Manager",
+      "company": "GrainCraft",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "expert2",
+      "first_name": "Hugo",
+      "last_name": "Chen",
+      "job_title": "Head Brewer",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "expert3",
+      "first_name": "Seth",
+      "last_name": "Moore",
+      "job_title": "Operations Manager",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "expert4",
+      "first_name": "Gia",
+      "last_name": "Diaz",
+      "job_title": "QC Specialist",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "expert5",
+      "first_name": "Gia",
+      "last_name": "Jackson",
+      "job_title": "Data Engineer",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "expert6",
+      "first_name": "Seth",
+      "last_name": "Smith",
+      "job_title": "Operations Manager",
+      "company": "YeastWorks",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "expert7",
+      "first_name": "Kara",
+      "last_name": "Smith",
+      "job_title": "Growth Marketer",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "expert8",
+      "first_name": "Dana",
+      "last_name": "Patel",
+      "job_title": "Data Engineer",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "expert9",
+      "first_name": "Liam",
+      "last_name": "Perez",
+      "job_title": "Taproom Supervisor",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "expert10",
+      "first_name": "Rhea",
+      "last_name": "Wright",
+      "job_title": "Data Engineer",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "expert11",
+      "first_name": "Jack",
+      "last_name": "Perez",
+      "job_title": "Digital Strategist",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "expert12",
+      "first_name": "Ben",
+      "last_name": "Diaz",
+      "job_title": "Taproom Supervisor",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "expert13",
+      "first_name": "Dana",
+      "last_name": "Wilson",
+      "job_title": "Taproom Supervisor",
+      "company": "Cider City",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "expert14",
+      "first_name": "Finn",
+      "last_name": "Miller",
+      "job_title": "Digital Strategist",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "expert15",
+      "first_name": "Wes",
+      "last_name": "Patel",
+      "job_title": "Event Coordinator",
+      "company": "YeastWorks",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "expert16",
+      "first_name": "Xia",
+      "last_name": "Diaz",
+      "job_title": "Growth Marketer",
+      "company": "Cider City",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "expert17",
+      "first_name": "Isla",
+      "last_name": "Jackson",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "Cascade Hops",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "expert18",
+      "first_name": "Hugo",
+      "last_name": "Kim",
+      "job_title": "Digital Strategist",
+      "company": "MaltMakers",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "expert19",
+      "first_name": "Cam",
+      "last_name": "Hill",
+      "job_title": "Event Coordinator",
+      "company": "Cascade Hops",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "expert20",
+      "first_name": "Uma",
+      "last_name": "Anderson",
+      "job_title": "Data Engineer",
+      "company": "Cider City",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "expert21",
+      "first_name": "Isla",
+      "last_name": "Chen",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "expert22",
+      "first_name": "Isla",
+      "last_name": "Lee",
+      "job_title": "Data Engineer",
+      "company": "MaltMakers",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "expert23",
+      "first_name": "Quinn",
+      "last_name": "Anderson",
+      "job_title": "Head Brewer",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "expert24",
+      "first_name": "Evan",
+      "last_name": "Singh",
+      "job_title": "Data Engineer",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "expert25",
+      "first_name": "Mia",
+      "last_name": "Perez",
+      "job_title": "Financial Analyst",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "expert26",
+      "first_name": "Rhea",
+      "last_name": "Lopez",
+      "job_title": "Head Brewer",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "expert27",
+      "first_name": "Yara",
+      "last_name": "Davis",
+      "job_title": "Head Brewer",
+      "company": "GrainCraft",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "expert28",
+      "first_name": "Finn",
+      "last_name": "Taylor",
+      "job_title": "Operations Manager",
+      "company": "GrainCraft",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "expert29",
+      "first_name": "Yara",
+      "last_name": "Singh",
+      "job_title": "QC Specialist",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "expert30",
+      "first_name": "Uma",
+      "last_name": "Thomas",
+      "job_title": "Event Coordinator",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "expert31",
+      "first_name": "Liam",
+      "last_name": "Singh",
+      "job_title": "QC Specialist",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "expert32",
+      "first_name": "Tara",
+      "last_name": "Davis",
+      "job_title": "Financial Analyst",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "expert33",
+      "first_name": "Liam",
+      "last_name": "Brown",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "expert34",
+      "first_name": "Seth",
+      "last_name": "Patel",
+      "job_title": "Head Brewer",
+      "company": "Cider City",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "expert35",
+      "first_name": "Yara",
+      "last_name": "Jackson",
+      "job_title": "Growth Marketer",
+      "company": "YeastWorks",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "expert36",
+      "first_name": "Rhea",
+      "last_name": "Singh",
+      "job_title": "Taproom Supervisor",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "expert37",
+      "first_name": "Nate",
+      "last_name": "Hill",
+      "job_title": "QC Specialist",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "expert38",
+      "first_name": "Mia",
+      "last_name": "Miller",
+      "job_title": "Financial Analyst",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "expert39",
+      "first_name": "Dana",
+      "last_name": "Diaz",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "expert40",
+      "first_name": "Ava",
+      "last_name": "Lee",
+      "job_title": "QC Specialist",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "expert41",
+      "first_name": "Hugo",
+      "last_name": "Lopez",
+      "job_title": "Head Brewer",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "expert42",
+      "first_name": "Cam",
+      "last_name": "Kim",
+      "job_title": "Digital Strategist",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "expert43",
+      "first_name": "Hugo",
+      "last_name": "Smith",
+      "job_title": "Financial Analyst",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "expert44",
+      "first_name": "Evan",
+      "last_name": "Lee",
+      "job_title": "Event Coordinator",
+      "company": "Cider City",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "expert45",
+      "first_name": "Zane",
+      "last_name": "Anderson",
+      "job_title": "Data Engineer",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    }
+  ],
+  "talents": [
+    {
+      "id": "talent1",
+      "first_name": "Uma",
+      "last_name": "Wright",
+      "job_title": "Operations Manager",
+      "company": "GrainCraft",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "talent2",
+      "first_name": "Hugo",
+      "last_name": "Chen",
+      "job_title": "Head Brewer",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "talent3",
+      "first_name": "Seth",
+      "last_name": "Moore",
+      "job_title": "Operations Manager",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "talent4",
+      "first_name": "Gia",
+      "last_name": "Diaz",
+      "job_title": "QC Specialist",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "talent5",
+      "first_name": "Gia",
+      "last_name": "Jackson",
+      "job_title": "Data Engineer",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "talent6",
+      "first_name": "Seth",
+      "last_name": "Smith",
+      "job_title": "Operations Manager",
+      "company": "YeastWorks",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "talent7",
+      "first_name": "Kara",
+      "last_name": "Smith",
+      "job_title": "Growth Marketer",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "talent8",
+      "first_name": "Dana",
+      "last_name": "Patel",
+      "job_title": "Data Engineer",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "talent9",
+      "first_name": "Liam",
+      "last_name": "Perez",
+      "job_title": "Taproom Supervisor",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "talent10",
+      "first_name": "Rhea",
+      "last_name": "Wright",
+      "job_title": "Data Engineer",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "talent11",
+      "first_name": "Jack",
+      "last_name": "Perez",
+      "job_title": "Digital Strategist",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "talent12",
+      "first_name": "Ben",
+      "last_name": "Diaz",
+      "job_title": "Taproom Supervisor",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "talent13",
+      "first_name": "Dana",
+      "last_name": "Wilson",
+      "job_title": "Taproom Supervisor",
+      "company": "Cider City",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "talent14",
+      "first_name": "Finn",
+      "last_name": "Miller",
+      "job_title": "Digital Strategist",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "talent15",
+      "first_name": "Wes",
+      "last_name": "Patel",
+      "job_title": "Event Coordinator",
+      "company": "YeastWorks",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "talent16",
+      "first_name": "Xia",
+      "last_name": "Diaz",
+      "job_title": "Growth Marketer",
+      "company": "Cider City",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "talent17",
+      "first_name": "Isla",
+      "last_name": "Jackson",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "Cascade Hops",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "talent18",
+      "first_name": "Hugo",
+      "last_name": "Kim",
+      "job_title": "Digital Strategist",
+      "company": "MaltMakers",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "talent19",
+      "first_name": "Cam",
+      "last_name": "Hill",
+      "job_title": "Event Coordinator",
+      "company": "Cascade Hops",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "talent20",
+      "first_name": "Uma",
+      "last_name": "Anderson",
+      "job_title": "Data Engineer",
+      "company": "Cider City",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "talent21",
+      "first_name": "Isla",
+      "last_name": "Chen",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "talent22",
+      "first_name": "Isla",
+      "last_name": "Lee",
+      "job_title": "Data Engineer",
+      "company": "MaltMakers",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "talent23",
+      "first_name": "Quinn",
+      "last_name": "Anderson",
+      "job_title": "Head Brewer",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "talent24",
+      "first_name": "Evan",
+      "last_name": "Singh",
+      "job_title": "Data Engineer",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "talent25",
+      "first_name": "Mia",
+      "last_name": "Perez",
+      "job_title": "Financial Analyst",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "talent26",
+      "first_name": "Rhea",
+      "last_name": "Lopez",
+      "job_title": "Head Brewer",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "talent27",
+      "first_name": "Yara",
+      "last_name": "Davis",
+      "job_title": "Head Brewer",
+      "company": "GrainCraft",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "talent28",
+      "first_name": "Finn",
+      "last_name": "Taylor",
+      "job_title": "Operations Manager",
+      "company": "GrainCraft",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "talent29",
+      "first_name": "Yara",
+      "last_name": "Singh",
+      "job_title": "QC Specialist",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "talent30",
+      "first_name": "Uma",
+      "last_name": "Thomas",
+      "job_title": "Event Coordinator",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "talent31",
+      "first_name": "Liam",
+      "last_name": "Singh",
+      "job_title": "QC Specialist",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "talent32",
+      "first_name": "Tara",
+      "last_name": "Davis",
+      "job_title": "Financial Analyst",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "talent33",
+      "first_name": "Liam",
+      "last_name": "Brown",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "talent34",
+      "first_name": "Seth",
+      "last_name": "Patel",
+      "job_title": "Head Brewer",
+      "company": "Cider City",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    },
+    {
+      "id": "talent35",
+      "first_name": "Yara",
+      "last_name": "Jackson",
+      "job_title": "Growth Marketer",
+      "company": "YeastWorks",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "talent36",
+      "first_name": "Rhea",
+      "last_name": "Singh",
+      "job_title": "Taproom Supervisor",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "talent37",
+      "first_name": "Nate",
+      "last_name": "Hill",
+      "job_title": "QC Specialist",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "talent38",
+      "first_name": "Mia",
+      "last_name": "Miller",
+      "job_title": "Financial Analyst",
+      "company": "Lagertown",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 125
+    },
+    {
+      "id": "talent39",
+      "first_name": "Dana",
+      "last_name": "Diaz",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 110
+    },
+    {
+      "id": "talent40",
+      "first_name": "Ava",
+      "last_name": "Lee",
+      "job_title": "QC Specialist",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "talent41",
+      "first_name": "Hugo",
+      "last_name": "Lopez",
+      "job_title": "Head Brewer",
+      "company": "Foamy Labs",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "talent42",
+      "first_name": "Cam",
+      "last_name": "Kim",
+      "job_title": "Digital Strategist",
+      "company": "Hops & Co.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "talent43",
+      "first_name": "Hugo",
+      "last_name": "Smith",
+      "job_title": "Financial Analyst",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 150
+    },
+    {
+      "id": "talent44",
+      "first_name": "Evan",
+      "last_name": "Lee",
+      "job_title": "Event Coordinator",
+      "company": "Cider City",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 90
+    },
+    {
+      "id": "talent45",
+      "first_name": "Zane",
+      "last_name": "Anderson",
+      "job_title": "Data Engineer",
+      "company": "Barrel Bros.",
+      "summary": "10+ years solving exactly this type of problem.",
+      "hourly_rate_usd": 75
+    }
+  ],
+  "trainings": [
+    {
+      "id": "training1",
+      "course_name": "Mastering Local Digital Ads",
+      "platform": "LinkedIn Learning",
+      "hours": 1.5,
+      "difficulty": "Intermediate",
+      "url": "https://www.linkedin.com/learning/mastering-local-digital-ads"
+    },
+    {
+      "id": "training2",
+      "course_name": "Lean Supply-Chain Tactics",
+      "platform": "LinkedIn Learning",
+      "hours": 2.0,
+      "difficulty": "Beginner",
+      "url": "https://www.linkedin.com/learning/lean-supply-chain-tactics"
+    },
+    {
+      "id": "training3",
+      "course_name": "Practical QR-Code Workflows",
+      "platform": "LinkedIn Learning",
+      "hours": 0.75,
+      "difficulty": "Beginner",
+      "url": "https://www.linkedin.com/learning/practical-qr-code-workflows"
+    },
+    {
+      "id": "training4",
+      "course_name": "Data Warehousing Basics",
+      "platform": "LinkedIn Learning",
+      "hours": 3.0,
+      "difficulty": "Intermediate",
+      "url": "https://www.linkedin.com/learning/data-warehousing-basics"
+    },
+    {
+      "id": "training5",
+      "course_name": "Permitting 101 for Pop-Ups",
+      "platform": "LinkedIn Learning",
+      "hours": 1.0,
+      "difficulty": "Beginner",
+      "url": "https://www.linkedin.com/learning/permitting-101-for-pop-ups"
+    },
+    {
+      "id": "training6",
+      "course_name": "Small-Batch Production Scheduling",
+      "platform": "LinkedIn Learning",
+      "hours": 1.25,
+      "difficulty": "Beginner",
+      "url": "https://www.linkedin.com/learning/small-batch-production-scheduling"
+    },
+    {
+      "id": "training7",
+      "course_name": "TikTok Marketing Essentials",
+      "platform": "LinkedIn Learning",
+      "hours": 2.5,
+      "difficulty": "Intermediate",
+      "url": "https://www.linkedin.com/learning/tiktok-marketing-essentials"
+    },
+    {
+      "id": "training8",
+      "course_name": "Financial Modeling for Craft Breweries",
+      "platform": "LinkedIn Learning",
+      "hours": 2.25,
+      "difficulty": "Advanced",
+      "url": "https://www.linkedin.com/learning/financial-modeling-for-craft-breweries"
+    },
+    {
+      "id": "training9",
+      "course_name": "Quality Control in Brewing",
+      "platform": "LinkedIn Learning",
+      "hours": 4.0,
+      "difficulty": "Advanced",
+      "url": "https://www.linkedin.com/learning/quality-control-in-brewing"
+    },
+    {
+      "id": "training10",
+      "course_name": "Launching Subscription Products",
+      "platform": "LinkedIn Learning",
+      "hours": 1.75,
+      "difficulty": "Intermediate",
+      "url": "https://www.linkedin.com/learning/launching-subscription-products"
+    }
+  ],
+  "services": [
+    {
+      "id": "service1",
+      "service_name": "GeoFencing Ads",
+      "service_description": "Runs hyper\u2011local ad campaigns with real\u2011time radius targeting.",
+      "website": "https://geofencingads.com"
+    },
+    {
+      "id": "service2",
+      "service_name": "BrewSched Pro",
+      "service_description": "SaaS that optimizes small\u2011batch production calendars.",
+      "website": "https://brewschedpro.com"
+    },
+    {
+      "id": "service3",
+      "service_name": "KegTrack 360",
+      "service_description": "QR\u2011code logistics platform for brewery assets and distributor returns.",
+      "website": "https://kegtrack360.com"
+    },
+    {
+      "id": "service4",
+      "service_name": "QuickPermit",
+      "service_description": "One\u2011stop service for processing city event and temporary occupancy permits.",
+      "website": "https://quickpermit.com"
+    },
+    {
+      "id": "service5",
+      "service_name": "MetriDash",
+      "service_description": "Managed Metabase hosting with turn\u2011key ETL bundles for SMBs.",
+      "website": "https://metridash.com"
+    },
+    {
+      "id": "service6",
+      "service_name": "HeatReclaim Co",
+      "service_description": "Supplies plate heat\u2011exchangers and heat\u2011recovery engineering for breweries.",
+      "website": "https://heatreclaim.co"
+    },
+    {
+      "id": "service7",
+      "service_name": "SocialTik Agency",
+      "service_description": "TikTok\u2011focused creative studio and micro\u2011influencer network.",
+      "website": "https://socialtik.agency"
+    },
+    {
+      "id": "service8",
+      "service_name": "SeltzerStudio",
+      "service_description": "Consulting + ingredients kit for launching craft hard seltzers.",
+      "website": "https://seltzerstudio.com"
+    },
+    {
+      "id": "service9",
+      "service_name": "BarrelSource",
+      "service_description": "Bulk bourbon barrel procurement with guaranteed freshness.",
+      "website": "https://barrelsource.com"
+    },
+    {
+      "id": "service10",
+      "service_name": "GiftCardXpress",
+      "service_description": "Instant digital gift\u2011card issuance through Stripe integration.",
+      "website": "https://giftcardxpress.com"
+    }
+  ],
+  "conversations": [
+    {
+      "first_name": "Dana",
+      "last_name": "Moore",
+      "job_title": "Digital Strategist",
+      "company": "MaltMakers",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 15,
+      "likes": 93,
+      "id": "conv1",
+      "question_id": "q1"
+    },
+    {
+      "first_name": "Ben",
+      "last_name": "Wright",
+      "job_title": "Operations Manager",
+      "company": "MaltMakers",
+      "comment_text": "Confirmed\u2014this playbook saved us weeks.",
+      "sentiment": "positive",
+      "days_ago": 11,
+      "likes": 13,
+      "id": "conv2",
+      "question_id": "q1"
+    },
+    {
+      "first_name": "Hugo",
+      "last_name": "Hill",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "Lagertown",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 5,
+      "likes": 54,
+      "id": "conv3",
+      "question_id": "q1"
+    },
+    {
+      "first_name": "Finn",
+      "last_name": "Smith",
+      "job_title": "Financial Analyst",
+      "company": "Barrel Bros.",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 15,
+      "likes": 70,
+      "id": "conv4",
+      "question_id": "q1"
+    },
+    {
+      "first_name": "Dana",
+      "last_name": "Kim",
+      "job_title": "QC Specialist",
+      "company": "Foamy Labs",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 8,
+      "likes": 21,
+      "id": "conv5",
+      "question_id": "q1"
+    },
+    {
+      "first_name": "Nate",
+      "last_name": "Anderson",
+      "job_title": "Financial Analyst",
+      "company": "Barrel Bros.",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 2,
+      "likes": 21,
+      "id": "conv6",
+      "question_id": "q2"
+    },
+    {
+      "first_name": "Mia",
+      "last_name": "Lopez",
+      "job_title": "Data Engineer",
+      "company": "GrainCraft",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 10,
+      "likes": 54,
+      "id": "conv7",
+      "question_id": "q2"
+    },
+    {
+      "first_name": "Wes",
+      "last_name": "Jackson",
+      "job_title": "Financial Analyst",
+      "company": "YeastWorks",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 10,
+      "likes": 27,
+      "id": "conv8",
+      "question_id": "q2"
+    },
+    {
+      "first_name": "Ben",
+      "last_name": "Lee",
+      "job_title": "QC Specialist",
+      "company": "Foamy Labs",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 2,
+      "likes": 6,
+      "id": "conv9",
+      "question_id": "q2"
+    },
+    {
+      "first_name": "Seth",
+      "last_name": "Anderson",
+      "job_title": "QC Specialist",
+      "company": "Lagertown",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 2,
+      "likes": 65,
+      "id": "conv10",
+      "question_id": "q2"
+    },
+    {
+      "first_name": "Cam",
+      "last_name": "Singh",
+      "job_title": "Head Brewer",
+      "company": "Hops & Co.",
+      "comment_text": "Confirmed\u2014this playbook saved us weeks.",
+      "sentiment": "positive",
+      "days_ago": 8,
+      "likes": 51,
+      "id": "conv11",
+      "question_id": "q3"
+    },
+    {
+      "first_name": "Dana",
+      "last_name": "Lee",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "Foamy Labs",
+      "comment_text": "Confirmed\u2014this playbook saved us weeks.",
+      "sentiment": "positive",
+      "days_ago": 3,
+      "likes": 53,
+      "id": "conv12",
+      "question_id": "q3"
+    },
+    {
+      "first_name": "Vik",
+      "last_name": "Lee",
+      "job_title": "Event Coordinator",
+      "company": "Lagertown",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 9,
+      "likes": 26,
+      "id": "conv13",
+      "question_id": "q3"
+    },
+    {
+      "first_name": "Vik",
+      "last_name": "Davis",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "GrainCraft",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 5,
+      "likes": 85,
+      "id": "conv14",
+      "question_id": "q3"
+    },
+    {
+      "first_name": "Uma",
+      "last_name": "Brown",
+      "job_title": "Financial Analyst",
+      "company": "Cascade Hops",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 1,
+      "likes": 58,
+      "id": "conv15",
+      "question_id": "q3"
+    },
+    {
+      "first_name": "Tara",
+      "last_name": "Lee",
+      "job_title": "Head Brewer",
+      "company": "Hops & Co.",
+      "comment_text": "Confirmed\u2014this playbook saved us weeks.",
+      "sentiment": "positive",
+      "days_ago": 7,
+      "likes": 64,
+      "id": "conv16",
+      "question_id": "q4"
+    },
+    {
+      "first_name": "Isla",
+      "last_name": "Chen",
+      "job_title": "Digital Strategist",
+      "company": "Hops & Co.",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 12,
+      "likes": 36,
+      "id": "conv17",
+      "question_id": "q4"
+    },
+    {
+      "first_name": "Finn",
+      "last_name": "Taylor",
+      "job_title": "QC Specialist",
+      "company": "GrainCraft",
+      "comment_text": "Confirmed\u2014this playbook saved us weeks.",
+      "sentiment": "positive",
+      "days_ago": 21,
+      "likes": 67,
+      "id": "conv18",
+      "question_id": "q4"
+    },
+    {
+      "first_name": "Ava",
+      "last_name": "Jackson",
+      "job_title": "Taproom Supervisor",
+      "company": "Hops & Co.",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 9,
+      "likes": 14,
+      "id": "conv19",
+      "question_id": "q4"
+    },
+    {
+      "first_name": "Dana",
+      "last_name": "Jackson",
+      "job_title": "Growth Marketer",
+      "company": "GrainCraft",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 20,
+      "likes": 26,
+      "id": "conv20",
+      "question_id": "q4"
+    },
+    {
+      "first_name": "Wes",
+      "last_name": "Davis",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "GrainCraft",
+      "comment_text": "Confirmed\u2014this playbook saved us weeks.",
+      "sentiment": "positive",
+      "days_ago": 16,
+      "likes": 32,
+      "id": "conv21",
+      "question_id": "q5"
+    },
+    {
+      "first_name": "Ben",
+      "last_name": "Patel",
+      "job_title": "Data Engineer",
+      "company": "GrainCraft",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 1,
+      "likes": 42,
+      "id": "conv22",
+      "question_id": "q5"
+    },
+    {
+      "first_name": "Yara",
+      "last_name": "Chen",
+      "job_title": "Taproom Supervisor",
+      "company": "YeastWorks",
+      "comment_text": "Confirmed\u2014this playbook saved us weeks.",
+      "sentiment": "positive",
+      "days_ago": 15,
+      "likes": 70,
+      "id": "conv23",
+      "question_id": "q5"
+    },
+    {
+      "first_name": "Wes",
+      "last_name": "Moore",
+      "job_title": "QC Specialist",
+      "company": "Foamy Labs",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 3,
+      "likes": 88,
+      "id": "conv24",
+      "question_id": "q5"
+    },
+    {
+      "first_name": "Evan",
+      "last_name": "Jackson",
+      "job_title": "Operations Manager",
+      "company": "Cascade Hops",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 14,
+      "likes": 16,
+      "id": "conv25",
+      "question_id": "q5"
+    },
+    {
+      "first_name": "Ben",
+      "last_name": "Brown",
+      "job_title": "Digital Strategist",
+      "company": "Foamy Labs",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 7,
+      "likes": 87,
+      "id": "conv26",
+      "question_id": "q6"
+    },
+    {
+      "first_name": "Hugo",
+      "last_name": "Wright",
+      "job_title": "Digital Strategist",
+      "company": "Lagertown",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 20,
+      "likes": 95,
+      "id": "conv27",
+      "question_id": "q6"
+    },
+    {
+      "first_name": "Evan",
+      "last_name": "Diaz",
+      "job_title": "Growth Marketer",
+      "company": "YeastWorks",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 1,
+      "likes": 22,
+      "id": "conv28",
+      "question_id": "q6"
+    },
+    {
+      "first_name": "Xia",
+      "last_name": "Davis",
+      "job_title": "Data Engineer",
+      "company": "Barrel Bros.",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 6,
+      "likes": 89,
+      "id": "conv29",
+      "question_id": "q6"
+    },
+    {
+      "first_name": "Dana",
+      "last_name": "Wilson",
+      "job_title": "Operations Manager",
+      "company": "Cider City",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 7,
+      "likes": 58,
+      "id": "conv30",
+      "question_id": "q6"
+    },
+    {
+      "first_name": "Liam",
+      "last_name": "Brown",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "Barrel Bros.",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 7,
+      "likes": 51,
+      "id": "conv31",
+      "question_id": "q7"
+    },
+    {
+      "first_name": "Kara",
+      "last_name": "Smith",
+      "job_title": "Head Brewer",
+      "company": "GrainCraft",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 21,
+      "likes": 65,
+      "id": "conv32",
+      "question_id": "q7"
+    },
+    {
+      "first_name": "Mia",
+      "last_name": "Jackson",
+      "job_title": "Digital Strategist",
+      "company": "Foamy Labs",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 9,
+      "likes": 22,
+      "id": "conv33",
+      "question_id": "q7"
+    },
+    {
+      "first_name": "Seth",
+      "last_name": "Smith",
+      "job_title": "Operations Manager",
+      "company": "Hops & Co.",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 12,
+      "likes": 93,
+      "id": "conv34",
+      "question_id": "q7"
+    },
+    {
+      "first_name": "Zane",
+      "last_name": "Davis",
+      "job_title": "Data Engineer",
+      "company": "Lagertown",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 13,
+      "likes": 73,
+      "id": "conv35",
+      "question_id": "q7"
+    },
+    {
+      "first_name": "Gia",
+      "last_name": "Smith",
+      "job_title": "Operations Manager",
+      "company": "MaltMakers",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 17,
+      "likes": 68,
+      "id": "conv36",
+      "question_id": "q8"
+    },
+    {
+      "first_name": "Vik",
+      "last_name": "Hill",
+      "job_title": "Digital Strategist",
+      "company": "MaltMakers",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 11,
+      "likes": 79,
+      "id": "conv37",
+      "question_id": "q8"
+    },
+    {
+      "first_name": "Kara",
+      "last_name": "Wright",
+      "job_title": "Taproom Supervisor",
+      "company": "Lagertown",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 14,
+      "likes": 41,
+      "id": "conv38",
+      "question_id": "q8"
+    },
+    {
+      "first_name": "Mia",
+      "last_name": "Brown",
+      "job_title": "QC Specialist",
+      "company": "YeastWorks",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 14,
+      "likes": 85,
+      "id": "conv39",
+      "question_id": "q8"
+    },
+    {
+      "first_name": "Mia",
+      "last_name": "Singh",
+      "job_title": "Event Coordinator",
+      "company": "GrainCraft",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 18,
+      "likes": 0,
+      "id": "conv40",
+      "question_id": "q8"
+    },
+    {
+      "first_name": "Jack",
+      "last_name": "Brown",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "MaltMakers",
+      "comment_text": "Confirmed\u2014this playbook saved us weeks.",
+      "sentiment": "positive",
+      "days_ago": 20,
+      "likes": 83,
+      "id": "conv41",
+      "question_id": "q9"
+    },
+    {
+      "first_name": "Kara",
+      "last_name": "Taylor",
+      "job_title": "Financial Analyst",
+      "company": "Cider City",
+      "comment_text": "Confirmed\u2014this playbook saved us weeks.",
+      "sentiment": "positive",
+      "days_ago": 7,
+      "likes": 65,
+      "id": "conv42",
+      "question_id": "q9"
+    },
+    {
+      "first_name": "Pia",
+      "last_name": "Singh",
+      "job_title": "Head Brewer",
+      "company": "GrainCraft",
+      "comment_text": "Confirmed\u2014this playbook saved us weeks.",
+      "sentiment": "positive",
+      "days_ago": 21,
+      "likes": 79,
+      "id": "conv43",
+      "question_id": "q9"
+    },
+    {
+      "first_name": "Kara",
+      "last_name": "Patel",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "GrainCraft",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 7,
+      "likes": 18,
+      "id": "conv44",
+      "question_id": "q9"
+    },
+    {
+      "first_name": "Ava",
+      "last_name": "Kim",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "Cider City",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 15,
+      "likes": 53,
+      "id": "conv45",
+      "question_id": "q9"
+    },
+    {
+      "first_name": "Uma",
+      "last_name": "Lee",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "MaltMakers",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 13,
+      "likes": 31,
+      "id": "conv46",
+      "question_id": "q10"
+    },
+    {
+      "first_name": "Evan",
+      "last_name": "Lopez",
+      "job_title": "Head Brewer",
+      "company": "MaltMakers",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 6,
+      "likes": 89,
+      "id": "conv47",
+      "question_id": "q10"
+    },
+    {
+      "first_name": "Quinn",
+      "last_name": "Taylor",
+      "job_title": "Operations Manager",
+      "company": "Lagertown",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 4,
+      "likes": 58,
+      "id": "conv48",
+      "question_id": "q10"
+    },
+    {
+      "first_name": "Evan",
+      "last_name": "Taylor",
+      "job_title": "QC Specialist",
+      "company": "Lagertown",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 15,
+      "likes": 78,
+      "id": "conv49",
+      "question_id": "q10"
+    },
+    {
+      "first_name": "Xia",
+      "last_name": "Thomas",
+      "job_title": "Data Engineer",
+      "company": "Lagertown",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 6,
+      "likes": 95,
+      "id": "conv50",
+      "question_id": "q10"
+    },
+    {
+      "first_name": "Pia",
+      "last_name": "Taylor",
+      "job_title": "Taproom Supervisor",
+      "company": "Barrel Bros.",
+      "comment_text": "Confirmed\u2014this playbook saved us weeks.",
+      "sentiment": "positive",
+      "days_ago": 9,
+      "likes": 98,
+      "id": "conv51",
+      "question_id": "q11"
+    },
+    {
+      "first_name": "Yara",
+      "last_name": "Thomas",
+      "job_title": "Financial Analyst",
+      "company": "Barrel Bros.",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 15,
+      "likes": 9,
+      "id": "conv52",
+      "question_id": "q11"
+    },
+    {
+      "first_name": "Wes",
+      "last_name": "Brown",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "GrainCraft",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 11,
+      "likes": 69,
+      "id": "conv53",
+      "question_id": "q11"
+    },
+    {
+      "first_name": "Cam",
+      "last_name": "Chen",
+      "job_title": "Growth Marketer",
+      "company": "Barrel Bros.",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 5,
+      "likes": 90,
+      "id": "conv54",
+      "question_id": "q11"
+    },
+    {
+      "first_name": "Gia",
+      "last_name": "Patel",
+      "job_title": "Data Engineer",
+      "company": "MaltMakers",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 18,
+      "likes": 59,
+      "id": "conv55",
+      "question_id": "q11"
+    },
+    {
+      "first_name": "Nate",
+      "last_name": "Kim",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "MaltMakers",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 19,
+      "likes": 89,
+      "id": "conv56",
+      "question_id": "q12"
+    },
+    {
+      "first_name": "Ava",
+      "last_name": "Lee",
+      "job_title": "Data Engineer",
+      "company": "Cider City",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 12,
+      "likes": 38,
+      "id": "conv57",
+      "question_id": "q12"
+    },
+    {
+      "first_name": "Yara",
+      "last_name": "Wilson",
+      "job_title": "Data Engineer",
+      "company": "Lagertown",
+      "comment_text": "Confirmed\u2014this playbook saved us weeks.",
+      "sentiment": "positive",
+      "days_ago": 18,
+      "likes": 77,
+      "id": "conv58",
+      "question_id": "q12"
+    },
+    {
+      "first_name": "Hugo",
+      "last_name": "Anderson",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "GrainCraft",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 16,
+      "likes": 3,
+      "id": "conv59",
+      "question_id": "q12"
+    },
+    {
+      "first_name": "Mia",
+      "last_name": "Davis",
+      "job_title": "Data Engineer",
+      "company": "YeastWorks",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 5,
+      "likes": 79,
+      "id": "conv60",
+      "question_id": "q12"
+    },
+    {
+      "first_name": "Rhea",
+      "last_name": "Lopez",
+      "job_title": "Data Engineer",
+      "company": "Foamy Labs",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 21,
+      "likes": 54,
+      "id": "conv61",
+      "question_id": "q13"
+    },
+    {
+      "first_name": "Evan",
+      "last_name": "Taylor",
+      "job_title": "Growth Marketer",
+      "company": "Foamy Labs",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 13,
+      "likes": 41,
+      "id": "conv62",
+      "question_id": "q13"
+    },
+    {
+      "first_name": "Gia",
+      "last_name": "Taylor",
+      "job_title": "Digital Strategist",
+      "company": "Cascade Hops",
+      "comment_text": "We followed the same steps and saw amazing results.",
+      "sentiment": "positive",
+      "days_ago": 9,
+      "likes": 96,
+      "id": "conv63",
+      "question_id": "q13"
+    },
+    {
+      "first_name": "Nate",
+      "last_name": "Smith",
+      "job_title": "Head Brewer",
+      "company": "Cider City",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 18,
+      "likes": 6,
+      "id": "conv64",
+      "question_id": "q13"
+    },
+    {
+      "first_name": "Liam",
+      "last_name": "Diaz",
+      "job_title": "Head Brewer",
+      "company": "Foamy Labs",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 8,
+      "likes": 25,
+      "id": "conv65",
+      "question_id": "q13"
+    },
+    {
+      "first_name": "Ava",
+      "last_name": "Perez",
+      "job_title": "Growth Marketer",
+      "company": "Barrel Bros.",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 16,
+      "likes": 85,
+      "id": "conv66",
+      "question_id": "q14"
+    },
+    {
+      "first_name": "Dana",
+      "last_name": "Lee",
+      "job_title": "Supply\u2011Chain Analyst",
+      "company": "Cider City",
+      "comment_text": "Confirmed\u2014this playbook saved us weeks.",
+      "sentiment": "positive",
+      "days_ago": 9,
+      "likes": 98,
+      "id": "conv67",
+      "question_id": "q14"
+    },
+    {
+      "first_name": "Liam",
+      "last_name": "Singh",
+      "job_title": "Event Coordinator",
+      "company": "Hops & Co.",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 10,
+      "likes": 13,
+      "id": "conv68",
+      "question_id": "q14"
+    },
+    {
+      "first_name": "Seth",
+      "last_name": "Lopez",
+      "job_title": "Taproom Supervisor",
+      "company": "MaltMakers",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 7,
+      "likes": 9,
+      "id": "conv69",
+      "question_id": "q14"
+    },
+    {
+      "first_name": "Seth",
+      "last_name": "Diaz",
+      "job_title": "Head Brewer",
+      "company": "GrainCraft",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 19,
+      "likes": 5,
+      "id": "conv70",
+      "question_id": "q14"
+    },
+    {
+      "first_name": "Liam",
+      "last_name": "Jackson",
+      "job_title": "Data Engineer",
+      "company": "Cascade Hops",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 17,
+      "likes": 82,
+      "id": "conv71",
+      "question_id": "q15"
+    },
+    {
+      "first_name": "Kara",
+      "last_name": "Lopez",
+      "job_title": "Data Engineer",
+      "company": "Cider City",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 14,
+      "likes": 46,
+      "id": "conv72",
+      "question_id": "q15"
+    },
+    {
+      "first_name": "Uma",
+      "last_name": "Taylor",
+      "job_title": "Growth Marketer",
+      "company": "MaltMakers",
+      "comment_text": "Tried this and it worked like a charm!",
+      "sentiment": "positive",
+      "days_ago": 17,
+      "likes": 83,
+      "id": "conv73",
+      "question_id": "q15"
+    },
+    {
+      "first_name": "Isla",
+      "last_name": "Perez",
+      "job_title": "QC Specialist",
+      "company": "Cider City",
+      "comment_text": "Didn\u2019t move the needle for us, maybe we implemented it wrong?",
+      "sentiment": "negative",
+      "days_ago": 14,
+      "likes": 93,
+      "id": "conv74",
+      "question_id": "q15"
+    },
+    {
+      "first_name": "Seth",
+      "last_name": "Smith",
+      "job_title": "Digital Strategist",
+      "company": "Barrel Bros.",
+      "comment_text": "We hit a snag on step 2\u2014any tips?",
+      "sentiment": "negative",
+      "days_ago": 9,
+      "likes": 57,
+      "id": "conv75",
+      "question_id": "q15"
+    }
+  ]
+}
