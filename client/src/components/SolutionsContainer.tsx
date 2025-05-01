@@ -26,22 +26,9 @@ import {
   FaEnvelope,
   FaClipboard,
   FaCreditCard,
-  FaSpinner,
-  FaDownload,
-  FaSearch,
-  FaPlus,
-  FaCode,
-  FaBrain,
-  FaCog,
-  FaChartBar,
-  FaFileAlt,
-  FaCalendarAlt,
-  FaDatabase,
-  FaShippingFast,
-  FaShoppingCart,
-  FaRegStar,
-  FaStar
+  FaSpinner
 } from "react-icons/fa";
+import AgentMarketplace from "./AgentMarketplace";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -85,75 +72,7 @@ interface SolutionsContainerProps {
   solution: SolutionResponse;
 }
 
-// Mock AI agents for marketplace
-const mockAgents = [
-  {
-    id: 1,
-    name: "Supply Chain Optimizer",
-    icon: <FaShippingFast className="text-blue-500" size={24} />,
-    description: "AI-powered assistant that analyzes your supply chain and recommends optimization strategies.",
-    category: "Supply Chain",
-    rating: 4.8,
-    reviews: 124,
-    creator: "LinkedIn Business Solutions",
-    actions: ["analyze", "optimize", "report"]
-  },
-  {
-    id: 2,
-    name: "Email Composer Pro",
-    icon: <FaEnvelope className="text-green-500" size={24} />,
-    description: "Creates professional business emails with perfect tone and formatting for any business need.",
-    category: "Communication",
-    rating: 4.7,
-    reviews: 356,
-    creator: "ProWrite AI",
-    actions: ["draft", "edit", "schedule"]
-  },
-  {
-    id: 3,
-    name: "Form Builder AI",
-    icon: <FaClipboard className="text-purple-500" size={24} />,
-    description: "Generate custom forms for data collection, surveys, and business processes with smart validation.",
-    category: "Process Automation",
-    rating: 4.6,
-    reviews: 89,
-    creator: "FormForge Technologies",
-    actions: ["create", "validate", "analyze"]
-  },
-  {
-    id: 4,
-    name: "Market Analyst",
-    icon: <FaChartBar className="text-orange-500" size={24} />,
-    description: "Real-time market analysis and competitor insights for strategic business decisions.",
-    category: "Business Intelligence",
-    rating: 4.9,
-    reviews: 212,
-    creator: "DataSense AI",
-    actions: ["research", "compare", "visualize"]
-  },
-  {
-    id: 5,
-    name: "Inventory Manager",
-    icon: <FaDatabase className="text-red-500" size={24} />,
-    description: "Optimize inventory levels, predict stock needs, and prevent overstock or stockouts.",
-    category: "Supply Chain",
-    rating: 4.5,
-    reviews: 78,
-    creator: "SupplyAI Solutions",
-    actions: ["track", "forecast", "optimize"]
-  },
-  {
-    id: 6,
-    name: "Product Recommender",
-    icon: <FaShoppingCart className="text-indigo-500" size={24} />,
-    description: "Recommend the perfect products and services for specific business needs and constraints.",
-    category: "Sales",
-    rating: 4.7,
-    reviews: 156,
-    creator: "RecoSystems Inc.",
-    actions: ["analyze", "recommend", "compare"]
-  }
-];
+
 
 const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -161,9 +80,6 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
   const [showConsultInDialog, setShowConsultInDialog] = useState(false);
   const [isConsultInThinking, setIsConsultInThinking] = useState(false);
   const [showConsultInAction, setShowConsultInAction] = useState(false);
-  const [installingAgent, setInstallingAgent] = useState<number | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
   
   // Determine which resource tabs to show
   const tabs = [];
@@ -188,18 +104,6 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
     tabs.push({ id: "consultin", name: "ConsultIn", icon: FaRobot });
   }
   
-  // Filter agents by category and search query
-  const filteredAgents = mockAgents.filter(agent => {
-    const matchesCategory = !selectedCategory || agent.category === selectedCategory;
-    const matchesSearch = !searchQuery || 
-      agent.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-      agent.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-  
-  // Get unique categories
-  const categories = Array.from(new Set(mockAgents.map(agent => agent.category)));
-  
   // Handle ConsultIn button click
   const handleConsultInClick = () => {
     setIsConsultInThinking(true);
@@ -209,21 +113,15 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
     }, 2000); // Simulate "thinking" for 2 seconds
   };
   
-  // Handle agent installation
+  // Handle agent installation from marketplace
   const handleInstallAgent = (agentId: number) => {
-    setInstallingAgent(agentId);
+    setShowConsultInDialog(false);
     
-    // Simulate installation and then close dialog and show action
+    // After a brief pause, show the ConsultIn action (as if the agent completed the task)
     setTimeout(() => {
-      setInstallingAgent(null);
-      setShowConsultInDialog(false);
-      
-      // After a brief pause, show the ConsultIn action (as if the agent completed the task)
-      setTimeout(() => {
-        setIsConsultInThinking(false);
-        setShowConsultInAction(true);
-      }, 1000);
-    }, 2000);
+      setIsConsultInThinking(false);
+      setShowConsultInAction(true);
+    }, 1000);
   };
 
   return (
@@ -422,6 +320,13 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
               {/* ConsultIn tab content */}
               {activeTab === "consultin" && step.consultInAction && (
                 <div className="pl-2">
+                  {/* AgentMarketplace Dialog */}
+                  <AgentMarketplace 
+                    isOpen={showConsultInDialog}
+                    onClose={() => setShowConsultInDialog(false)}
+                    onInstallAgent={handleInstallAgent}
+                  />
+                  
                   {!showConsultInAction ? (
                     <div className="flex flex-col items-center justify-center p-4">
                       <div className="text-center mb-3">
