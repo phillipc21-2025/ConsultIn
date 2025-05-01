@@ -76,13 +76,23 @@ interface SolutionsContainerProps {
 
 const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const [activeTab, setActiveTab] = useState<string | undefined>(undefined);
+  // Set ConsultIn as the default active tab if it exists
+  const [activeTab, setActiveTab] = useState<string | undefined>(
+    step.consultInAction ? "consultin" : undefined
+  );
   const [showConsultInDialog, setShowConsultInDialog] = useState(false);
   const [isConsultInThinking, setIsConsultInThinking] = useState(false);
   const [showConsultInAction, setShowConsultInAction] = useState(false);
   
   // Determine which resource tabs to show
   const tabs = [];
+  
+  // Add ConsultIn tab as the first tab if there's a consultInAction
+  if (step.consultInAction) {
+    tabs.push({ id: "consultin", name: "ConsultIn", icon: FaRobot });
+  }
+  
+  // Add other resource tabs
   if (step.resources?.experts && step.resources.experts.length > 0) {
     tabs.push({ id: "experts", name: "Experts", icon: FaUserTie });
   }
@@ -97,11 +107,6 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
   }
   if (step.resources?.services && step.resources.services.length > 0) {
     tabs.push({ id: "services", name: "Services", icon: FaTools });
-  }
-  
-  // Add ConsultIn tab if there's a consultInAction
-  if (step.consultInAction) {
-    tabs.push({ id: "consultin", name: "ConsultIn", icon: FaRobot });
   }
   
   // Handle ConsultIn button click
