@@ -104,11 +104,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // For easier console logging
       console.log("Available seed questions:");
+      let hasSolutions = false;
       allProblems.forEach(p => {
         if (p.solution) {
-          console.log(`- ${p.problem.substring(0, 50)}...`);
+          hasSolutions = true;
+          console.log(`- ${p.problem} (id: ${p.id})`);
         }
       });
+      
+      if (!hasSolutions) {
+        console.log("WARNING: No problems with solutions found in storage!");
+        // Import the seed data again since it might not have been loaded
+        try {
+          console.log("Trying to load seed data...");
+          const path = require('path');
+          const { importAllData } = require('./importConnectedData');
+          importAllData().then(() => {
+            console.log("Seed data loaded successfully!");
+          }).catch(err => {
+            console.error("Error loading seed data:", err);
+          });
+        } catch (err) {
+          console.error("Error importing seed data:", err);
+        }
+      }
       
       // Find a business problem with a similar text
       const userInput = validatedBody.problem.toLowerCase().trim();
@@ -124,25 +143,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
         'analytics stack': ['analytics', 'dashboard', 'pos'],
         'keg loss': ['keg', 'tracking'],
         'beer garden': ['beer garden', 'pop-up', 'summer'],
-        'beer-quality consistency': ['beer-quality', 'beer quality', 'consistency', 'bjcp', 'scoresheets']
+        'beer-quality': ['beer-quality', 'beer quality', 'consistency', 'bjcp', 'scoresheets', '38+']
       };
       
       // Find matching problem with solution
       let matchingProblem = null;
       
-      // Check for exact matches first
-      for (const [key, synonyms] of Object.entries(exactMatches)) {
-        if (synonyms.some(term => userInput.includes(term))) {
-          // Find a problem that contains the key phrase and has a solution
-          const match = allProblems.find(p => 
-            p.solution && 
-            p.problem.toLowerCase().includes(key)
-          );
-          
-          if (match) {
-            matchingProblem = match;
-            console.log(`Found exact match for '${key}' in problem: ${match.problem.substring(0, 50)}...`);
-            break;
+      // First try direct matching with the full beer quality consistency problem
+      const beerQualityProblem = "How can we improve beer-quality consistency enough to score 38+ on BJCP scoresheets?";
+      if (userInput.includes('beer quality') || userInput.includes('beer-quality') || userInput.includes('bjcp')) {
+        console.log("Detected beer quality question");
+        
+        // Look for exact beer quality consistency problem
+        const directMatch = allProblems.find(p => 
+          p.solution && 
+          p.problem.includes(beerQualityProblem)
+        );
+        
+        if (directMatch) {
+          console.log("Found direct beer quality consistency match!");
+          matchingProblem = directMatch;
+        }
+      }
+      
+      // If no direct match found, try keyword matching
+      if (!matchingProblem) {
+        // Check for exact matches using keywords
+        for (const [key, synonyms] of Object.entries(exactMatches)) {
+          if (synonyms.some(term => userInput.includes(term))) {
+            // Find a problem that contains the key phrase and has a solution
+            const match = allProblems.find(p => 
+              p.solution && 
+              p.problem.toLowerCase().includes(key)
+            );
+            
+            if (match) {
+              matchingProblem = match;
+              console.log(`Found keyword match for '${key}' in problem: ${match.problem.substring(0, 50)}...`);
+              break;
+            }
           }
         }
       }
