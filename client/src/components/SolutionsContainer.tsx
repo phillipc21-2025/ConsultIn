@@ -75,10 +75,11 @@ interface SolutionsContainerProps {
 
 
 const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
-  const [isOpen, setIsOpen] = useState(true);
-  // Set ConsultIn as the default active tab if it exists
+  // Only the first step (index 0) should be open by default
+  const [isOpen, setIsOpen] = useState(index === 0);
+  // Set ConsultIn as the default active tab if it exists and this is the first step
   const [activeTab, setActiveTab] = useState<string | undefined>(
-    step.consultInAction ? "consultin" : undefined
+    (step.consultInAction && index === 0) ? "consultin" : undefined
   );
   const [showConsultInDialog, setShowConsultInDialog] = useState(false);
   const [isConsultInThinking, setIsConsultInThinking] = useState(false);
