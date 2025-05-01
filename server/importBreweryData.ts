@@ -32,9 +32,9 @@ async function importProviders() {
       const service: InsertService = {
         name: provider.service_name,
         description: provider.service_description,
-        website: provider.website,
-        category: 'Brewery Services',
-        price: 'Contact for pricing'
+        icon: null, // Icon could be generated from initials or standardized icon
+        usageStats: "Used by 100+ breweries",
+        pricing: "Contact for pricing"
       };
       
       await storage.createService(service);
@@ -56,11 +56,9 @@ async function importFreelancers() {
         name: `${freelancer.first_name} ${freelancer.last_name}`,
         title: freelancer.job_title,
         company: freelancer.company,
-        bio: freelancer.summary,
-        expertise: 'Brewery Operations',
         profileImage: `https://randomuser.me/api/portraits/${Math.random() > 0.5 ? 'men' : 'women'}/${Math.floor(Math.random() * 100)}.jpg`,
-        connectionDegree: Math.floor(Math.random() * 3) + 1,
-        mutualConnections: Math.floor(Math.random() * 15) + 1
+        connections: Math.floor(Math.random() * 1000) + 500,
+        experience: freelancer.summary
       };
       
       await storage.createExpert(expert);
@@ -82,10 +80,10 @@ async function importCourses() {
         title: course.course_name,
         provider: course.platform,
         duration: `${course.hours} hours`,
-        level: course.difficulty,
+        thumbnail: "https://placehold.co/300x200?text=Course+Thumbnail",
         description: `A ${course.difficulty.toLowerCase()} level course on ${course.course_name.toLowerCase()}.`,
-        url: course.url,
-        cost: 'Included with subscription'
+        rating: `${(3.5 + Math.random() * 1.5).toFixed(1)}/5.0`,
+        reviewCount: Math.floor(Math.random() * 500) + 100
       };
       
       await storage.createTraining(training);
@@ -109,10 +107,9 @@ async function importQuestions() {
           const conversation: InsertConversation = {
             authorName: `${comment.first_name} ${comment.last_name}`,
             authorTitle: comment.job_title,
-            authorCompany: comment.company,
             authorImage: `https://randomuser.me/api/portraits/${Math.random() > 0.5 ? 'men' : 'women'}/${Math.floor(Math.random() * 100)}.jpg`,
             content: comment.comment_text || `Discussion about: ${question.summary}`,
-            time: new Date().toISOString(),
+            postedTime: `${Math.floor(Math.random() * 8) + 1} days ago`,
             likes: Math.floor(Math.random() * 50) + 1,
             comments: Math.floor(Math.random() * 10)
           };
@@ -132,17 +129,7 @@ async function importStepsForTalents() {
   console.log('Importing steps for talents...');
   const steps = readJsonFile('steps.json');
   
-  // Create a pool of talents from the steps data
-  const talentPool = new Set<string>();
-  
-  // Extract unique names from steps data
-  steps.forEach(step => {
-    if (step.freelancer_ids && step.freelancer_ids.length > 0) {
-      step.freelancer_ids.forEach(id => talentPool.add(id));
-    }
-  });
-  
-  // Randomly generate talents from the unique IDs
+  // Randomly generate talents
   const talentNames = [
     "Sarah Johnson", "Michael Chen", "Raj Patel", "Emma Wilson", 
     "Carlos Rodriguez", "Aisha Khan", "David Kim", "Olivia Garcia",
@@ -155,27 +142,30 @@ async function importStepsForTalents() {
     "Distribution Coordinator", "Customer Experience Manager", "Events Coordinator"
   ];
   
-  let talentCount = 0;
-  for (const id of talentPool) {
+  // Generate talents (around 10 talents)
+  const talentCount = Math.min(10, talentNames.length);
+  
+  for (let i = 0; i < talentCount; i++) {
     try {
-      const nameIndex = Math.floor(Math.random() * talentNames.length);
-      const titleIndex = Math.floor(Math.random() * talentTitles.length);
+      // Use a name from our list
+      const name = talentNames[i];
+      // Get a random title
+      const title = talentTitles[Math.floor(Math.random() * talentTitles.length)];
       
       const talent: InsertTalent = {
-        name: talentNames[nameIndex],
-        title: talentTitles[titleIndex],
-        skills: ["Brewery Operations", "Supply Chain", "Marketing", "Analytics"].slice(0, Math.floor(Math.random() * 3) + 1).join(", "),
-        location: ["Boston, MA", "Portland, OR", "Denver, CO", "Austin, TX", "San Diego, CA"][Math.floor(Math.random() * 5)],
+        name: name,
+        title: title,
         profileImage: `https://randomuser.me/api/portraits/${Math.random() > 0.5 ? 'men' : 'women'}/${Math.floor(Math.random() * 100)}.jpg`,
+        location: ["Boston, MA", "Portland, OR", "Denver, CO", "Austin, TX", "San Diego, CA"][Math.floor(Math.random() * 5)],
         availability: ["Full-time", "Part-time", "Contract", "Freelance"][Math.floor(Math.random() * 4)]
       };
       
       await storage.createTalent(talent);
-      talentCount++;
     } catch (error) {
-      console.error(`Error importing talent ${id}:`, error);
+      console.error(`Error importing talent ${i}:`, error);
     }
   }
+  
   console.log(`Imported ${talentCount} talents`);
 }
 
