@@ -19,6 +19,9 @@ import {
   type ConsultInProductAction
 } from "@shared/schema";
 
+// Import brewery-specific mock data generator
+import { generateBrewerySolution } from "./breweryMockData";
+
 // Initialize OpenAI
 const openai = new OpenAI({ 
   apiKey: process.env.OPENAI_API_KEY || 
@@ -1527,8 +1530,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         };
       };
       
-      // Generate mock solution instead of calling OpenAI
-      const solution = generateMockSolution(
+      // Generate brewery-specific mock solution instead of calling OpenAI
+      const solution = generateBrewerySolution(
         validatedBody.problem,
         experts,
         conversations,
