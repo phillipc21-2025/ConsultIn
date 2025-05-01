@@ -437,7 +437,50 @@ const StepCard = ({ step, index }: { step: ProcessStep; index: number }) => {
                     onInstallAgent={handleInstallAgent}
                   />
                   
-                  {!showConsultInAction ? (
+                  {/* Agent installation progress display */}
+                  {isAgentExecuting || agentTaskComplete ? (
+                    <div className={`${agentTaskComplete ? 'bg-green-50 border-green-200' : 'bg-blue-50 border-blue-200'} border rounded-lg p-4 mb-3`}>
+                      <div className="flex items-center">
+                        <div className={`h-12 w-12 mr-3 ${agentTaskComplete ? 'bg-green-100' : 'bg-blue-100'} rounded-full flex items-center justify-center`}>
+                          {agentTaskComplete ? (
+                            <FaCheck className="text-green-600 text-xl" />
+                          ) : (
+                            <FaRobot className="text-blue-600 text-xl" />
+                          )}
+                        </div>
+                        <div className="flex-1">
+                          <h3 className={`font-semibold text-sm ${agentTaskComplete ? 'text-green-700' : 'text-blue-700'} mb-1`}>
+                            {agentTaskComplete ? 'Brewery Agent Task Complete' : 'Brewery Agent Working'}
+                          </h3>
+                          <p className={`text-xs ${agentTaskComplete ? 'text-green-800' : 'text-blue-800'} font-mono mb-3`}>
+                            {agentExecutionMessage}
+                          </p>
+                          
+                          {/* Progress bar or success indicator */}
+                          {agentTaskComplete ? (
+                            <div className="flex items-center justify-between">
+                              <div className="text-sm text-green-700 font-semibold">Step successfully completed!</div>
+                              <div className="h-8 w-8 bg-green-100 rounded-full flex items-center justify-center">
+                                <FaCheck className="text-green-600" />
+                              </div>
+                            </div>
+                          ) : (
+                            <>
+                              <div className="w-full h-3 bg-blue-100 rounded-full overflow-hidden">
+                                <div 
+                                  className="h-full bg-blue-600 rounded-full"
+                                  style={{ width: `${agentExecutionProgress}%`, transition: 'width 0.5s ease-in-out' }}
+                                ></div>
+                              </div>
+                              <div className="text-xs text-right mt-1 text-blue-700">
+                                {agentExecutionProgress}% Complete
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ) : !showConsultInAction ? (
                     <div className="flex flex-col items-center justify-center p-4">
                       <div className="text-center mb-3">
                         <FaRobot className="inline-block text-4xl text-[#0a66c2] mb-2" />

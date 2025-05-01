@@ -171,11 +171,13 @@ const AgentMarketplace = ({ isOpen, onClose, onInstallAgent }: AgentMarketplaceP
   const handleInstallAgent = (agentId: number) => {
     setInstallingAgent(agentId);
     
-    // Simulate installation and then close dialog and show action
+    // Simulate installation
     setTimeout(() => {
       setInstallingAgent(null);
+      
+      // Pass the selected agent ID to the parent component for execution
       onInstallAgent(agentId);
-    }, 2000);
+    }, 1500);
   };
   
   return (
